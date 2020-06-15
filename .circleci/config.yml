@@ -5,6 +5,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:10-browsers
 
+jobs:
   deploy-featurepeek:
     <<: *defaults
     steps:
