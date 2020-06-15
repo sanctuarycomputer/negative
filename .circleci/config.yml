@@ -1,0 +1,34 @@
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/negative
+  docker:
+    - image: circleci/node:10-browsers
+
+  deploy-featurepeek:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/negative
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: .
+          paths: .
+      - run: NODE_ENV=production CI="" yarn build
+      - run:
+          name: Create Preview Link
+          command: bash <(curl -s https://peek.run/ci)
+
+workflows:
+  build:
+    jobs:
+      - deploy-featurepeek

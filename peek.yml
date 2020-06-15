@@ -1,0 +1,4 @@
+version: 2
+main:
+  type: static
+  path: /_site
