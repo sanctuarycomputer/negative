@@ -7,9 +7,39 @@
     <link rel="stylesheet" href="https://fonts.sanctuary.computer/AustinNewsDeck/styles.css">
     <link rel="stylesheet" href="https://fonts.sanctuary.computer/AtlasGrotesk/styles.css">
     <title>Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" integrity="sha256-wtnfrDHx0iOJYp1fQkoK7fWaUDAysStI8W7pCHTEPrc=" crossorigin="anonymous"></script>
+
   </head>
   <body>
 
+
+  <style>
+    .map {
+      position: fixed;
+      width: 80vw;
+      height: 80vw;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .map canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      opacity: 0.75;
+    }
+    .map img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <div class="map">
+    <img class="globe" src="assets/images/globe.svg" />
+    <canvas id="map-canvas"></canvas>
+  </div>
+
+
+    <!--
     <div class="headroom">
       <p class="serif">Menu</p>
     </div>
@@ -54,6 +84,7 @@
 
       <div class="fade"></div>
     </div>
+    -->
 
     <header class="mx1 mb6">
       <div class="studio col col-6 relative">
@@ -66,7 +97,6 @@
           Carbon Negative
         </h1>
       </div>
-      <img class="globe" src="assets/images/globe.jpg" />
     </header>
 
     <div class="wrapper mxauto">
@@ -137,4 +167,213 @@
     </footer>
 
   </body>
-</html>
+
+  <script>
+"use strict";
+var body = document.body
+  , html = document.documentElement
+  , vw = window.innerWidth
+  , vh = window.innerHeight
+  , dh = 0
+  , homeScroll = 0
+  , scrollTop = window.scrollY
+  , scrollBottom = scrollTop + vh
+  , mouse = { x: 0, y: 0 }
+  , resizeQueue = []
+  , resizeTimeout = null
+  , map
+  , t = Date.now()
+  , delta = 0
+  , dpi = Math.min(2, window.devicePixelRatio) || 1;
+
+function handleResize() {
+  // Update Vars
+    vw = window.innerWidth;
+    vh = window.innerHeight;
+    dh = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  // Update Listeners
+  clearTimeout(resizeTimeout),
+  resizeTimeout = setTimeout(runResizeQueue, 200)
+  sizeMap();
+}
+
+function runResizeQueue() {
+    resizeQueue.forEach(function(e) {
+        e()
+    })
+}
+
+window.addEventListener("resize", handleResize);
+
+function init() {
+  map = new WeatherMap(document.querySelector('.map'));
+  handleResize();
+
+  setTimeout(function() {
+    map.initCallback(map)
+    animateMap()
+  }, 300)
+}
+document.addEventListener("mousemove", function(e) {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY + scrollTop;
+});
+
+if ("loading" != document.readyState) {
+  init();
+} else {
+  document.addEventListener
+    ? document.addEventListener("DOMContentLoaded", init)
+    : document.attachEvent("onreadystatechange", function() {
+        "complete" == document.readyState && init()
+      });
+}
+
+class WeatherMap {
+  constructor(el) {
+    this.el = el;
+
+    this.top = 0;
+    this.bottom = 0;
+    this.left = 0;
+    this.right = 0;
+
+    this.mouse = { x: 0, y: 0 };
+    this.data = {};
+  }
+
+  initCallback(map) {
+    var internalCanvas = document.createElement("canvas");
+    var outputCanvas = document.getElementById("map-canvas");
+    var outputContext = outputCanvas.getContext("2d");
+    outputContext.imageSmoothingEnabled = !1;
+
+    map.data = {
+      outputCanvas: outputCanvas,
+      outputCtx: outputContext,
+      pixels: [],
+      noise: new SimplexNoise,
+      t: 0,
+      x: 0,
+      y: 0,
+      flip: !0
+    };
+
+    initCanvasAndAppend(internalCanvas, map);
+
+    // TODO: Does nothing
+    this.resize.bind(map)();
+    resizeQueue.push(this.resize.bind(map));
+  }
+
+  updateCallback(map, delta) {
+    map.data.x -= map.mouse.x / 2;
+    map.data.y -= map.mouse.y / 2;
+    map.data.t += delta;
+
+    for (var n = 0; n < map.data.cw; n++) {
+      for (var o = 0; o < map.data.ch; o++) {
+        map.data.pixels[n][o] = map.data.noise.noise3D(
+          (n + map.data.x) / 40, (o + map.data.y) / 40, map.data.t / 4e3
+        );
+      }
+    }
+  }
+
+  drawCallback(map) {
+    var data = map.data;
+    data.ctx.clearRect(0, 0, data.cw, data.ch);
+
+    for (var px = 0; px < data.cw; px++) {
+      for (var n = 0; n < data.ch; n++) {
+
+          var o = data.pixels[px][n];
+          var i = false;
+
+          .6 < o ? i = data.flip : .2 < o ? px % 2 == 0 && n % 2 == 0 || (i = data.flip) : -.2 < o ? (px + n) % 2 != 0 && (i = data.flip) : -.6 < o && px % 2 != 0 && n % 2 != 0 && (i = data.flip);
+
+          data.ctx.fillStyle = i ? "#0000FF" : "rgba(255, 255, 255, 0)";
+          data.ctx.fillRect(px, n, 1, 1);
+      }
+    }
+
+    var s = Math.ceil(data.outputCanvas.width / data.canvas.width), r = Math.ceil(data.outputCanvas.height / data.canvas.height);
+    data.outputCtx.clearRect(0, 0, data.canvas.width * s, data.canvas.height * r);
+    data.outputCtx.drawImage(data.canvas, 0, 0, data.canvas.width * s, data.canvas.height * r);
+  }
+
+  resize(map) {
+    var e = this
+      , t = e.data.canvas;
+    e.data.pixels = [],
+    e.data.resolution = 5 * e.data.dpi / 2,
+    t.width = Math.floor(t.width / e.data.resolution),
+    t.height = Math.floor(t.height / e.data.resolution),
+    e.data.cw = t.width,
+    e.data.ch = t.height;
+    for (var a = 0; a < e.data.cw; a++) {
+      e.data.pixels[a] = [];
+      for (var n = 0; n < e.data.ch; n++) {
+        e.data.pixels[a][n] = 0
+      }
+    }
+  }
+
+}
+
+function sizeMap() {
+  var a = map.el.getBoundingClientRect();
+  a = {
+    width: a.width,
+    height: a.height,
+    top: a.top,
+    left: a.left
+  };
+  map.bounds = a;
+  map.top = a.top + scrollTop,
+  map.bottom = a.top + a.height + scrollTop,
+  map.left = a.left,
+  map.right = a.left + a.width
+}
+
+function animateMap() {
+  var lastTimestamp = t;
+  var now = Date.now();
+  delta = now - lastTimestamp;
+
+  // Give it a choppy effect
+  if (delta < 150) {
+    requestAnimationFrame(animateMap);
+    return;
+  }
+
+  t = Date.now();
+  map.updateCallback(map, delta);
+  map.drawCallback(map);
+  requestAnimationFrame(animateMap);
+}
+
+function initCanvasAndAppend(e, map) {
+  map.data.canvas = e,
+  map.data.ctx = e.getContext("2d"),
+  sizeCanvas(map)
+  resizeQueue.push(resizeCanvas.bind([map]))
+}
+
+function sizeCanvas(e) {
+  var a = e.bounds.width
+    , n = e.bounds.height;
+  e.data.cw = e.data.canvas.width = a * dpi,
+  e.data.ch = e.data.canvas.height = n * dpi,
+  e.data.canvas.style.width = a + "px",
+  e.data.canvas.style.height = n + "px",
+  e.data.dpi = dpi
+}
+
+function resizeCanvas() {
+  var e = this[0], a = e.data.cw;
+  sizeCanvas(e);
+  var n = e.data.cw;
+}
+  </script>
