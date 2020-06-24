@@ -1,0 +1,13 @@
+{
+  "name": "negative",
+  "license": "MIT",
+  "devDependencies": {
+    "@sanctucompu/basement": "^1.1.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.9"
+  },
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  }
+}
