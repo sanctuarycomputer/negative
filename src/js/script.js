@@ -120,7 +120,7 @@
       for (let x = 0; x < data.cw; x++) {
         for (let y = 0; y < data.ch; y++) {
           data.pixels[x][y] = data.noise.noise3D(
-            (x + data.x) / 40, (y + data.y) / 40, data.t / 10000
+            (x + data.x) / 40, (y + data.y) / 40, data.t / 25000
           );
         }
       }
