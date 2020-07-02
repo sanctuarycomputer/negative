@@ -1,10 +1,6 @@
+@import 'config';
 @import '~@sanctucompu/basement/src/index';
-@import 'reset';
-
-//TO-DO: remove before launch
-.debug {
-  border: 1px solid red;
-}
+@import 'settings', 'reset', 'typography';
 
 header {
   height: 100vh;
@@ -47,9 +43,8 @@ header {
 
 .wrapper,
 .header {
-  padding-left: 1.11rem;
-  padding-right: 1.11rem;
-  margin: auto;
+  margin-left: 1.11rem;
+  margin-right: 1.11rem;
 }
 
 .content-container {
@@ -94,8 +89,8 @@ img.globe {
 }
 
 button {
+  @extend %text-button;
   padding: 10px 20px;
-  font-size: 12px;
   background-color: transparent;
   border-width: 1px;
   border-color: black;
@@ -107,130 +102,6 @@ footer {
   img {
     max-width: 80px;
   }
-}
-
-//Typography
-html { 
-  font-size: 18px; 
-}
-
-$atlas: 'Atlas Grotesk Web', sans-serif;
-$austin: 'Austin News Deck Web', serif;
-
-.atlas {
-  font-family: $atlas;
-}
-
-.austin {
-  font-family: $austin;
-}
-
-.serif {
-  font-family: 'Austin News Deck Web', serif;
-}
-
-.sans-serif {
-  font-family: 'Atlas Grotesk Web', sans-serif;
-}
-
-.italic {
-  font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6, p.serif {
-  font-weight: 100;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 3.5rem;
-}
-
-p.sans-serif, li.sans-serif {
-  line-height: 1.72rem;
-  font-size: 0.66rem;
-
-  @include media('md-up') {
-    font-size: 1rem;
-  }
-}
-
-.text-title, .text-subtitle, .text-menu, .text-caption {
-  font-family: $austin;
-}
-
-.text-title {
-  font-size: 2rem;
-  line-height: auto;
-
-  @include media('md-up') {
-    font-size: 4vw;
-  }
-}
-
-.text-subtitle {
-  font-size: 1.27rem;
-  line-height: 1.5rem;
-
-  @include media('md-up') {
-    margin-left: 6.88rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-.text-menu {
-  font-size: 1rem;
-  line-height: .75rem;
-
-  @include media('md-up') {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-  }
-}
-
-.text-button {
-  font-family: $atlas;
-  font-size: 0.5rem;
-
-  @include media('md-up') {
-    font-size: .77rem;
-  }
-}
-
-.text-caption {
-  font-weight: 300;
-  font-size: 0.6rem;
-  line-height: 1.25rem;
-  letter-spacing: 1px;
-
-  @include media('md-up') {
-    font-size: .77rem;
-    line-height: 1.25rem;
-  }
-}
-
-.text-paragraph {
-  line-height: 1.11rem;
-  font-size: .66rem;
-  margin-left: 3.27rem;
-
-  @include media('md-up') {
-    font-size: 1rem;
-    line-height: 1.72rem;
-    margin-left: 50%;
-  }
-}
-
-ol {
-  list-style: none;
-}
-
-.caption-number {
-  padding-right: 2.38rem;
 }
 
 //Images
@@ -305,21 +176,51 @@ ol {
 }
 
 .image-four-container {
+  margin-right: 40%;
+  
   @include media('md-up') {
     margin-left: 30%;
+    margin-right: 0;
   }
+}
 
-  // > img {
-  //   max-height: 17.77rem;
-  //   object-fit: contain;
-  // }
+.image-five-container {
+  @include media('md-up') {
+    margin-left: 12%;
+  }
+}
 
-  // @include media('md-up') {
-  //   bottom: 0;
-  //   left: 50%;
+.image-six-container {
+  margin-bottom: 10rem;
+  margin-right: 0;
 
-  //   > img {
-  //     max-height: unset;
-  //   }
-  // }
+  @include media('md-up') {
+    margin-right: 3%;
+    margin-bottom: 0;
+  }
+}
+
+//Footer
+.footer-padding-x {
+  padding-left: 1.11rem;
+  padding-right: 1.11rem;
+}
+
+.footer-header {
+  padding-left: 1.11rem;
+  padding-right: 1.11rem;
+
+  @include media('md-up') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.footer-menu {
+  padding-bottom: 10rem;
+
+  > div > a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

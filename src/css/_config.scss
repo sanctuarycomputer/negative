@@ -1,0 +1,12 @@
+@import 'settings';
+
+$spacing-units: 0rem, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.5rem, 2rem, 2.5rem, 3rem, 4rem, 5rem, 6rem, 10rem;
+
+$additional-class-definitions: (
+  'debug': (
+    border: 1px solid red
+  ),
+  'text-decoration-none': (
+    text-decoration: none
+  )
+);
