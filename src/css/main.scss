@@ -53,9 +53,26 @@ header {
   max-width: 1440px;
 
   @include media('md-up') {
+    margin-bottom: 10rem;
+  }
+}
+
+.inner-content-padding-x {
+  @include media('md-up') {
     padding-left: 6.72rem;
     padding-right: 6.72rem;
-    margin-bottom: 10rem;
+  }
+}
+
+.inner-content-padding-x-left {
+  @include media('md-up') {
+    padding-left: 6.72rem;
+  }
+}
+
+.inner-content-padding-x-right {
+  @include media('md-up') {
+    padding-right: 6.72rem;
   }
 }
 
@@ -106,7 +123,17 @@ footer {
   }
 }
 
-//Images
+//Index
+.studio {
+  margin-top: 12vh;
+  z-index: 1;
+}
+
+.negative {
+  margin-top: 45vh;
+  z-index: 1;
+}
+
 .index-section-one-container {
   height: 90rem;
 
@@ -204,6 +231,103 @@ footer {
   @include media('md-up') {
     margin-left: 12%;
   }
+}
+
+//Calculating Emissions
+.calculating {
+  margin-top: 10vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 45vh;
+  }
+}
+
+.emissions {
+  margin-top: 55vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    padding-right: 8%;
+    margin-top: 18vh;
+  }
+}
+
+.emissions-header-image-container {
+  top: 16%;
+  left: 1.112rem;
+  max-height: 20rem;
+
+  > img {
+    object-fit: cover;
+  }
+
+  @include media('sm-up') {
+    top: 19%;
+  }
+
+  @include media('md-up') {
+    top: 15%;
+    left: 30%;
+  }
+}
+
+.emissions-caption {
+  bottom: 5%;
+  right: 1.112rem;
+
+  @include media('md-up') {
+    right: 20%;
+  }
+
+  @include media('xl-up') {
+    right: 15%;
+  }
+}
+
+.measuring-emissions-caption {
+  @include media('md-up') {
+    margin-top: 40%;
+  }
+}
+
+.emissions-diagram-table > :last-child {
+  border-bottom: 1px solid color('black');
+}
+
+.emissions-diagram-table-item {
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
+  border-top: 1px solid color('black');
+
+  @include media('md-up') {
+    padding-top: 1.77rem;
+    padding-bottom: 1.77rem;
+  }
+}
+
+.emissions-image-four-container {
+  @include media('md-up') {
+    margin-top: -10%;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:last-of-type {
+  border-bottom: 1px solid color('black');
+}
+
+.table-header > th {
+  padding-bottom: 0.66rem;
+}
+
+.table-items > td {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  border-top: 1px solid color('black');
 }
 
 //Footer

@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.scss" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.sanctuary.computer/AustinNewsDeck/styles.css">
+    <link rel="stylesheet" href="https://fonts.sanctuary.computer/AtlasGrotesk/styles.css">
+    <title>Studio Carbon Negative</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" integrity="sha256-wtnfrDHx0iOJYp1fQkoK7fWaUDAysStI8W7pCHTEPrc=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- TO-DO: update menu when designs are finalized. Start Menu -->
+
+    <!-- End Menu -->
+
+    <!-- Start Page Content -->
+    <header class="header mb6">
+      <div class="calculating col col-6 relative">
+        <h1 class="text-title serif">
+          Calculating
+        </h1>
+      </div>
+      <div class="emissions-header-image-container absolute col-5 md:col-2">
+        <img class="h100 w100" src="img/italy.jpg"/>
+      </div>
+      <p class="emissions-caption text-caption mt2 absolute col-8 md:col-3">
+        <span class="caption-number">(8.)</span>Italy – In Venice the sea level has been rising even more rapidly in Venice than in other parts of the world. At the same time, the city is sinking, the result of tectonic plates shifting below the Italian coast. Those factors together, along with the more frequent extreme weather events associated with climate change, contribute to floods. 
+      </p>
+      <div class="emissions col col-6 text-right relative">
+        <h1 class="text-title serif">
+          Emissions
+        </h1>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <section class="content-container inner-content-padding-x mxauto flex-col">
+        <h3 class="text-subtitle serif mb3 md:col-5">How we measured our carbon footprint and emissions.</h3>
+        <div class="flex flex-col-reverse off-1 md:off-0 md:flex-row">
+          <div class="measuring-emissions-caption flex flex-col off-1 md:off-0 md:col-4">
+            <p class="text-caption">
+              <span class="caption-number">(A.)</span>The Greenhouse Gas Protocol – The most widely used international accounting tool for government and business leaders to understand, quantify, and manage greenhouse gas emissions. A decade-long partnership between the World Resources Institute (WRI) and the World Business Council for Sustainable Development (WBCSD), the GHG Protocol is working with businesses, governments, and environmental groups around the world to build a new generation of credible and effective programs for tackling climate change. It serves as the foundation for nearly every GHG standard and program in the world - from the International Standards Organization to The Climate Registry - as well as hundreds of GHG inventories prepared by individual companies.
+            </p>
+          </div>
+          <div class="flex flex-col md:col-5 md:off-2">
+            <p class="text-paragraph atlas">
+              First, we needed to understand the industry standard approach to carbon footprinting. We discussed the process with several third party consultancies, certification companies, and did a bunch of our own research, we decided to base our math on the GHG Protocol.
+            </p>
+            <p class="text-paragraph atlas">
+              The GHG Protocol consists of "Scopes", each of which has multiple sub categories. In order to calculate our current carbon footprint, we looked into the emission categories within Scope 1, Scope 2, and Scope 3.
+            </p>
+            <div class="emissions-diagram-container mb3">
+              <img class="h100 w100" src="img/emissions-diagram.svg"/>
+            </div>
+            <div class="emissions-diagram-table mb3 flex flex-col">
+              <div class="flex flex-col md:flex-row emissions-diagram-table-item">
+                <div class="text-details sans-serif md:col-3 mr2 mb1 md:mb0 flex flex-col">
+                  <p>Scope 1</p>
+                  <p class="italic">Direct emissions</p>
+                </div>
+                <p class="text-caption serif md:col-9">
+                  These are the business activities the company performs that directly create emissions.
+                </p>
+              </div>
+              <div class="flex flex-col md:flex-row  emissions-diagram-table-item">
+                <div class="text-details sans-serif md:col-3 mr2 mb1 md:mb0 flex flex-col">
+                  <p>Scope 2</p>
+                  <p class="italic">Indirect emissions</p>
+                </div>
+                <p class="text-caption serif md:col-9">
+                  These consist of the purchased electricity, steam, heating, and cooling for own use. 
+                </p>
+              </div>
+              <div class="flex flex-col md:flex-row  emissions-diagram-table-item">
+                <div class="text-details sans-serif md:col-3 mr2 mb1 md:mb0 flex flex-col">
+                  <p>Scope 3</p>
+                  <p class="italic">Indirect emissions</p>
+                </div>
+                <p class="text-caption serif md:col-9">
+                  Includes goods and services, goods, fuel, transportation distribution, and business travel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="full-width-content-container flex flex-col">
+        <div class="emissions-image-one-container mb5 md:mb0">
+          <div>
+            <img class="col-8 md:col-6 md:off-1 w100" src="img/united-states.jpg"/>
+          </div>
+          <div>
+            <p class="col-8 md:col-4 md:off-1 text-caption mt2">
+              <span class="caption-number">(9.)</span>United States – Alaska’s winter temperatures increasing, the type of precipitation will change. Lack of snow cover on the ground will expose tree roots to colder soils, and yellow ceder is already showing the result of this with many trees dying.
+            </p>
+          </div>
+        </div>
+        <div class="emissions-image-two-container col-12 md:col-3 md:off-8">
+          <div class="flex justify-end">
+            <img class="col-8 md:col-12 w100" src="img/united-states-b.jpg"/>
+          </div>
+          <div class="flex justify-end">
+            <p class="col-8 md:col-12 text-caption mt2">
+              <span class="caption-number">(10.)</span>United States – In 2017, the real estate website Zillow wrote that if climate predictions were correct, by 2100 "One in eight Florida homes would be under water, accounting for nearly half of the lost housing value nationwide." This calculation was based on comparing NOAA maps for a 6 foot sea level rise with the Zillow database of homes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-container inner-content-padding-x mxauto flex-col">
+        <h3 class="text-subtitle serif mb3 md:col-6">Using third parties to source our emissions and understand our impact.</h3>
+        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+          We had calls with several third party consultancies, certification companies, and companies selling software tools that could help us collect our carbon emission data, provide analysis, recommend offsets to purchase, and become carbon neutral certified. The services were either incredibly expensive for a studio of our size or not quite what we were looking for, and most of the software tools were in their beta testing phase. Additionally, a lot of the data we would have to provide anyway, so we figure we might as well give it a shot first!
+        </p>
+      </section>
+      
+      <section class="full-width-content-container flex flex-col">
+        <div class="emissions-image-three-container md:col-4 md:off-8 mb5 md:mb0">
+          <div class="flex justify-end col-12 md:col-9">
+            <img class="col-8 md:col-12 w100" src="img/maldives.jpg"/>
+          </div>
+          <div class="flex justify-end col-12 md:col-9">
+            <p class="col-8 md:col-12 text-caption mt2">
+              <span class="caption-number">(11.)</span>The Maldives – By 2020,[needs update] Maldives plans to eliminate or offset all of its greenhouse gas emissions. At the 2009 International Climate Talks, Nasheed explained that: 
+            </p>
+          </div>
+        </div>
+        <div class="emissions-image-four-container md:off-2 md:col-4">
+          <img class="col-8 md:col-12 w100" src="img/alps.jpg"/>
+          <p class="col-8 md:col-12 text-caption mt2">
+            <span class="caption-number">(12.)</span>The Alps – Various models of climate change have been projected into the 22nd century for the Alps, with an expectation that a trend toward increased temperatures will have an effect on snowfall, snowpack, glaciation, and river runoff. Significant changes, of both natural and anthropogenic origins, have already been diagnosed from observations. 
+          </p>
+        </div>
+      </section>
+
+      <section class="content-container mxauto flex-col">
+        <div class="inner-content-padding-x">
+          <h3 class="text-subtitle serif mb3 md:col-6">Calculating our carbon footprint.</h3>
+          <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+            Fortunately, a business like our is relatively straight forward to calculate: at the end of the day, Sanctuary Computer is a room of desks and monitors. We don't have any complex products that need LCA studies done, and our supply chain is relatively straight forward.
+          </p>
+          <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+            That's not to say it's easy. In order to get accurate numbers for each of our categories, we had to piece together a variety of calculators, datasets and spreadsheets from trusted sourced all over the internet. To make it easy for our peers to do the same, we've put together this spreadsheet. Please reach out to us if you have suggestions, or would like a hand doing this for your studio!
+          </p>
+        </div>
+        <div class="flex flex-col-reverse md:flex-row md:mt10">
+          <div class="flex flex-col justify-between md:col-6 md:pr10">
+            <p class="inner-content-padding-x-left text-caption py4 col-7 md:col-10 off-5 md:off-0 md:pt10 md:pb10">
+              <span class="caption-number">(B.)</span>Sanctuary Computers 2019 Emissions – Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.
+            </p>
+            <div class="carbon-footprint-image-container col-7 md:col-9">
+              <img class="w100" src="img/haiti-b.jpg"/>
+              <p class="md:col-10 text-caption mt2">
+                <span class="caption-number">(13.)</span>Haiti – Haiti's position as a Southern island nation makes it particularly susceptible to the effects of climate change. Factors that make Haiti more vulnerable than other Caribbean nations, such as the Dominican Republic, are its higher population density, extensive deforestation, extreme soil erosion, and high income-inequality.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col off-1 md:off-0 md:col-6 inner-content-padding-x-right">
+            <div class="carbon-footprint-diagram-container mb3">
+              <img class="h100 w100" src="img/carbon-footprint-diagram.svg"/>
+            </div>
+            <table class="mb2">
+              <tr class="table-header">
+                <th class="text-caption serif text-left">Scope 1</th>
+                <th class="text-caption serif text-right">0%</th>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td>None*</td>
+                <td></td>
+              </tr>
+            </table>
+            <table class="mb2 w100">
+              <tr class="table-header">
+                <th class="text-caption serif text-left">Scope 2</th>
+                <th class="text-caption serif text-right">12%</th>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Electricity Bills</td>
+                <td class="text-right">103.33</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Servers</td>
+                <td class="text-right">578.51</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Other Utilities</td>
+                <td class="text-right">103.33</td>
+              </tr>
+            </table>
+            <table class="w100">
+              <tr class="table-header">
+                <th class="text-caption serif text-left">Scope 3</th>
+                <th class="text-caption serif text-right">78%</th>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Company Travel</td>
+                <td class="text-right">683.58</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Employee Commutes</td>
+                <td class="text-right">578.51</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Office Purchases</td>
+                <td class="text-right">281.70</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Miscellaneous Cars</td>
+                <td class="text-right">670.57</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Food Purchases</td>
+                <td class="text-right">968.23</td>
+              </tr>
+              <tr class="table-items sans-serif text-details">
+                <td class="text-left">Company Meals</td>
+                <td class="text-right">497.15</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-container inner-content-padding-x mxauto flex-col">
+        <h3 class="text-subtitle serif mb3 md:col-6">Setting new goals.</h3>
+        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+          Going to all of this effort without preparing a clear plan to reduce emissions overall is a pointless endeavor. The long term health of our planet requires a reduction in emissions, which can't be achieved if we just meet the status quo each year.
+        </p>
+        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+          When performing these studies, we assessed each category, tried to see if we could do better. We were surprised! We found a bunch of places we could lower our emissions simply by choosing a different provider, or doing a little leg work to set up better systems. 
+        </p>
+      </section>
+     
+      <section class="content-container inner-content-padding-x  mxauto flex-col">
+        <p class="text-subtitle serif md:col-8">
+          Studio Carbon Negative was initiated by Sanctuary Computer. Get in touch if you would like to know more information about Studio Carbon Negative.
+        </p>
+        <a href="https://www.sanctuary.computer/"><button class="col-7 lg:col-3 mt2">&rarr; Visit Sanctuary Computer</button></a>
+      </section>
+    </div>
+    <!-- End Page Content -->
+
+    <!-- Start Footer -->
+    <section class="md:off-6">
+      <p class="footer-header color-black text-footer-sm pb3">Continue Reading</p>
+    </section>
+    <footer class="footer-padding-x flex flex-col pb2">
+      <div class="footer-menu links text-title md:off-6">
+        <div>
+          <a href="clients.html">Studio Carbon Negative</a>
+        </div>
+        <div>
+          <a href="emissions.html">Calculating Emissions</a>
+        </div>
+        <div>
+          <a href="offsetting.html">Buying Offsets</a>
+        </div>
+        <div>
+          <a href="clients.html">Helping Clients</a>
+        </div>
+        <div>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:justify-between">
+        <div class="pb2 md:pb0">
+          <img src="img/sanctu.svg" />
+        </div>
+
+        <div class="text-footer-xs flex flex-col md:col-6 pr4">
+          <h6 class="color-black">Research and documentation done by Sanctuary Computer.</h6>
+          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits 26g of Carbon per Page Load. View this project on Github.</h6>
+        </div>
+
+      </div>
+      
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

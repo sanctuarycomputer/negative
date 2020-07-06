@@ -51,11 +51,11 @@ p.sans-serif, li.sans-serif {
 }
 
 .text-title {
-  font-size: 2rem;
+  font-size: 9vw;
   line-height: auto;
 
   @include media('md-up') {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 
@@ -131,6 +131,15 @@ p.sans-serif, li.sans-serif {
   @include media('md-up') {
     font-size: 1rem;
     line-height: 1.72rem;
+  }
+}
+
+.text-details {
+  font-family: $atlas;
+  font-size: 0.6rem;
+
+  @include media('md-up') {
+    font-size: 0.77rem;
   }
 }
 
