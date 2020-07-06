@@ -286,7 +286,7 @@ footer {
 }
 
 .measuring-emissions-caption {
-  @include media('md-up') {
+  @include media('lg-up') {
     margin-top: 40%;
   }
 }
