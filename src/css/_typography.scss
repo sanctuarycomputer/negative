@@ -3,7 +3,7 @@ html {
 }
 
 $atlas: 'Atlas Grotesk Web', sans-serif;
-$austin: 'Austin News Deck Web', serif;
+$austin:  'Austin News Deck Web', serif;
 
 .atlas {
   font-family: $atlas;
@@ -25,7 +25,7 @@ $austin: 'Austin News Deck Web', serif;
   font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6, p.serif {
+.text-title, h1, h2, h3, h4, h5, h6, p.serif {
   font-weight: 100;
 }
 
@@ -64,7 +64,6 @@ p.sans-serif, li.sans-serif {
   line-height: 1.5rem;
 
   @include media('md-up') {
-    margin-left: 6.88rem;
     font-size: 2rem;
     line-height: 2.5rem;
   }
@@ -127,12 +126,10 @@ p.sans-serif, li.sans-serif {
 .text-paragraph {
   line-height: 1.11rem;
   font-size: .66rem;
-  // margin-left: 3.27rem;
 
   @include media('md-up') {
     font-size: 1rem;
     line-height: 1.72rem;
-    // margin-left: 50%;
   }
 }
 
