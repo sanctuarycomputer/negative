@@ -50,10 +50,11 @@ header {
 .content-container {
   display: flex;
   margin-bottom: 4.33rem;
+  max-width: 1440px;
 
   @include media('md-up') {
-    margin-left: 8.86rem;
-    margin-right: 8.86rem;
+    padding-left: 6.72rem;
+    padding-right: 6.72rem;
     margin-bottom: 10rem;
   }
 }
@@ -106,7 +107,7 @@ footer {
 }
 
 //Images
-.section-one-container {
+.index-section-one-container {
   height: 90rem;
 
   @include media('sm-up') {
