@@ -292,6 +292,60 @@ tr:last-of-type {
   border-top: 1px solid color('black');
 }
 
+//Buying Offsets
+.buying {
+  margin-top: 10vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 10vh;
+  }
+}
+
+.offsets {
+  margin-top: 55vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 50vh;
+    padding-right: 18%;
+  }
+}
+
+.offsets-header-image-container {
+  top: 32%;
+  right: 1.112rem;
+  max-height: 20rem;
+
+  > img {
+    object-fit: cover;
+  }
+
+  @include media('sm-up') {
+    top: 40%;
+  }
+
+  @include media('md-up') {
+    top: 43%;
+    left: 30%;
+  }
+}
+
+.offsets-caption {
+  bottom: 5%;
+  right: 1.112rem;
+
+  @include media('md-up') {
+    right: 20%;
+  }
+
+  @include media('xl-up') {
+    right: 15%;
+  }
+}
+
+
+
 //Footer
 
 .footer-logo-container > img {
