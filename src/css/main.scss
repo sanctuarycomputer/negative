@@ -96,6 +96,7 @@ button {
   border-color: black;
   border-style: solid;
   border-radius: 999px;
+  cursor: pointer;
 }
 
 footer {
@@ -112,7 +113,7 @@ footer {
 
   > img {
     max-height: 8.44rem;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @include media('md-up') {
@@ -121,7 +122,6 @@ footer {
 
     > img {
       max-height: 26.83rem;
-      object-fit: contain;
     }
   }
 }
@@ -133,7 +133,7 @@ footer {
 
   > img {
     max-height: 7rem;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @include media('md-up') {
@@ -142,7 +142,6 @@ footer {
 
     > img {
       max-height: 8.27rem;
-      object-fit: contain;
     }
   }
 }
@@ -154,7 +153,7 @@ footer {
 
   > img {
     max-height: 17.77rem;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @include media('md-up') {
