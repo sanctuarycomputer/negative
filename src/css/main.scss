@@ -344,7 +344,11 @@ tr:last-of-type {
   }
 }
 
-
+.offsetting-technologies-caption {
+  @include media('lg-up') {
+    margin-top: 60%;
+  }
+}
 
 //Footer
 
