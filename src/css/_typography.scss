@@ -46,7 +46,7 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-title, .text-subtitle, .text-menu, .text-caption {
+.text-title, .text-intro, .text-subtitle, .text-menu, .text-caption {
   font-family: $austin;
 }
 
@@ -56,6 +56,16 @@ p.sans-serif, li.sans-serif {
 
   @include media('md-up') {
     font-size: 5vw;
+  }
+}
+
+.text-intro {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+
+  @include media('md-up') {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
   }
 }
 
