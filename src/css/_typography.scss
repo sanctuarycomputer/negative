@@ -170,3 +170,8 @@ ol {
 .caption-number {
   padding-right: 2.38rem;
 }
+
+.resources-list > li > a {
+  text-decoration: none;
+  color: color('gray');
+}
