@@ -145,7 +145,7 @@ footer {
   }
 }
 
-.image-one-container {
+.index-image-one-container {
   margin-bottom: 10rem;
   top: 0;
   left: 0;
@@ -162,7 +162,7 @@ footer {
   }
 }
 
-.image-two-container {
+.index-image-two-container {
   margin-bottom: 10rem;
   top: 35%;
   right: 0;
@@ -173,7 +173,7 @@ footer {
   }
 }
 
-.image-three-container {
+.index-image-three-container {
   margin-top: 10rem;    
   bottom: 0;
   left: 0;
@@ -193,15 +193,14 @@ footer {
   }
 }
 
-.image-four-container {
-
+.index-image-four-container {
   @include media('md-up') {
     margin-left: 30%;
     margin-right: 0;
   }
 }
 
-.image-five-container {
+.index-image-five-container {
   @include media('md-up') {
     margin-left: 12%;
   }
