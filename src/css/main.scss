@@ -386,8 +386,12 @@ tr:last-of-type {
 }
 
 .clients {
-  margin-top: 55vh;
+  margin-top: 70vh;
   z-index: 1;
+
+  @include media('sm-up') {
+    margin-top: 65vh;
+  }
 
   @include media('md-up') {
     margin-top: 25vh;
@@ -396,20 +400,32 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  top: 32%;
-  right: 1.112rem;
-  max-height: 20rem;
+  @include media('sm-down') {
+    top: 17%;
+    width: 80%;
+    padding-right: 1.112rem;
+    padding-left: 1.112rem;
+    right: 10%;
+    left: 10%;  
 
-  > img {
-    object-fit: cover;
+    > img {
+      max-height: 21.0625rem;
+      object-fit: contain;
+    }
   }
 
   @include media('sm-up') {
-    top: 15%;
+    top: 20%;
   }
 
   @include media('md-up') {
-    left: 40%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media('lg-up') {
+    top: 40%;
   }
 }
 
@@ -426,7 +442,7 @@ tr:last-of-type {
   }
 }
 
-.clients-technologies-caption {
+.clients-diagram-caption {
   @include media('lg-up') {
     margin-top: 60%;
   }
