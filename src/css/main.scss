@@ -350,6 +350,65 @@ tr:last-of-type {
   }
 }
 
+//Helping Clients
+.helping {
+  margin-top: 10vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 25vh;
+    padding-left: 6.72rem;
+  }
+}
+
+.clients {
+  margin-top: 55vh;
+  z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 25vh;
+    padding-right: 6.72rem;
+  }
+}
+
+.clients-header-image-container {
+  top: 32%;
+  right: 1.112rem;
+  max-height: 20rem;
+
+  > img {
+    object-fit: cover;
+  }
+
+  @include media('sm-up') {
+    top: 40%;
+  }
+
+  @include media('md-up') {
+    top: 43%;
+    left: 30%;
+  }
+}
+
+.clients-caption {
+  bottom: 5%;
+  right: 1.112rem;
+
+  @include media('md-up') {
+    right: 20%;
+  }
+
+  @include media('xl-up') {
+    right: 15%;
+  }
+}
+
+.clients-technologies-caption {
+  @include media('lg-up') {
+    margin-top: 60%;
+  }
+}
+
 //Footer
 
 .footer-logo-container > img {
