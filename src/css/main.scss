@@ -296,10 +296,6 @@ tr:last-of-type {
 .buying {
   margin-top: 10vh;
   z-index: 1;
-
-  @include media('md-up') {
-    margin-top: 10vh;
-  }
 }
 
 .offsets {
