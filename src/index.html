@@ -14,7 +14,7 @@
     <!-- Start Weathermap -->
     <style>
       .background-slide {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100%;
         pointer-events: none;
@@ -27,10 +27,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: opacity 450ms ease-in-out;
-      }
-      .map-container.faded {
-        opacity: 0;
       }
       .map-container:before {
         content: "";
@@ -62,60 +58,17 @@
       @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
     <div class="background-slide">
-      <div class="map-container faded">
+      <div class="map-container">
         <div class="map">
-          <img class="globe" src="img/globe.svg" />
+          <img class="globe" src="img/earth.jpg" />
           <canvas id="map-canvas"></canvas>
         </div>
       </div>
     </div>
     <!-- End Weathermap -->
 
-    <!-- Start Menu -->
-    <div class="headroom">
-      <p class="serif">Menu</p>
-    </div>
-    <div class="drawer">
-
-      <div class="content pt1">
-        <div class="clearfix inner mxauto">
-          <div class="clearfix mb2">
-            <div class="col col-6">
-              <p class="serif">Close</p>
-            </div>
-            <div class="col col-6">
-              <p class="serif">Table of Contents</p>
-            </div>
-          </div>
-
-          <div class="links clearfix mb2">
-            <div class="col off-6 col-6">
-              <p class="serif">Studio Carbon Negative</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Calculating Emissions</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Buying Offsets</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Helping Clients</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Resources</p>
-            </div>
-          </div>
-
-          <div class="mb4">
-            <div class="col off-6 col-6">
-              <p class="sans-serif">&rarr; See our 2019 Report</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <!-- TO-DO: add menu. Start Menu -->
       <div class="fade"></div>
-    </div>
     <!-- End Menu -->
 
     <!-- Start Page Content -->
@@ -134,9 +87,9 @@
 
     <div class="wrapper">
       <section class="content-container inner-content-padding-x mxauto">
-        <div class="col-12 md:col-10 mxauto">
+        <div>
           <h2 class="text-intro serif mb2">
-            As Sanctuary Computer approaches its fourth loop around the sun, we're taking a chance to look  inward, and critically assess our standing. Our earth is on fire; we're taking stock. Everything we build causes damage - do we deserve to exist? 
+            As Sanctuary Computer approaches its fourth loop around the sun, we're taking a chance to look  inward, and critically assess our standing. Our earth is on fire; we're taking stock. Everything we build causes damage - do we deserve to exist?
           </h2>
           <a href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5"><button>See Our 2019 Report &rarr;</button></a>
         </div>
@@ -144,23 +97,23 @@
 
       <section class="full-width-content-container index-section-one-container relative">
         <div class="image-one-container absolute col-8 md:col-6">
-          <img class="image-one w100" src="img/antarctica.jpg"/>
+          <img class="w100" src="img/antarctica.jpg"/>
           <p class="col-12 md:col-7 text-caption mt2">
-            <span class="caption-number">(1.)</span>Antartica – A study published in Nature Geoscience in 2013 (online in December 2012) identified central West Antarctica as one of the fastest-warming regions on Earth. The researchers present a complete temperature record from Antarctica's Byrd Station and assert that it "reveals a linear increase in annual temperature between 1958 and 2010 by 2.4±1.2 °C
+            <span class="caption-number">(1.)</span>Antartica – <span class="color-gray-lighter">A study published in Nature Geoscience in 2013 (online in December 2012) identified central West Antarctica as one of the fastest-warming regions on Earth. The researchers present a complete temperature record from Antarctica's Byrd Station and assert that it "reveals a linear increase in annual temperature between 1958 and 2010 by 2.4±1.2 °C</span>
           </p>
         </div>
         <div class="image-two-container absolute col-8 md:col-3">
           <div>
-            <img class="col-12 md:col-6 image-two w100" src="img/yemen.jpg"/>
+            <img class="col-12 md:col-8 w100 test" src="img/yemen.jpg"/>
           </div>
           <p class="text-caption mt2">
-            <span class="caption-number">(2.)</span>Yemen – The average Yemeni has access to only 140 cubic meters of water per year (101 gallons per day) for all uses, while the Middle Eastern average is 1000 m3/yr, and the internationally defined threshold for water stress is 1700 cubic meters per year.
+            <span class="caption-number">(2.)</span>Yemen – <span class="color-gray-lighter">The average Yemeni has access to only 140 cubic meters of water per year (101 gallons per day) for all uses, while the Middle Eastern average is 1000 m3/yr, and the internationally defined threshold for water stress is 1700 cubic meters per year.</span>
           </p>
         </div>
         <div class="image-three-container absolute col-8 md:col-3">
-          <img class="image-three w100" src="img/haiti.jpg"/>
+          <img class="w100" src="img/haiti.jpg"/>
           <p class="text-caption mt2">
-            <span class="caption-number">(2.)</span>Yemen – The average Yemeni has access to only 140 cubic meters of water per year (101 gallons per day) for all uses, while the Middle Eastern average is 1000 m3/yr, and the internationally defined threshold for water stress is 1700 cubic meters per year.
+            <span class="caption-number">(2.)</span>Yemen – <span class="color-gray-lighter">The average Yemeni has access to only 140 cubic meters of water per year (101 gallons per day) for all uses, while the Middle Eastern average is 1000 m3/yr, and the internationally defined threshold for water stress is 1700 cubic meters per year.</span>
           </p>
         </div>
       </section>
@@ -175,9 +128,9 @@
     
       <section class="full-width-content-container">
         <div class="image-four-container col-8 md:col-3">
-          <img class="col-12 md:col-8 image-four w100" src="img/uae.jpg"/>
+          <img class="col-12 md:col-8 w100 test" src="img/uae.jpg"/>
           <p class="text-caption mt2">
-            <span class="caption-number">(4.)</span>United Arab Emirates – In 2010, The Abu Dhabi Environmental Agency published an announcement which shows that 85% of UAE's population would be affected by rising sea levels as well as 90 percent of its infrastructure.
+            <span class="caption-number">(4.)</span>United Arab Emirates – <span class="color-gray-lighter">In 2010, The Abu Dhabi Environmental Agency published an announcement which shows that 85% of UAE's population would be affected by rising sea levels as well as 90 percent of its infrastructure.</span>
           </p>
         </div>
       </section>
@@ -210,7 +163,7 @@
         <div class="image-six-container mb10 md:mb0 col-8 md:col-7">
           <img class="image-six w100" src="img/jordan.jpg"/>
           <p class="col-12 md:col-5 text-caption mt2">
-            <span class="caption-number">(6.)</span>Jordan – If the temperature rises by 2 °C, even an increase in precipitation by 20% would not compensate the increase in evaporation resulting in a decrease of surface runoff.
+            <span class="caption-number">(6.)</span>Jordan – <span class="color-gray-lighter">If the temperature rises by 2 °C, even an increase in precipitation by 20% would not compensate the increase in evaporation resulting in a decrease of surface runoff.</span>
           </p>
         </div>
         <div class="image-five-container col-8 md:col-3 off-4 md:off-2">
@@ -218,7 +171,7 @@
             <img class="col-12 md:col-8 image-five w100" src="img/great-barrier-reef.jpg"/>
           </div>
           <p class="text-caption mt2">
-            <span class="caption-number">(5.)</span>Great Barrier Reef – As global warming continues, corals will not be able to keep up with increasing ocean temperatures. Coral bleaching events lead to increased disease susceptibility, which causes detrimental ecological effects for reef communities.
+            <span class="caption-number">(5.)</span>Great Barrier Reef – <span class="color-gray-lighter">As global warming continues, corals will not be able to keep up with increasing ocean temperatures. Coral bleaching events lead to increased disease susceptibility, which causes detrimental ecological effects for reef communities.</span>
           </p>
         </div>
       </section>

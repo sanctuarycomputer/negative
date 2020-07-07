@@ -97,8 +97,8 @@ header {
 
 img.globe {
   max-width: 800px;
+  width: 100%;
   position: absolute;
-  width: 75%;
   left: 0;
   right: 0;
   top: 0;
@@ -169,9 +169,6 @@ footer {
   }
 
   @include media('md-up') {
-    top: 0;
-    left: 0;
-
     > img {
       max-height: unset;
     }
@@ -183,18 +180,9 @@ footer {
   top: 35%;
   right: 0;
 
-  > img {
-    max-height: 7rem;
-    object-fit: cover;
-  }
-
   @include media('md-up') {
     top: 0;
     right: 7%;
-
-    > img {
-      max-height: unset;
-    }
   }
 }
 
@@ -219,8 +207,7 @@ footer {
 }
 
 .image-four-container {
-  margin-right: 40%;
-  
+
   @include media('md-up') {
     margin-left: 30%;
     margin-right: 0;
