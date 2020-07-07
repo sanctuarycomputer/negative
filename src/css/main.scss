@@ -381,12 +381,11 @@ tr:last-of-type {
   }
 
   @include media('sm-up') {
-    top: 40%;
+    top: 15%;
   }
 
   @include media('md-up') {
-    top: 43%;
-    left: 30%;
+    left: 40%;
   }
 }
 
@@ -406,6 +405,39 @@ tr:last-of-type {
 .clients-technologies-caption {
   @include media('lg-up') {
     margin-top: 60%;
+  }
+}
+
+.clients-section-one-container {
+  height: 100rem;
+
+  @include media('sm-up') {
+    height: 130rem;
+  }
+
+  @include media('md-up') {
+    height: 60rem;
+  }
+
+  @include media('xl-up') {
+    height: 70rem;
+  }
+
+  @include media('xxl-up') {
+    height: 80rem;
+  }
+
+  @include media('xxxl-up') {
+    height: 100rem;
+  }
+}
+
+.clients-image-two-container {
+  top: 45%;
+
+  @include media('md-up') {
+    top: 0;
+    right: 0;
   }
 }
 
