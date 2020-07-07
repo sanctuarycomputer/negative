@@ -88,12 +88,17 @@ header {
 button {
   @extend %text-button;
   padding: 10px 20px;
+  width: 12.22rem;
   background-color: transparent;
   border-width: 1px;
   border-color: black;
   border-style: solid;
   border-radius: 999px;
   cursor: pointer;
+
+  @include media('lg-up') {
+    width: 14.44rem;
+  }
 }
 
 footer {

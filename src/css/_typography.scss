@@ -25,7 +25,7 @@ $austin:  'Austin News Deck Web', serif;
   font-style: italic;
 }
 
-.text-title, h1, h2, h3, h4, h5, p.serif {
+.text-title, .text-intro, h1, h2, h3, h4, h5, p.serif {
   font-weight: 100;
 }
 
@@ -51,7 +51,7 @@ p.sans-serif, li.sans-serif {
 }
 
 .text-title {
-  font-size: 9vw;
+  font-size: 7vw;
   line-height: auto;
 
   @include media('md-up') {
