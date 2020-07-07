@@ -108,6 +108,20 @@ footer {
 }
 
 //Index
+
+.map-container {
+  position: relative;
+  width: 70vw;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include media('md-up') {
+    width: 45vw;
+  }
+}
+
 .studio {
   margin-top: 12vh;
   z-index: 1;
@@ -118,11 +132,32 @@ footer {
 }
 
 .negative {
-  margin-top: 12vh;
   z-index: 1;
 
   @include media('md-up') {
     margin-top: 40vh;
+  }
+}
+
+.header-image-container {
+  top: 55%;
+  left: 50%;
+  max-height: 8.61rem;
+  transform: translate(-50%, -50%);
+
+  > img {
+    object-fit: contain;
+  }
+
+  @include media('md-up') {
+    max-height: 13.94rem;
+    top: 50%;
+    left: 35%;
+  }
+
+  @include media('xl-up') {
+    top: 45%;
+    left: 35%;
   }
 }
 
