@@ -86,13 +86,21 @@ header {
 }
 
 .studio {
-  margin-top: 40vh;
+  margin-top: 12vh;
   z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 40vh;
+  }
 }
 
 .negative {
-  margin-top: 40vh;
+  margin-top: 12vh;
   z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 40vh;
+  }
 }
 
 img.globe {
