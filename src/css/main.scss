@@ -85,24 +85,6 @@ header {
   }
 }
 
-.studio {
-  margin-top: 12vh;
-  z-index: 1;
-
-  @include media('md-up') {
-    margin-top: 40vh;
-  }
-}
-
-.negative {
-  margin-top: 12vh;
-  z-index: 1;
-
-  @include media('md-up') {
-    margin-top: 40vh;
-  }
-}
-
 img.globe {
   max-width: 800px;
   width: 100%;
@@ -135,11 +117,19 @@ footer {
 .studio {
   margin-top: 12vh;
   z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 40vh;
+  }
 }
 
 .negative {
-  margin-top: 45vh;
+  margin-top: 12vh;
   z-index: 1;
+
+  @include media('md-up') {
+    margin-top: 40vh;
+  }
 }
 
 .index-section-one-container {
