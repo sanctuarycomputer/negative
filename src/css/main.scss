@@ -85,17 +85,6 @@ header {
   }
 }
 
-img.globe {
-  max-width: 800px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: auto;
-  bottom: 0;
-}
-
 button {
   @extend %text-button;
   padding: 10px 20px;
