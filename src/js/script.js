@@ -16,7 +16,7 @@ const addActiveClassToFooterMenuLink = () => {
   };
   
   if (currentPathname === clientsPathname) {
-    clientsFooterLink = document.getElementsByClassName('nav-clients')[0].classList.add('italic', 'footer-menu-active-link');
+    document.getElementsByClassName('nav-clients')[0].classList.add('italic', 'footer-menu-active-link');
   };
   
   if (currentPathname === resourcesPathname) {
