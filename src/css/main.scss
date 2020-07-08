@@ -53,7 +53,7 @@ header {
   max-width: 1440px;
 
   @include media('md-up') {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 }
 
@@ -81,7 +81,7 @@ header {
   margin-bottom: 5rem;
 
   @include media('md-up') {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 }
 
@@ -98,12 +98,14 @@ button {
   transition: all ease-in-out 0.18s;
 
   &:hover {
+    width: 16rem;
     background-color: color('black');
     color: color('white');
   }
 
-  @include media('lg-up') {
+  @include media('md-up') {
     padding: 6px 20px;
+    width: 16rem;
   }
 }
 
@@ -166,86 +168,15 @@ footer {
   }
 }
 
-.index-section-one-container {
-  height: 90rem;
-
-  @include media('sm-up') {
-    height: 100rem;
-  }
-
-  @include media('md-up') {
-    height: 75rem;
-  }
-
-  @include media('xl-up') {
-    height: 90rem;
-  }
-
-  @include media('xxxl-up') {
-    height: 100rem;
-  }
-
-  @include media('xxxxl-up') {
-    height: 120rem;
-  }
-}
-
-.index-image-one-container {
-  margin-bottom: 10rem;
-  top: 0;
-  left: 0;
-
-  > div > img {
-    max-height: 8.44rem;
-    object-fit: cover;
-
-    @include media('md-up') {
-      max-height: unset;
-    }
-  }
-}
-
 .index-image-two-container {
-  margin-bottom: 10rem;
-  top: 35%;
-  right: 0;
-
   @include media('md-up') {
-    top: 0;
-    right: 7%;
+    margin-top: 8.3rem;
   }
 }
 
-.index-image-three-container {
-  margin-top: 10rem;    
-  bottom: 0;
-  left: 0;
-
-  > img {
-    max-height: 17.77rem;
-    object-fit: cover;
-  }
-
+.index-image-seven-container {
   @include media('md-up') {
-    bottom: 0;
-    left: 50%;
-
-    > img {
-      max-height: unset;
-    }
-  }
-}
-
-.index-image-four-container {
-  @include media('md-up') {
-    margin-left: 30%;
-    margin-right: 0;
-  }
-}
-
-.index-image-five-container {
-  @include media('md-up') {
-    margin-left: 12%;
+    margin-top: 20rem;
   }
 }
 
@@ -284,7 +215,7 @@ footer {
 
   @include media('md-up') {
     top: 15%;
-    left: 30%;
+    left: 35%;
   }
 }
 
@@ -368,11 +299,15 @@ tr:last-of-type {
   > div > a {
     color: color('black');
     text-decoration: none;
+
+    &:hover {
+      color: color('gray')
+    }
   }
 }
 
 .footer-menu-active-link {
-  color: color('gray-light')!important;
+  color: color('gray')!important;
 }
 
 .color-img {

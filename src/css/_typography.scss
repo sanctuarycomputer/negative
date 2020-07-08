@@ -25,7 +25,7 @@ $austin:  'Austin News Deck Web', serif;
   font-style: italic;
 }
 
-.text-title, .text-intro, h1, h2, h3, h4, h5, p.serif {
+.text-title, .text-footer-md, h1, h2, h3, h4, h5, p.serif {
   font-weight: 100;
 }
 
@@ -46,7 +46,7 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-title, .text-intro, .text-subtitle, .text-menu, .text-caption {
+.text-title, .text-footer-md, .text-subtitle, .text-menu, .text-caption {
   font-family: $austin;
 }
 
@@ -56,16 +56,6 @@ p.sans-serif, li.sans-serif {
 
   @include media('md-up') {
     font-size: 6.5vw;
-  }
-}
-
-.text-intro {
-  font-size: 1.27rem;
-  line-height: 1.5rem;
-
-  @include media('md-up') {
-    font-size: 3.2rem;
-    line-height: 3.8rem;
   }
 }
 
@@ -108,6 +98,16 @@ p.sans-serif, li.sans-serif {
   @include media('md-up') {
     font-size: .77rem;
     line-height: 1.25rem;
+  }
+}
+
+.text-footer-md {
+  font-size: 1.27rem;
+  line-height: 1.5rem;
+
+  @include media('md-up') {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
   }
 }
 
