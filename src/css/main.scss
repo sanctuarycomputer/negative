@@ -41,6 +41,14 @@ header {
   }
 }
 
+.header {
+  margin-bottom: 5rem;
+
+  @include media('md-up') {
+    margin-bottom: 12rem;
+  }
+}
+
 .wrapper,
 .header {
   margin-left: 1.11rem;
@@ -53,7 +61,7 @@ header {
   max-width: 1440px;
 
   @include media('md-up') {
-    margin-bottom: 15rem;
+    margin-bottom: 12rem;
   }
 }
 
@@ -81,7 +89,7 @@ header {
   margin-bottom: 5rem;
 
   @include media('md-up') {
-    margin-bottom: 15rem;
+    margin-bottom: 12rem;
   }
 }
 

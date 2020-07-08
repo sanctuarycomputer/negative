@@ -25,6 +25,10 @@ $austin:  'Austin News Deck Web', serif;
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
 .text-title, .text-footer-md, h1, h2, h3, h4, h5, p.serif {
   font-weight: 100;
 }
