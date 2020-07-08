@@ -366,9 +366,13 @@ tr:last-of-type {
   padding-bottom: 10rem;
 
   > div > a {
+    color: color('black');
     text-decoration: none;
-    color: inherit;
   }
+}
+
+.footer-menu-active-link {
+  color: color('gray-light')!important;
 }
 
 .color-img {
