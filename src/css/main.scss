@@ -2,10 +2,6 @@
 @import '~@sanctucompu/basement/src/index';
 @import 'settings', 'reset', 'typography';
 
-header {
-  height: 100vh;
-}
-
 .headroom {
   position: fixed;
   z-index: 2;
@@ -42,6 +38,7 @@ header {
 }
 
 .header {
+  height: 100vh;
   margin-bottom: 5rem;
 
   @include media('md-up') {
