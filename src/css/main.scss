@@ -49,7 +49,7 @@ header {
 
 .content-container {
   display: flex;
-  margin-bottom: 4.33rem;
+  margin-bottom: 5rem;
   max-width: 1440px;
 
   @include media('md-up') {
@@ -78,7 +78,7 @@ header {
 
 .full-width-content-container {
   display: flex;
-  margin-bottom: 4.33rem;
+  margin-bottom: 5rem;
 
   @include media('md-up') {
     margin-bottom: 10rem;
@@ -95,9 +95,15 @@ button {
   border-style: solid;
   border-radius: 999px;
   cursor: pointer;
+  transition: all ease-in-out 0.18s;
+
+  &:hover {
+    background-color: color('black');
+    color: color('white');
+  }
 
   @include media('lg-up') {
-    width: 14.44rem;
+    padding: 6px 20px;
   }
 }
 
@@ -151,12 +157,11 @@ footer {
 
   @include media('md-up') {
     max-height: 13.94rem;
-    top: 50%;
+    top: 40vh;
     left: 35%;
   }
 
   @include media('xl-up') {
-    top: 45%;
     left: 35%;
   }
 }
@@ -190,13 +195,11 @@ footer {
   top: 0;
   left: 0;
 
-  > img {
+  > div > img {
     max-height: 8.44rem;
     object-fit: cover;
-  }
 
-  @include media('md-up') {
-    > img {
+    @include media('md-up') {
       max-height: unset;
     }
   }
@@ -365,5 +368,13 @@ tr:last-of-type {
   > div > a {
     text-decoration: none;
     color: inherit;
+  }
+}
+
+.color-img {
+  background-color: #0807fe;
+
+  > img {
+    mix-blend-mode: lighten;
   }
 }
