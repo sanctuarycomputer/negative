@@ -51,7 +51,7 @@ workflows:
   build:
     jobs:
       - build
-      - deploy-featurepeek
+      - deploy-featurepeek:
           requires:
             - build
           filters:
@@ -59,7 +59,7 @@ workflows:
               ignore:
                 - main
                 - production
-      - deploy-production
+      - deploy-production:
           requires:
             - build
           filters:
