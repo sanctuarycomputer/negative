@@ -328,10 +328,11 @@ tr:last-of-type {
 }
 
 .offsets-caption {
-  bottom: 5%;
+  bottom: -5%;
   right: 1.112rem;
 
   @include media('md-up') {
+    bottom: 5%;
     right: 20%;
   }
 
@@ -402,10 +403,11 @@ tr:last-of-type {
 }
 
 .clients-caption {
-  bottom: 5%;
+  bottom: -5%;
   right: 1.112rem;
 
   @include media('md-up') {
+    bottom: 5%;
     right: 20%;
   }
 
