@@ -81,6 +81,12 @@
   }
 }
 
+.column-margin-padding-left {
+  @include media('md-up') {
+    padding-left: 2.3%;
+  }
+}
+
 .full-width-content-container {
   display: flex;
   margin-bottom: 5rem;
@@ -274,9 +280,15 @@ footer {
   }
 }
 
+.emissions-image-two-container {
+  @include media('md-up') {
+    margin-top: 20rem;
+  }
+}
+
 .emissions-image-four-container {
   @include media('md-up') {
-    margin-top: -10%;
+    margin-top: 15rem;
   }
 }
 
@@ -337,11 +349,5 @@ tr:last-of-type {
 
   > img {
     mix-blend-mode: lighten;
-  }
-}
-
-.column-margin-padding-left {
-  @include media('md-up') {
-    padding-left: 2.3%;
   }
 }
