@@ -47,7 +47,7 @@ jobs:
       - run: aws s3 sync dist s3://computer-sanctuary-negative/ --delete
       - run: aws s3 cp dist/index.html s3://computer-sanctuary-negative/index.html --cache-control max-age=0 --content-type "text/html"
       - run: aws s3 cp dist/emissions.html s3://computer-sanctuary-negative/emissions --cache-control max-age=0 --content-type "text/html"
-      - run: aws s3 cp dist/offsetting.html s3://computer-sanctuary-negative/offsetting--cache-control max-age=0 --content-type "text/html"
+      - run: aws s3 cp dist/offsetting.html s3://computer-sanctuary-negative/offsetting --cache-control max-age=0 --content-type "text/html"
       - run: aws s3 cp dist/clients.html s3://computer-sanctuary-negative/clients --cache-control max-age=0 --content-type "text/html"
       - run: aws s3 cp dist/resources.html s3://computer-sanctuary-negative/resources --cache-control max-age=0 --content-type "text/html"
 
