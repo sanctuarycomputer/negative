@@ -448,6 +448,20 @@ tr:last-of-type {
   }
 }
 
+//Resources
+
+.resources-list {
+  > li > a {
+    color: color('black');
+    text-decoration: none;
+    transition: all ease-in-out 0.18s;
+
+    &:hover {
+      color: color('gray')
+    }
+  }
+}
+
 //Footer
 
 .footer-logo-container > img {
