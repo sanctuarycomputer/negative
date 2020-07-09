@@ -367,7 +367,6 @@ tr:last-of-type {
 //Helping Clients
 .helping {
   margin-top: 10vh;
-  z-index: 1;
 
   @include media('md-up') {
     margin-top: 25vh;
@@ -377,7 +376,6 @@ tr:last-of-type {
 
 .clients {
   margin-top: 70vh;
-  z-index: 1;
 
   @include media('sm-up') {
     margin-top: 65vh;
@@ -408,7 +406,6 @@ tr:last-of-type {
 
     > img {
       max-height: 21.0625rem;
-      object-fit: contain;
     }
   }
 
@@ -447,36 +444,10 @@ tr:last-of-type {
   }
 }
 
-.clients-section-one-container {
-  height: 100rem;
-
-  @include media('sm-up') {
-    height: 130rem;
-  }
+.clients-image-three-container {
 
   @include media('md-up') {
-    height: 60rem;
-  }
-
-  @include media('xl-up') {
-    height: 70rem;
-  }
-
-  @include media('xxl-up') {
-    height: 80rem;
-  }
-
-  @include media('xxxl-up') {
-    height: 100rem;
-  }
-}
-
-.clients-image-two-container {
-  top: 45%;
-
-  @include media('md-up') {
-    top: 0;
-    right: 0;
+    margin-top: -2%;
   }
 }
 
