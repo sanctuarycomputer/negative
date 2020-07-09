@@ -131,6 +131,7 @@ footer {
   transform: translate(-50%, -50%);
 
   @include media('md-up') {
+    top: 50;
     width: 45vw;
   }
 }
@@ -164,8 +165,12 @@ footer {
 
   @include media('md-up') {
     max-height: 13.94rem;
-    top: 40vh;
+    top: 55vh;
     left: 35%;
+  }
+
+  @include media('md-up') {
+    top: 40vh;
   }
 
   @include media('xl-up') {
