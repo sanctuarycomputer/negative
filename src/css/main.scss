@@ -414,8 +414,8 @@ tr:last-of-type {
     transform: translate(-50%, -50%);
   }
 
-  @include media('lg-up') {
-    top: 40%;
+  @include media('xl-up') {
+    top: 35%;
   }
 }
 
