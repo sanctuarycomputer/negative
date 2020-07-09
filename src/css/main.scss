@@ -191,7 +191,15 @@ footer {
   z-index: 1;
 
   @include media('md-up') {
+    margin-top: 35vh;
+  }
+
+  @include media('lg-up') {
     margin-top: 45vh;
+  }
+
+  @include media('xxl-up') {
+    margin-top: 50vh;
   }
 }
 
@@ -199,14 +207,22 @@ footer {
   margin-top: 55vh;
   z-index: 1;
 
+  @include media('sm-up') {
+    margin-top: 65vh;
+  }
+  
   @include media('md-up') {
     padding-right: 8%;
-    margin-top: 18vh;
+    margin-top: 25vh;
+  }
+
+  @include media('lg-up') {
+    margin-top: 30vh;
   }
 }
 
 .emissions-header-image-container {
-  top: 16%;
+  top: 19%;
   left: 1.112rem;
   max-height: 20rem;
 
@@ -215,7 +231,7 @@ footer {
   }
 
   @include media('sm-up') {
-    top: 19%;
+    top: 22%;
   }
 
   @include media('md-up') {
@@ -304,6 +320,7 @@ tr:last-of-type {
   > div > a {
     color: color('black');
     text-decoration: none;
+    transition: all ease-in-out 0.18s;
 
     &:hover {
       color: color('gray')
@@ -320,5 +337,11 @@ tr:last-of-type {
 
   > img {
     mix-blend-mode: lighten;
+  }
+}
+
+.column-margin-padding-left {
+  @include media('md-up') {
+    padding-left: 2.3%;
   }
 }
