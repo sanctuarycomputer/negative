@@ -131,7 +131,7 @@ footer {
   transform: translate(-50%, -50%);
 
   @include media('md-up') {
-    top: 50;
+    top: 50%;
     width: 40vw;
   }
 }
