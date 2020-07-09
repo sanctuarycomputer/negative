@@ -37,10 +37,6 @@
   }
 }
 
-.header {
-  height: 100vh;
-}
-
 .wrapper,
 .header {
   margin-left: 1.11rem;
@@ -123,9 +119,7 @@ footer {
 //Index
 
 .map-container {
-  position: relative;
   width: 90vw;
-  overflow: hidden;
   top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -138,7 +132,6 @@ footer {
 
 .studio {
   margin-top: 12vh;
-  z-index: 1;
 
   @include media('md-up') {
     margin-top: 40vh;
@@ -146,8 +139,6 @@ footer {
 }
 
 .negative {
-  z-index: 1;
-
   @include media('md-up') {
     margin-top: 40vh;
   }
@@ -158,10 +149,6 @@ footer {
   left: 38%;
   max-height: 8.61rem;
   transform: translate(-50%, -50%);
-
-  > img {
-    object-fit: contain;
-  }
 
   @include media('md-up') {
     max-height: 13.94rem;
@@ -193,7 +180,6 @@ footer {
 //Calculating Emissions
 .calculating {
   margin-top: 10vh;
-  z-index: 1;
 
   @include media('md-up') {
     margin-top: 35vh;
@@ -210,7 +196,6 @@ footer {
 
 .emissions {
   margin-top: 60vh;
-  z-index: 1;
 
   @include media('sm-up') {
     margin-top: 65vh;
@@ -231,10 +216,6 @@ footer {
   left: 6%;
   left: 1.112rem;
   max-height: 20rem;
-
-  > img {
-    object-fit: cover;
-  }
 
   @include media('sm-up') {
     top: 22%;
@@ -316,7 +297,7 @@ tr:last-of-type {
 .footer-logo-container > img {
 
   @include media('sm-down') {
-    max-width: 62px;
+    max-width: 3.44rem;
   }
 }
 
