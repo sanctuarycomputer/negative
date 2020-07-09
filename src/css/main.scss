@@ -309,10 +309,9 @@ tr:last-of-type {
 //Footer
 
 .footer-logo-container > img {
-  max-width: 62px;
 
-  @include media('md-up') {
-    max-width: unset;
+  @include media('sm-down') {
+    max-width: 62px;
   }
 }
 
