@@ -6,7 +6,7 @@ defaults: &defaults
     - image: circleci/node:10-browsers
 
 jobs:
-  deploy-featurepeek:
+  build:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -21,15 +21,47 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: NODE_ENV=production CI="" yarn build
       - persist_to_workspace:
           root: .
           paths: .
-      - run: NODE_ENV=production CI="" yarn build
+
+  deploy-featurepeek:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/negative
+      - checkout
       - run:
           name: Create Preview Link
           command: bash <(curl -s https://peek.run/ci)
 
+  deploy-production:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/negative
+      - checkout
+      - run: sudo apt-get install python-dev python-pip
+      - run: sudo pip install awscli
+      - run: aws s3 sync _site s3://computer-sanctuary-negative/ --delete
+      - run: aws s3 cp _site/index.html s3://computer-sanctuary-negative/ --cache-control max-age=0
+
 workflows:
   build:
     jobs:
+      - build
       - deploy-featurepeek
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - main
+                - production
+      - deploy-production
+          requires:
+            - build
+          filters:
+            branches:
+              only: production
