@@ -323,45 +323,38 @@ tr:last-of-type {
 }
 
 .offsets {
-  margin-top: 55vh;
+  margin-top: 50vh;
   z-index: 1;
 
+  @include media('sm-down') {
+    display: flex;
+    justify-content: flex-end;
+  };
+
+  @include media('sm-up') {
+    margin-top: 65vh;
+  }
+
   @include media('md-up') {
-    margin-top: 50vh;
-    padding-right: 18%;
+    margin-top: 30vh;
   }
 }
 
 .offsets-header-image-container {
-  top: 32%;
+  top: 25%;
   right: 1.112rem;
-  max-height: 20rem;
-
-  > img {
-    object-fit: cover;
-  }
-
-  @include media('sm-up') {
-    top: 40%;
-  }
 
   @include media('md-up') {
-    top: 43%;
     left: 30%;
+    top: 25%;
   }
 }
 
 .offsets-caption {
   bottom: -5%;
-  right: 1.112rem;
 
   @include media('md-up') {
     bottom: 5%;
-    right: 20%;
-  }
-
-  @include media('xl-up') {
-    right: 15%;
   }
 }
 
