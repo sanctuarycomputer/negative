@@ -39,11 +39,6 @@
 
 .header {
   height: 100vh;
-  margin-bottom: 5rem;
-
-  @include media('md-up') {
-    margin-bottom: 12rem;
-  }
 }
 
 .wrapper,
@@ -98,7 +93,7 @@
 
 button {
   @extend %text-button;
-  padding: 10px 20px;
+  padding: 6px 20px;
   width: 12.22rem;
   background-color: transparent;
   border-width: 1px;
@@ -115,7 +110,6 @@ button {
   }
 
   @include media('md-up') {
-    padding: 6px 20px;
     width: 16rem;
   }
 }
@@ -130,7 +124,7 @@ footer {
 
 .map-container {
   position: relative;
-  width: 70vw;
+  width: 80vw;
   overflow: hidden;
   top: 50%;
   left: 50%;
@@ -210,7 +204,7 @@ footer {
 }
 
 .emissions {
-  margin-top: 55vh;
+  margin-top: 60vh;
   z-index: 1;
 
   @include media('sm-up') {
@@ -218,8 +212,8 @@ footer {
   }
   
   @include media('md-up') {
-    padding-right: 8%;
     margin-top: 25vh;
+    padding-right: 8%;
   }
 
   @include media('lg-up') {
@@ -228,7 +222,8 @@ footer {
 }
 
 .emissions-header-image-container {
-  top: 19%;
+  top: 23%;
+  left: 6%;
   left: 1.112rem;
   max-height: 20rem;
 
@@ -247,10 +242,11 @@ footer {
 }
 
 .emissions-caption {
-  bottom: 5%;
+  bottom: -5%;
   right: 1.112rem;
 
   @include media('md-up') {
+    bottom: 5%;
     right: 20%;
   }
 

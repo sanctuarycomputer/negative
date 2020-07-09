@@ -86,7 +86,7 @@ p.sans-serif, li.sans-serif {
 .text-button,
 %text-button {
   font-family: $atlas;
-  font-size: 0.5rem;
+  font-size: 0.66rem;
 
   @include media('md-up') {
     font-size: .77rem;
@@ -97,11 +97,11 @@ p.sans-serif, li.sans-serif {
   font-weight: 100;
   font-size: 0.6rem;
   line-height: 0.8rem;
-  letter-spacing: 1px;
+  letter-spacing: .75px;
 
   @include media('md-up') {
-    font-size: .77rem;
-    line-height: 1.25rem;
+    font-size: 0.77rem;
+    line-height: 1.1rem;
   }
 }
 
@@ -118,7 +118,7 @@ p.sans-serif, li.sans-serif {
 .text-footer-sm {
   font-family: $atlas;
   font-size: 0.61rem;
-  line-height: 8.33rem;
+  line-height: 0.66rem;
 
   @include media('md-up') {
     font-size: 0.77rem;
@@ -138,8 +138,8 @@ p.sans-serif, li.sans-serif {
 }
 
 .text-paragraph {
-  font-size: .66rem;
-  line-height: 1.2rem;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
 
   @include media('md-up') {
     font-size: 1rem;
@@ -150,7 +150,7 @@ p.sans-serif, li.sans-serif {
 
 .text-details {
   font-family: $atlas;
-  font-size: 0.6rem;
+  font-size: 0.66rem;
 
   @include media('md-up') {
     font-size: 0.77rem;
@@ -162,8 +162,8 @@ ol {
 }
 
 .list-number {
-  min-width: 3.83rem;
-  max-width: 3.83rem;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
 }
 
 .caption-number {
