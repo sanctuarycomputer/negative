@@ -2,20 +2,13 @@
 @import '~@sanctucompu/basement/src/index';
 @import 'settings', 'reset', 'typography';
 
-.view {
+.view, .globe {
   @extend %transition-short;
 
   &--menu-is-active {
     transform: translate3d(0, 5rem, 0);
     transform-style: preserve-3d;
   }
-}
-
-.headroom {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 10px;
 }
 
 .menu {
@@ -235,7 +228,7 @@ footer {
   transform: translate(-50%, -50%);
 
   @include media('md-up') {
-    top: 50%;
+    // top: 50%;
     width: 40vw;
   }
 }
@@ -255,7 +248,7 @@ footer {
 }
 
 .header-image-container {
-  z-index: 3;
+  z-index: 4;
   top: 60%;
   left: 38%;
   max-height: 8.61rem;
