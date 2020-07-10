@@ -323,8 +323,12 @@ tr:last-of-type {
 
   @include media('md-up') {
     left: 50%;
-    top: 25%;
+    top: 38%;
     transform: translate(-50%, -50%);
+  }
+
+  @include media('xl-up') {
+    top: 45%;
   }
 }
 
