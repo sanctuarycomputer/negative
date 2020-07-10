@@ -34,11 +34,34 @@ const addActiveClassToFooterMenuLink = () => {
 //Nav
 
 const navMenuButton = document.getElementById('nav-menu-button');
-navMenuButton.addEventListener('click', toggleMenu);
+// navMenuButton.addEventListener('click', toggleMenu);
 
-const toggleMenu = () => {
-  console.log('menu button clicked')
-  // document.getElementById("demo").innerHTML = "menu opens here";
+// function addEvent(element, evnt, funct){
+//   if (element.attachEvent)
+//    return element.attachEvent('on'+evnt, funct);
+//   else
+//    return element.addEventListener(evnt, funct, false);
+// }
+
+// // example
+// addEvent(
+//     document.getElementById('nav-menu-button'),
+//     'click',
+//     function () { alert('hi!'); }
+// );
+
+const addEventListeners = () => {
+  document.getElementById('nav-menu-button'),
+  'click',
+  function () { alert('hi!'); }
 }
 
-window.onload = addActiveClassToFooterMenuLink();
+
+// const toggleMenu = () => {
+//   console.log('menu button clicked')
+//   // document.getElementById("demo").innerHTML = "menu opens here";
+// }
+
+addEventListeners();
+window.onload = addEventListeners();
+// window.onload = addActiveClassToFooterMenuLink();
