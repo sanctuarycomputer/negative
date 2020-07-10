@@ -61,49 +61,68 @@
     <!-- End Weathermap -->
 
 <!-- Start Menu -->
-<div class="drawer">
-
-  <div class="h100 content pt1">
-    <div class="clearfix inner mxauto">
-      <div class="flex justify-between clearfix mb2">
-        <div class="col col-6">
-          <p class="text-menu serif"><span class="italic mr_25">Studio</span>Carbon Negative</p>
+<nav>
+  <div class="main-nav fixed t0 r0 l0 flex justify-center bg-color-white">
+    <div class="flex col-6 items-center">
+      <button id="studio-carbon-negative-nav-button" class="button--style-nav text-menu-md serif studio-carbon-negative-nav-button studio-carbon-negative-nav-button--inactive">
+        <a class="text-menu-md" href="index.html"><span class="italic mr_25">Studio</span><span>Carbon Negative</span></a>
+      </button>
+    </div>
+    <div class="flex col-6 flex justify-end">
+      <button id="nav-menu-button" class="button--style-nav italic text-menu-md serif">
+        Menu
+      </button>
+    </div>
+  </div>
+  
+  <div id="menu" class="menu menu--inactive">
+  
+    <div class="h100 bg-color-white">
+        
+      <div class="inner-nav flex md:mb2_5">
+        <div class="flex flex-row justify-between md:off-6 md:col-6">
+          <div class="md:col-4 flex items-center md:pl2_5">
+            <div class="text-menu-md serif">
+              Table of Contents
+            </div>
+          </div>
+          <div class="md:col-4 flex justify-end">
+            <button id="nav-close-button" class="button--style-nav italic text-menu-md serif">
+              Close
+            </button>
+          </div>
         </div>
-        <div class="col col-6 flex justify-end">
-          <button id="nav-menu-button" class="button--style-nav italic text-menu-md serif">
-            Menu
-          </button>
-        </div>
+       
       </div>
-
-      <div class="text-menu-lg serif md:col-6 md:off-6 links clearfix mb2">
-        <div>
-          <p>Studio Carbon Negative</p>
+  
+      <div class="inner-menu mxauto">
+        <div class="text-menu-lg serif md:col-6 md:off-6 links mb1 md:mb2 md:pl2_5">
+          <div>
+            <button class="button--style-nav"><a href="index.html">Studio Carbon Negative</a></button>
+          </div>
+          <div>
+            <button class="button--style-nav"><a href="emissions.html">Calculating Emissions</a</button>
+          </div>
+          <div>
+            <button class="button--style-nav"><a href="offsetting.html">Buying Offsets</a</button>
+          </div>
+          <div>
+            <button class="button--style-nav"><a href="clients.html">Helping Clients</a</button>
+          </div>
+          <div>
+            <button class="button--style-nav"><a href="resources.html">Resources</a></button>
+          </div>
         </div>
-        <div>
-          <p>Calculating Emissions</p>
-        </div>
-        <div>
-          <p>Buying Offsets</p>
-        </div>
-        <div>
-          <p>Helping Clients</p>
-        </div>
-        <div>
-          <p>Resources</p>
-        </div>
-      </div>
-
-      <div class="mb4 md:col-6 md:off-6">
-        <div class="">
+        <div class="md:col-6 md:off-6 md:pl2_5">
           <a href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5"><button class="button--style-primary">&rarr; See Our 2019 Report</button></a>
         </div>
       </div>
+        
+      </div>
+      <div class="fade"></div>
     </div>
-  </div>
+</nav>
 
-  <div class="fade"></div>
-</div>
 <!-- End Menu -->
 
     <!-- Start Page Content -->

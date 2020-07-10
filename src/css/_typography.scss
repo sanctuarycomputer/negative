@@ -73,7 +73,10 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-menu-lg {
+.text-menu-lg,
+%text-menu-lg {
+  font-family: $austin;
+  font-weight: 100;
   font-size: 9vw;
   line-height: 11vw;
 

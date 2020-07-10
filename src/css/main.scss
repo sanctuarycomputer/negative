@@ -9,29 +9,73 @@
   padding: 10px;
 }
 
-.drawer {
+.menu {
+  @extend %transition;
   position: fixed;
   z-index: 4;
   width: 100%;
-  height: 50vh;
+  height: 32rem;
 
-  .content {
-    background-color: white;
+  &--inactive {
+    transform: translate3d(0, -32rem, 0);
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
 
-    .inner {
-      @include media('md-up') {
-        margin-left: 1.66rem;
-        margin-right: 1.66rem;
-      }
-    }
+  &--active {
+    z-index: 800;
+    opacity: 1;
   }
 
   .fade {
     background: linear-gradient(to bottom,#fff 0,#0000 100%);
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 5rem;
+    height: 10rem;
+  }
+}
+
+.main-nav,
+.inner-nav {
+  button {
+    @extend %transition-short;
+    &:hover {
+      color: color('gray')
+    }
+  }
+
+  @include media('md-up') {
+    height: 4.55rem;
+    padding-left: 1.66rem;
+    padding-right: 1.66rem;
+  }
+}
+
+.main-nav {
+  z-index: 700;
+  background: linear-gradient(to bottom,#fff 0,#0000 100%);
+}
+
+.studio-carbon-negative-nav-button {
+  @extend %transition;
+
+  &--inactive {
+    transform: translate3d(0, -2rem, 0);
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.inner-menu {
+  max-width: 80rem;
+
+  button > a {
+    @extend %text-menu-lg;
   }
 }
 
@@ -91,10 +135,22 @@ button {
 
 .button--style-nav {
   background-color: transparent;
+  padding: 0;
+
+  > a {
+    @extend %transition-short;
+    text-decoration: none;
+    color: color('black');
+
+    &:hover {
+      color: color('gray')
+    }
+  }
 }
 
 .button--style-primary {
   @extend %text-button;
+  @extend %transition-short;
   padding: 6px 20px;
   width: 12.22rem;
   background-color: transparent;
@@ -103,7 +159,6 @@ button {
   border-style: solid;
   border-radius: 999px;
   cursor: pointer;
-  transition: all ease-in-out 0.18s;
 
   &:hover {
     width: 16rem;
@@ -447,9 +502,9 @@ tr:last-of-type {
 
 .resources-list {
   > li > a {
+    @extend %transition-short;
     color: color('black');
     text-decoration: none;
-    transition: all ease-in-out 0.18s;
 
     &:hover {
       color: color('gray')
@@ -487,7 +542,7 @@ tr:last-of-type {
   > div > a {
     color: color('black');
     text-decoration: none;
-    transition: all ease-in-out 0.18s;
+    @extend %transition-short;
 
     &:hover {
       color: color('gray')

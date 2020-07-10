@@ -1,14 +1,8 @@
-$transition-duration-shorter: 0.18s;
-$transition-duration-short: 0.4s;
+$transition-duration-short: 0.18s;
 $transition-duration-medium: 0.5s;
 $transition-duration-long: 1s;
 $transition-easing: ease-in-out;
 $transition: $transition-duration-short $transition-easing;
-
-.transition-shorter,
-%transition-shorter {
-  transition: all $transition-duration-shorter $transition-easing;
-}
 
 .transition-short,
 %transition-short {
