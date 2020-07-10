@@ -32,36 +32,38 @@ const addActiveClassToFooterMenuLink = () => {
 
 
 //Nav
-
 const navMenuButton = document.getElementById('nav-menu-button');
-// navMenuButton.addEventListener('click', toggleMenu);
+const navCloseButton = document.getElementById('nav-close-button');
+const menu = document.getElementById('menu');
+const studioCarbonNegativeNavButton = document.getElementById('studio-carbon-negative-nav-button');
 
-// function addEvent(element, evnt, funct){
-//   if (element.attachEvent)
-//    return element.attachEvent('on'+evnt, funct);
-//   else
-//    return element.addEventListener(evnt, funct, false);
-// }
+const activeMenu = () => {
+  menu.classList.remove('menu--inactive');
+  menu.classList.add('menu--active');
+};
 
-// // example
-// addEvent(
-//     document.getElementById('nav-menu-button'),
-//     'click',
-//     function () { alert('hi!'); }
-// );
+const closeMenu = () => {
+  menu.classList.remove('menu--active');
+  menu.classList.add('menu--inactive');
+};
 
-const addEventListeners = () => {
-  document.getElementById('nav-menu-button'),
-  'click',
-  function () { alert('hi!'); }
-}
+const handleNavScroll = () => {
+  const scrollTop = document.documentElement.scrollTop;
+
+  if (scrollTop > 400) {
+    studioCarbonNegativeNavButton.classList.remove('studio-carbon-negative-nav-button--inactive');
+    studioCarbonNegativeNavButton.classList.add('studio-carbon-negative-nav-button--active');
+  }
+
+  if (scrollTop < 400) {
+    studioCarbonNegativeNavButton.classList.remove('studio-carbon-negative-nav-button--active');
+    studioCarbonNegativeNavButton.classList.add('studio-carbon-negative-nav-button--inactive');
+  }
+};
 
 
-// const toggleMenu = () => {
-//   console.log('menu button clicked')
-//   // document.getElementById("demo").innerHTML = "menu opens here";
-// }
+navMenuButton.addEventListener('click', activeMenu);
+navCloseButton.addEventListener('click', closeMenu);
+window.addEventListener('scroll', handleNavScroll);
 
-addEventListeners();
-window.onload = addEventListeners();
-// window.onload = addActiveClassToFooterMenuLink();
+window.onload = addActiveClassToFooterMenuLink();
