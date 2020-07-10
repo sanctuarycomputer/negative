@@ -36,15 +36,18 @@ const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
 const studioCarbonNegativeNavButton = document.getElementById('studio-carbon-negative-nav-button');
+const view = document.getElementsByClassName('view')[0];
 
 const activeMenu = () => {
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
+  view.classList.add('view--menu-is-active');
 };
 
 const closeMenu = () => {
   menu.classList.remove('menu--active');
   menu.classList.add('menu--inactive');
+  view.classList.remove('view--menu-is-active');
 };
 
 const handleNavScroll = () => {
