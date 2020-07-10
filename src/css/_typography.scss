@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-.text-title, .text-footer-md, h1, h2, h3, h4, h5, p.serif {
+.text-title, .text-menu-lg, h1, h2, h3, h4, h5, p.serif {
   font-weight: 100;
 }
 
@@ -50,7 +50,7 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-title, .text-footer-md, .text-subtitle, .text-menu, .text-caption {
+.text-title, .text-menu-lg, .text-subtitle, .text-menu, .text-caption {
   font-family: $austin;
 }
 
@@ -73,7 +73,17 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-menu {
+.text-menu-lg {
+  font-size: 9vw;
+  line-height: 11vw;
+
+  @include media('md-up') {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+.text-menu-md {
   font-size: 0.8rem;
   line-height: 1.2rem;
   font-weight: 100;
@@ -103,16 +113,6 @@ p.sans-serif, li.sans-serif {
   @include media('md-up') {
     font-size: 0.77rem;
     line-height: 1.1rem;
-  }
-}
-
-.text-footer-md {
-  font-size: 9vw;
-  line-height: 11vw;
-
-  @include media('md-up') {
-    font-size: 3.2rem;
-    line-height: 3.8rem;
   }
 }
 
