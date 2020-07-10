@@ -14,23 +14,11 @@
     <!-- Start Weathermap -->
     <style>
       .background-slide {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100%;
         pointer-events: none;
         opacity: 1;
-      }
-      .map-container {
-        position: relative;
-        width: 80%;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: opacity 450ms ease-in-out;
-      }
-      .map-container.faded {
-        opacity: 0.1;
       }
       .map-container:before {
         content: "";
@@ -38,7 +26,7 @@
         padding-top: 100%;
       }
       .map-container .map {
-        position:  absolute;
+        position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
@@ -53,152 +41,205 @@
       .map img {
         width: 100%;
         height: 100%;
-        -webkit-animation:spin 400s linear infinite;
-        -moz-animation:spin 400s linear infinite;
-        animation:spin 400s linear infinite;
+        -webkit-animation:spin 100s linear infinite;
+        -moz-animation:spin 100s linear infinite;
+        animation:spin 100s linear infinite;
       }
       @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
       @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
       @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
     <div class="background-slide">
-      <div class="map-container faded">
+      <div class="map-container relative overflow-hidden">
         <div class="map">
-          <img class="globe" src="img/globe.svg" />
+          <img class="globe" src="img/earth.jpg" alt="Earth" />
           <canvas id="map-canvas"></canvas>
         </div>
       </div>
     </div>
     <!-- End Weathermap -->
 
-    <!-- Start Menu -->
-    <div class="headroom">
-      <p class="serif">Menu</p>
-    </div>
-    <div class="drawer">
-
-      <div class="content pt1">
-        <div class="clearfix inner mxauto">
-          <div class="clearfix mb2">
-            <div class="col col-6">
-              <p class="serif">Close</p>
-            </div>
-            <div class="col col-6">
-              <p class="serif">Table of Contents</p>
-            </div>
-          </div>
-
-          <div class="links clearfix mb2">
-            <div class="col off-6 col-6">
-              <p class="serif">Studio Carbon Negative</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Calculating Emissions</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Buying Offsets</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Helping Clients</p>
-            </div>
-            <div class="col off-6 col-6">
-              <p class="serif">Resources</p>
-            </div>
-          </div>
-
-          <div class="mb4">
-            <div class="col off-6 col-6">
-              <p class="sans-serif">⭢ See our 2019 Report</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <!-- TO-DO: add menu. Start Menu -->
       <div class="fade"></div>
-    </div>
     <!-- End Menu -->
 
     <!-- Start Page Content -->
-    <header class="mx1 mb6">
-      <div class="studio col col-6 relative">
-        <h1 class="serif italic">
+    <header class="header vh100 md:mb6">
+      <div class="studio z1 col col-12 text-center md:text-left md:col-6 relative">
+        <h1 class="text-title serif italic">
           Studio
         </h1>
       </div>
-      <div class="negative col col-6 text-right relative">
-        <h1 class="serif">
+      <div class="header-image-container absolute col-5 md:col-2">
+        <img class="fit-contain h100 w100" src="img/placeholder/italy.jpg" alt="Venice, Italy"/>
+      </div>
+      <div class="negative z1 col col-12 md:col-6 text-center md:text-right relative">
+        <h1 class="text-title serif">
           Carbon Negative
         </h1>
       </div>
     </header>
 
-    <div class="wrapper mxauto">
-      <section class="clearfix mx1 mb8">
-        <div class="col col-12 sm:col-10 md:col-8 lg:col-6">
-          <h2 class="serif mb2">
-            As Sanctuary Computer approaches its fourth loop around the sun, we're taking a chance to look  inward, and critically assess our standing. Our earth is on fire; we're taking stock. Everything we build causes damage - do we deserve to exist? 
+    <div class="wrapper">
+      <section class="content-container mxauto">
+        <div class="md:col-6 md:off-6">
+          <h2 class="text-subtitle serif mb1 md:mb2">
+            As Sanctuary Computer approaches its fourth loop around the sun, we're taking a chance to look  inward, and critically assess our standing. Our earth is on fire; we're taking stock. Everything we build causes damage - do we deserve to exist?
           </h2>
-          <button>See Our 2019 Report ⭢</button>
+          <a href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5"><button>&rarr; See Our 2019 Report</button></a>
         </div>
       </section>
 
-      <section class="clearfix mx1 mb4">
-        <div class="col col-12 mb4">
-          <h2 class="serif">Why Carbon Negative?</h2>
+      <section class="full-width-content-container col-12 flex flex-col md:flex-row">
+        <div class="col-8 md:col-6 mb5 md:mb0">
+          <div class="md:col-6 md:off-4">
+            <img class="w100" src="img/placeholder/antarctica.jpg" alt="Antarctica"/>
+          </div>
+          <p class="md:col-6 md:off-4 text-caption mt_5">
+            <span class="caption-number">(1.)</span>Antarctica – <span class="color-gray-darker">A study published in Nature Geoscience in 2013 (online in December 2012) identified central West Antarctica as one of the fastest-warming regions on Earth. The researchers present a complete temperature record from Antarctica's Byrd Station and assert that it "reveals a linear increase in annual temperature between 1958 and 2010 by 2.4±1.2 °C</span>
+          </p>
         </div>
-        <div class="col col-12 sm:off-6 sm:col-6 md:col-5 lg:col-4">
-          <p class="sans-serif mb1">
-            Sanctuary Computer is a team of thoughtful individuals; and we agree it's no longer good enough to make yet another nice thing. We understand that if our company is going to continue to exist, we owe it to our community to justify our existence. From this point on, we're committed to measuring and reducing our carbon emissions where we can, and offsetting where we can not. We'll be encouraging peers and clients to do the same.
+        <div class="index-image-two-container col-8 md:col-6 off-4 md:off-0">
+          <div class="md:off-2">
+            <img class="md:col-4 w100" src="img/placeholder/yemen.jpg" alt="Yemen"/>
+          </div>
+          <p class="md:off-2 md:col-6 text-caption mt_5">
+            <span class="caption-number">(2.)</span>Yemen – <span class="color-gray-darker">The average Yemeni has access to only 140 cubic meters of water per year (101 gallons per day) for all uses, while the Middle Eastern average is 1000 m3/yr, and the internationally defined threshold for water stress is 1700 cubic meters per year.</span>
           </p>
-          <p class="sans-serif mb3">
-            In order to achieve a true net negative effect year over year, we'll be choosing offsets that are priced ethically (most carbon is too cheap), and can clearly prove additionality (most Renewable Energy Credits can not), basing that math on at least 150% of our previous year's emissions.
-          </p>
-          <button>See Calculating Carbon Emissions ⭢</button>
         </div>
       </section>
 
-      <section class="clearfix mx1 mb8">
-        <div class="col col-12 mb4">
-          <h2 class="serif">Our Commitment</h2>
+      <section class="content-container mxauto inner-content-padding-x flex-col">
+        <h3 class="text-subtitle serif mb3 lg:col-6">We decided to do better than neutral. We are going negative.</h3>
+        <p class="off-1 md:off-6 md:col-6 text-paragraph atlas">
+          Sanctuary Computer is a team of thoughtful individuals; and we're agreed. It's no longer good enough to make yet another nice thing. We understand that if our company is going to continue to exist, we owe it to our community to justify our existence. From this point on, we're committed to measuring and reducing our carbon emissions where we can, and offsetting where we can not. We'll be encouraging peers and clients to do the same. In order to achieve a true net negative effect year over year, we'll be choosing offsets that are priced ethically (most carbon is too cheap), and can clearly prove additionality (most RECs can not), basing that math on at least 150% of our previous year's emissions.
+        </p>
+        <a href="emissions.html"><button class="off-1 md:off-2 mt1 md:mt2">&rarr; View Calculating Emissions</button></a>
+      </section>
+    
+      <section class="full-width-content-container">
+        <div class="index-image-four-container col-8 md:col-3 md:off-4">
+          <img class="col-12 md:col-8 w100" src="img/placeholder/uae.jpg" alt="United Arab Emirates"/>
+          <p class="text-caption mt_5">
+            <span class="caption-number">(4.)</span>United Arab Emirates – <span class="color-gray-darker">In 2010, The Abu Dhabi Environmental Agency published an announcement which shows that 85% of UAE's population would be affected by rising sea levels as well as 90 percent of its infrastructure.</span>
+          </p>
         </div>
-        <div class="col col-12 sm:off-6 sm:col-6 md:col-5 lg:col-4">
-          <ol>
-            <li class="sans-serif mb2">Measure, reduce, and offset our studio's carbon emissions in order to matain carbon negative.</li>
-            <li class="sans-serif mb2">Set expectations with potential clients to meet certain sustainability criteria in order to partner with us.</li>
-            <li class="sans-serif mb2">Provide lightweight consulting to help our client’s build sustainability into their brand from day one.</li>
+      </section>
+
+      <section class="content-container mxauto inner-content-padding-x flex-col">
+        <h3 class="text-subtitle serif mb3 lg:col-6">It just takes a few steps to ensure a commitment to sustainability.</h3>
+        <ol class="off-1 md:off-6 text-paragraph atlas md:col-6">
+          <div class="flex flex-row space-between pb2 md:pb3">
+            <span class="list-number">(1.)</span>
+            <li>
+              Measure, reduce, and offset our studio's carbon emissions in order to become carbon negative.
+            </li>
+          </div>
+          <div class="flex flex-row space-between pb2 md:pb3">
+            <span class="list-number">(2.)</span>
+            <li>
+              Set expectations with potential clients to meet certain sustainability criteria in order to partner with us.
+            </li>
+          </div>
+          <div class="flex flex-row space-between pb2 md:pb3">
+            <span class="list-number">(3.)</span>
+            <li>
+              Provide lightweight consulting to help our client’s build sustainability into their brand from day one.
+            </li>
+          </div>
           </ol>
+      </section>
+
+      <section class="full-width-content-container flex-col-reverse md:flex-row">
+        <div class="col-8 md:col-6">
+          <div class="md:col-8 md:off-4 md:mt10">
+            <img class="w100" src="img/placeholder/jordan.jpg" alt="Jordan"/>
+          </div>
+          <p class="md:off-4 md:col-6 text-caption mt_5">
+            <span class="caption-number">(6.)</span>Jordan – <span class="color-gray-darker">If the temperature rises by 2 °C, even an increase in precipitation by 20% would not compensate the increase in evaporation resulting in a decrease of surface runoff.</span>
+          </p>
+        </div>
+        <div class="col-8 md:col-6 off-4 md:off-0 mb5 md:mb0">
+          <div class="md:off-2">
+            <img class="md:col-4 w100" src="img/placeholder/great-barrier-reef.jpg" alt="Great Barrier Reef"/>
+          </div>
+          <p class="md:col-6 md:off-2 text-caption mt_5">
+            <span class="caption-number">(5.)</span>Great Barrier Reef – <span class="color-gray-darker">As global warming continues, corals will not be able to keep up with increasing ocean temperatures. Coral bleaching events lead to increased disease susceptibility, which causes detrimental ecological effects for reef communities.</span>
+          </p>
         </div>
       </section>
 
-      <section class="clearfix mx1 mb8">
-        <div class="col col-12 mb4">
-          <h2 class="serif">Expecting More</h2>
+      <section class="content-container inner-content-padding-x mxauto flex-col">
+        <h3 class="text-subtitle serif mb3 lg:col-6">Expecting more from ourselves and helping inspire our clients.</h3>
+        <p class="off-1 md:off-6 text-paragraph mb2_5 atlas md:col-6">
+          We live and work in New York City, where a new DTC brand is released on what feels like a daily basis. Sanctuary is now after four years in the industry in a fortunate position to be able to say no to potential clients whose mission we don't align with. We're fortunate to work with incredible clients who are moving. 
+        </p>
+        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+          It also becomes our responsibility to challenge our clients to do the best that we collectively can when it comes to reducing their footprint on the planet. Additionally, we wanted to collect data on the amount of carbon emissions that the hardware products we work on release. Our first case study is the Light Phone.
+        </p>
+        <a href="clients.html"><button class="off-1 md:off-2 mt1 md:mt2">&rarr; View Helping Clients</button></a>
+      </section>
+
+      <section class="full-width-content-container flex-col md:flex-row">
+        <div class="col-8 off-4 md:off-0 md:col-6 mb5 md:mb0">
+          <img class="md:off-6 column-margin-padding-left md:col-6 w100" src="img/placeholder/haiti-a.jpg" alt="Haiti"/>
+          <p class="md:off-6 md:col-6 column-margin-padding-left text-caption mt_5">
+            <span class="caption-number">(4.)</span>Haiti – <span class="color-gray-darker">Haiti's forests covered 60% of the country as recently as 50 years ago, but today, according to more in-depth environmental analysis, the country yields approximately 30% tree cover, a stark difference from the often cited figure of 2% which has been widely circulated in discourse concerning Haiti. </span>
+          </p>
         </div>
-        <div class="col col-12 sm:off-6 sm:col-6 md:col-5 lg:col-4">
-          <p class="sans-serif mb1">
-            We live and work in New York City, where a new DTC brand is released on what feels like a daily basis. Sanctuary is now after four years in the industry in a fortunate position to be able to say no to potential clients whose mission we don't align with. We're fortunate to work with incredible clients who are moving.
+        <div class="col-8 md:col-6">
+          <img class="index-image-seven-container md:off-2 md:col-4 w100" src="img/placeholder/haiti-b.jpg" alt="Haiti"/>
+          <p class="md:col-6 md:off-2 text-caption mt_5">
+            <span class="caption-number">(4.)</span>Haiti – <span class="color-gray-darker">Haiti's forests covered 60% of the country as recently as 50 years ago, but today, according to more in-depth environmental analysis, the country yields approximately 30% tree cover, a stark difference from the often cited figure of 2% which has been widely circulated in discourse concerning Haiti. </span>
           </p>
-          <p class="sans-serif mb3">
-            It also becomes our responsibility to challenge our clients to do the best that we collectively can when it comes to reducing their footprint on the planet. Additionally, we wanted to collect data on the amount of carbon emissions that the hardware products we work on release. Our first case study is the Light Phone.
-          </p>
-          <button>Helping Clients ⭢</button>
         </div>
       </section>
+
+      <section class="content-container inner-content-padding-x mxauto flex-col">
+        <p class="text-subtitle serif lg:col-8">
+          Studio Carbon Negative was initiated by Sanctuary Computer. Get in touch if you would like to know more information about Studio Carbon Negative.
+        </p>
+        <a href="https://www.sanctuary.computer/"><button class="mt1 md:mt2">&rarr; Visit Sanctuary Computer</button></a>
+      </section>
+      
     </div>
     <!-- End Page Content -->
 
     <!-- Start Footer -->
-    <section class="mx1">
-      <p class="sans-serif">Up next</p>
-      <h5 class="serif">Calculating Emissions</h5>
+    <section class="md:off-6">
+      <p class="footer-header color-black text-footer-sm pb2">Continue Reading</p>
     </section>
-    <footer class="flex flex-row justify-between mx1 mb1">
-      <div class="flex justify-end items-end">
-        <h6 class="serif">*This website emits 26g of carbon per page load</h6>
+    <footer class="footer-padding-x flex flex-col pb2">
+      <div class="footer-menu links text-footer-md md:off-6">
+        <div>
+          <a class="nav-studio-carbon-negative" href="index.html">Studio Carbon Negative</a>
+        </div>
+        <div>
+          <a class="nav-emissions" href="emissions.html">Calculating Emissions</a>
+        </div>
+        <div>
+          <a class="nav-offsetting" href="offsetting.html">Buying Offsets</a>
+        </div>
+        <div>
+          <a class="nav-clients" href="clients.html">Helping Clients</a>
+        </div>
+        <div>
+          <a class="nav-resources" href="resources.html">Resources</a>
+        </div>
       </div>
-      <div>
-        <img src="img/sanctu.svg" />
+
+      <div class="flex flex-col md:flex-row md:justify-between">
+        <div class="footer-logo-container pb2 md:pb0">
+          <img src="img/sanctu.svg" alt="Sanctuary Computer logo" />
+        </div>
+
+        <div class="text-footer-xs flex flex-col justify-end md:col-6 pr4">
+          <h6 class="color-black">Research and documentation done by Sanctuary Computer.</h6>
+          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits 26g of Carbon per Page Load. View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative">Github</a>.</h6>
+        </div>
+
       </div>
+      
     </footer>
     <!-- End Footer -->
 
