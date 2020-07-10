@@ -18,11 +18,13 @@
     background-color: white;
 
     .inner {
-      max-width: 600px;
-
+      @include media('md-up') {
+        margin-left: 1.66rem;
+        margin-right: 1.66rem;
+      }
       .links {
         p {
-          font-size: 1.6rem;
+          @extend .text-subtitle;
         }
       }
     }
