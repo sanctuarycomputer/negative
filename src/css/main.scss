@@ -46,7 +46,7 @@
 .content-container {
   display: flex;
   margin-bottom: 5rem;
-  max-width: 1440px;
+  max-width: 80rem;
 
   @include media('md-up') {
     margin-bottom: 12rem;
