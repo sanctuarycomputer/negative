@@ -453,6 +453,12 @@ tr:last-of-type {
 
 //Resources
 
+.resources-list-container {
+  @include media('md-up') {
+    margin-top: 12rem;
+  }
+}
+
 .resources-list {
   > li > a {
     color: color('black');
