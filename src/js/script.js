@@ -30,4 +30,15 @@ const addActiveClassToFooterMenuLink = () => {
   };  
 };
 
+
+//Nav
+
+const navMenuButton = document.getElementById('nav-menu-button');
+navMenuButton.addEventListener('click', toggleMenu);
+
+const toggleMenu = () => {
+  console.log('menu button clicked')
+  // document.getElementById("demo").innerHTML = "menu opens here";
+}
+
 window.onload = addActiveClassToFooterMenuLink();
