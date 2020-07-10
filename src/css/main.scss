@@ -119,6 +119,7 @@ footer {
 //Index
 
 .map-container {
+  z-index: 2;
   width: 90vw;
   top: 58%;
   left: 50%;
@@ -145,6 +146,7 @@ footer {
 }
 
 .header-image-container {
+  z-index: 3;
   top: 60%;
   left: 38%;
   max-height: 8.61rem;
