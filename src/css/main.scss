@@ -318,13 +318,11 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
-  margin-top: 10vh;
-  z-index: 1;
+  margin-top: 20vh;
 }
 
 .offsets {
-  margin-top: 55vh;
-  z-index: 1;
+  margin-top: 50vh;
 
   @include media('sm-down') {
     display: flex;
@@ -392,17 +390,11 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  top: 17%;
-  right: 10%;
-  left: 10%;
+  top: 30%;
+  left: 30%;
   max-height: 20rem;
 
-  @include media('sm-up') {
-    top: 20%;
-  }
-
   @include media('md-up') {
-    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
