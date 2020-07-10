@@ -323,7 +323,7 @@ tr:last-of-type {
 }
 
 .offsets {
-  margin-top: 50vh;
+  margin-top: 55vh;
   z-index: 1;
 
   @include media('sm-down') {
@@ -341,12 +341,12 @@ tr:last-of-type {
 }
 
 .offsets-header-image-container {
-  top: 25%;
-  right: 1.112rem;
+  top: 18vh;
 
   @include media('md-up') {
-    left: 30%;
+    left: 50%;
     top: 25%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -375,7 +375,7 @@ tr:last-of-type {
 }
 
 .clients {
-  margin-top: 70vh;
+  margin-top: 80vh;
 
   @include media('sm-up') {
     margin-top: 65vh;
@@ -388,18 +388,10 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  @include media('sm-down') {
-    top: 17%;
-    width: 80%;
-    padding-right: 1.112rem;
-    padding-left: 1.112rem;
-    right: 10%;
-    left: 10%;  
-
-    > img {
-      max-height: 21.0625rem;
-    }
-  }
+  top: 17%;
+  right: 10%;
+  left: 10%;
+  max-height: 20rem;
 
   @include media('sm-up') {
     top: 20%;
