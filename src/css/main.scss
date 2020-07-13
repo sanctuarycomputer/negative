@@ -1,22 +1,75 @@
 @import 'config';
 @import '~@sanctucompu/basement/src/index';
-@import 'settings', 'reset', 'typography';
+@import 'settings', 'reset', 'typography', 'sizing';
 
-.view, .globe {
-  @extend %transition-short;
+//Nav
 
-  &--menu-is-active {
-    transform: translate3d(0, 5rem, 0);
-    transform-style: preserve-3d;
+.nav-menu-button-container {
+  background: linear-gradient(to bottom,#fff 0,#0000 100%);
+}
+
+.nav-menu-button-container,
+.studio-carbon-negative-button-container {
+  height: $nav-height-mobile;
+
+  button {
+    @extend %transition-shorter;
+    &:hover {
+      color: color('gray')
+    }
   }
+
+  @include media('md-up') {
+    height: $nav-height-desktop;
+  }
+}
+
+.nav-menu-button-container {
+  padding-right: $nav-padding-x;
+  padding-left: $nav-padding-x;
+
+  @include media('xl-up') {
+    padding-left: 0;
+    padding-right: $nav-padding-x;
+  }
+}
+
+.studio-carbon-negative-button-container {
+  padding-left: $nav-padding-x;
+
+  @include media('md-up') {
+    padding-left: $nav-padding-x;
+  }
+}
+
+.studio-carbon-negative-button {
+  @extend %transition;
+
+  &--inactive {
+    transform: translate3d(0, -2rem, 0);
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+
+.main-nav {
+  background: linear-gradient(to bottom,#fff 0,#0000 100%);
 }
 
 .menu {
   @extend %transition-short;
   position: fixed;
-  z-index: 4;
   width: 100%;
   height: 55vh;
+
+  @include media('sm-up') {
+    height: 65vh;
+  }
 
   @include media('xl-up') {
     height: 60vh;
@@ -48,9 +101,9 @@
 
 .main-nav,
 .inner-nav {
-  height: 3.88rem;
-  padding-left: 1.11rem;
-  padding-right: 1.11rem;
+  height: $nav-height-mobile;
+  padding-left: $nav-padding-x;
+  padding-right: $nav-padding-x;
 
   button {
     @extend %transition-shorter;
@@ -60,34 +113,20 @@
   }
 
   @include media('md-up') {
-    height: 4.55rem;
-    padding-left: 1.66rem;
-    padding-right: 1.66rem;
+    height: $nav-height-desktop;
+    padding-left: $nav-padding-x;
+    padding-right: $nav-padding-x;
   }
 }
 
 .main-nav {
-  z-index: 700;
   background: linear-gradient(to bottom,#fff 0,#0000 100%);
 }
 
-.studio-carbon-negative-nav-button {
-  @extend %transition;
-
-  &--inactive {
-    transform: translate3d(0, -2rem, 0);
-    transform-style: preserve-3d;
-    opacity: 0;
-  }
-
-  &--active {
-    opacity: 1;
-  }
-}
-
 .inner-menu {
-  padding-left: 1.11rem;
-  padding-right: 1.11rem;
+  padding-left: $nav-padding-x;
+  padding-right: $nav-padding-x;
+  padding-top: $nav-height-desktop;
   max-width: 80rem;
 
   button > a {
@@ -95,7 +134,19 @@
   }
 
   @include media('xl-up') {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//View
+
+.view, .globe {
+  @extend %transition-short;
+
+  &--menu-is-active {
+    transform: translate3d(0, 5rem, 0);
+    transform-style: preserve-3d;
   }
 }
 
@@ -117,20 +168,20 @@
 
 .inner-content-padding-x {
   @include media('md-up') {
-    padding-left: 6.72rem;
-    padding-right: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 
 .inner-content-padding-x-left {
   @include media('md-up') {
-    padding-left: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
   }
 }
 
 .inner-content-padding-x-right {
   @include media('md-up') {
-    padding-right: 6.72rem;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 
@@ -149,6 +200,8 @@
   }
 }
 
+
+//Buttons
 button {
   cursor: pointer;
 }
@@ -221,14 +274,13 @@ footer {
 //Index
 
 .map-container {
-  z-index: 2;
   width: 90vw;
   top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @include media('md-up') {
-    // top: 50%;
+    top: 50%;
     width: 40vw;
   }
 }
@@ -248,11 +300,9 @@ footer {
 }
 
 .header-image-container {
-  z-index: 4;
-  top: 60%;
-  left: 38%;
+  top: 50vh;
+  left: 18vw;
   max-height: 8.61rem;
-  transform: translate(-50%, -50%);
 
   @include media('md-up') {
     max-height: 13.94rem;
@@ -398,11 +448,15 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
-  margin-top: 20vh;
+  margin-top: 10vh;
+
+  @include media('md-up') {
+    margin-top: 15vh;
+  }
 }
 
 .offsets {
-  margin-top: 50vh;
+  margin-top: 55vh;
 
   @include media('sm-down') {
     display: flex;
@@ -414,7 +468,7 @@ tr:last-of-type {
   }
 
   @include media('md-up') {
-    margin-top: 30vh;
+    margin-top: 50vh;
   }
 }
 
@@ -427,8 +481,12 @@ tr:last-of-type {
     transform: translate(-50%, -50%);
   }
 
-  @include media('xl-up') {
+  @include media('lg-up') {
     top: 45%;
+  }
+
+  @include media('xxl-up') {
+    top: 55%;
   }
 }
 
@@ -452,7 +510,7 @@ tr:last-of-type {
 
   @include media('md-up') {
     margin-top: 25vh;
-    padding-left: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
   }
 }
 
@@ -465,7 +523,7 @@ tr:last-of-type {
 
   @include media('md-up') {
     margin-top: 25vh;
-    padding-right: 6.72rem;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 

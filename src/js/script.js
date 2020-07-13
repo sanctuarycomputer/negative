@@ -35,11 +35,19 @@ const addActiveClassToFooterMenuLink = () => {
 const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
-const studioCarbonNegativeNavButton = document.getElementById('studio-carbon-negative-nav-button');
+const studioCarbonNegativeButton = document.getElementById('studio-carbon-negative-button');
+const studioCarbonNegativeButtonContainer = document.getElementsByClassName('studio-carbon-negative-button-container')[0];
+const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
 const globe = document.getElementsByClassName('background-slide')[0];
 
-const activeMenu = () => {
+const openMenu = () => {
+  studioCarbonNegativeButtonContainer.classList.remove('z-2000');
+  tableOfContentsTitle.classList.remove('opacity-0');
+  tableOfContentsTitle.classList.add('opacity-1');
+  navMenuButton.classList.add('opacity-0', 'events-none', 'none');
+  navCloseButton.classList.remove('opacity-0', 'events-none', 'none');
+  navCloseButton.classList.add('opacity-1', 'events-all');
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
@@ -47,6 +55,12 @@ const activeMenu = () => {
 };
 
 const closeMenu = () => {
+  studioCarbonNegativeButtonContainer.classList.add('z-2000');
+  tableOfContentsTitle.classList.add('opacity-0');
+  tableOfContentsTitle.classList.remove('opacity-1');
+  navCloseButton.classList.add('opacity-0', 'events-none', 'none');
+  navMenuButton.classList.add('opacity-1', 'events-all');
+  navMenuButton.classList.remove('opacity-0', 'events-none', 'none');
   menu.classList.remove('menu--active');
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
@@ -57,18 +71,18 @@ const handleNavScroll = () => {
   const scrollTop = document.documentElement.scrollTop;
 
   if (scrollTop > 400) {
-    studioCarbonNegativeNavButton.classList.remove('studio-carbon-negative-nav-button--inactive');
-    studioCarbonNegativeNavButton.classList.add('studio-carbon-negative-nav-button--active');
+    studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--inactive');
+    studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--active');
   }
 
   if (scrollTop < 400) {
-    studioCarbonNegativeNavButton.classList.remove('studio-carbon-negative-nav-button--active');
-    studioCarbonNegativeNavButton.classList.add('studio-carbon-negative-nav-button--inactive');
+    studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--active');
+    studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--inactive');
   }
 };
 
 
-navMenuButton.addEventListener('click', activeMenu);
+navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
 window.addEventListener('scroll', handleNavScroll);
 
