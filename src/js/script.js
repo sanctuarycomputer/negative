@@ -32,17 +32,18 @@ const addActiveClassToFooterMenuLink = () => {
 
 
 //Nav
+const screenXL = 1280; 
 const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
 const studioCarbonNegativeButton = document.getElementById('studio-carbon-negative-button');
 const studioCarbonNegativeButtonContainer = document.getElementsByClassName('studio-carbon-negative-button-container')[0];
+const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button-container')[0];
 const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
 const globe = document.getElementsByClassName('background-slide')[0];
 
 const openMenu = () => {
-  studioCarbonNegativeButtonContainer.classList.remove('z-2000');
   tableOfContentsTitle.classList.remove('opacity-0');
   tableOfContentsTitle.classList.add('opacity-1');
   navMenuButton.classList.add('opacity-0', 'events-none', 'none');
@@ -52,10 +53,15 @@ const openMenu = () => {
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
   globe.classList.add('globe--menu-is-active');
+
+  if (window.innerWidth < screenXL) {
+    studioCarbonNegativeButton.classList.add('none');
+    studioCarbonNegativeButtonContainer.classList.remove('z-2000');
+  };
+
 };
 
 const closeMenu = () => {
-  studioCarbonNegativeButtonContainer.classList.add('z-2000');
   tableOfContentsTitle.classList.add('opacity-0');
   tableOfContentsTitle.classList.remove('opacity-1');
   navCloseButton.classList.add('opacity-0', 'events-none', 'none');
@@ -65,6 +71,8 @@ const closeMenu = () => {
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
   globe.classList.remove('globe--menu-is-active');
+  studioCarbonNegativeButton.classList.remove('none');
+  studioCarbonNegativeButtonContainer.classList.add('z-2000');
 };
 
 const handleNavScroll = () => {
@@ -81,9 +89,7 @@ const handleNavScroll = () => {
   }
 };
 
-
 navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
 window.addEventListener('scroll', handleNavScroll);
-
 window.onload = addActiveClassToFooterMenuLink();
