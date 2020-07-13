@@ -110,6 +110,28 @@ button {
   }
 }
 
+.button--style-primary {
+  @extend %text-button;
+  @extend %transition-shorter;
+  padding: 6px 20px;
+  width: 12.22rem;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color('black');
+    color: color('white');
+  }
+
+  @include media('md-up') {
+    width: 16rem;
+  }
+}
+
 footer {
   img {
     max-width: 80px;
