@@ -110,6 +110,28 @@ button {
   }
 }
 
+.button--style-primary {
+  @extend %text-button;
+  @extend %transition-shorter;
+  padding: 6px 20px;
+  width: 12.22rem;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color('black');
+    color: color('white');
+  }
+
+  @include media('md-up') {
+    width: 16rem;
+  }
+}
+
 footer {
   img {
     max-width: 80px;
@@ -119,6 +141,7 @@ footer {
 //Index
 
 .map-container {
+  z-index: 2;
   width: 90vw;
   top: 58%;
   left: 50%;
@@ -145,6 +168,7 @@ footer {
 }
 
 .header-image-container {
+  z-index: 3;
   top: 60%;
   left: 38%;
   max-height: 8.61rem;
@@ -290,6 +314,141 @@ tr:last-of-type {
   padding-top: 0.55rem;
   padding-bottom: 0.55rem;
   border-top: 1px solid color('black');
+}
+
+//Buying Offsets
+.buying {
+  margin-top: 20vh;
+}
+
+.offsets {
+  margin-top: 50vh;
+
+  @include media('sm-down') {
+    display: flex;
+    justify-content: flex-end;
+  };
+
+  @include media('sm-up') {
+    margin-top: 65vh;
+  }
+
+  @include media('md-up') {
+    margin-top: 30vh;
+  }
+}
+
+.offsets-header-image-container {
+  top: 18vh;
+
+  @include media('md-up') {
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media('xl-up') {
+    top: 45%;
+  }
+}
+
+.offsets-caption {
+  bottom: -5%;
+
+  @include media('md-up') {
+    bottom: 5%;
+  }
+}
+
+.offsetting-technologies-caption {
+  @include media('lg-up') {
+    margin-top: 60%;
+  }
+}
+
+//Helping Clients
+.helping {
+  margin-top: 10vh;
+
+  @include media('md-up') {
+    margin-top: 25vh;
+    padding-left: 6.72rem;
+  }
+}
+
+.clients {
+  margin-top: 80vh;
+
+  @include media('sm-up') {
+    margin-top: 65vh;
+  }
+
+  @include media('md-up') {
+    margin-top: 25vh;
+    padding-right: 6.72rem;
+  }
+}
+
+.clients-header-image-container {
+  top: 30%;
+  left: 30%;
+  max-height: 20rem;
+
+  @include media('md-up') {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media('xl-up') {
+    top: 35%;
+  }
+}
+
+.clients-caption {
+  bottom: -5%;
+  right: 1.112rem;
+
+  @include media('md-up') {
+    bottom: 5%;
+    right: 20%;
+  }
+
+  @include media('xl-up') {
+    right: 15%;
+  }
+}
+
+.clients-diagram-caption {
+  @include media('lg-up') {
+    margin-top: 60%;
+  }
+}
+
+.clients-image-three-container {
+
+  @include media('md-up') {
+    margin-top: -2%;
+  }
+}
+
+//Resources
+
+.resources-list-container {
+  @include media('md-up') {
+    margin-top: 12rem;
+  }
+}
+
+.resources-list {
+  > li > a {
+    color: color('black');
+    text-decoration: none;
+    transition: all ease-in-out 0.18s;
+
+    &:hover {
+      color: color('gray')
+    }
+  }
 }
 
 //Footer
