@@ -32,10 +32,11 @@ const addActiveClassToFooterMenuLink = () => {
 
 
 //Nav
-const screenXL = 1280; 
+const breakpointBelowXL = window.innerWidth < 1280;
 const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
+let menuIsActive = false;
 const studioCarbonNegativeButton = document.getElementById('studio-carbon-negative-button');
 const studioCarbonNegativeButtonContainer = document.getElementsByClassName('studio-carbon-negative-button-container')[0];
 const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button-container')[0];
@@ -44,6 +45,7 @@ const view = document.getElementsByClassName('view')[0];
 const globe = document.getElementsByClassName('background-slide')[0];
 
 const openMenu = () => {
+  menuIsActive = true;
   tableOfContentsTitle.classList.remove('opacity-0');
   tableOfContentsTitle.classList.add('opacity-1');
   navMenuButton.classList.add('opacity-0', 'events-none', 'none');
@@ -54,14 +56,17 @@ const openMenu = () => {
   view.classList.add('view--menu-is-active');
   globe.classList.add('globe--menu-is-active');
 
-  if (window.innerWidth < screenXL) {
+  if (breakpointBelowXL) {
     studioCarbonNegativeButton.classList.add('none');
     studioCarbonNegativeButtonContainer.classList.remove('z-2000');
-  };
-
+  } else {
+    studioCarbonNegativeButton.classList.remove('none');
+    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+  }
 };
 
 const closeMenu = () => {
+  menuIsActive = false;
   tableOfContentsTitle.classList.add('opacity-0');
   tableOfContentsTitle.classList.remove('opacity-1');
   navCloseButton.classList.add('opacity-0', 'events-none', 'none');
@@ -71,25 +76,42 @@ const closeMenu = () => {
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
   globe.classList.remove('globe--menu-is-active');
-  studioCarbonNegativeButton.classList.remove('none');
-  studioCarbonNegativeButtonContainer.classList.add('z-2000');
+
+  if (breakpointBelowXL) {
+    studioCarbonNegativeButton.classList.add('none');
+    studioCarbonNegativeButtonContainer.classList.remove('z-2000');
+  } else {
+    studioCarbonNegativeButton.classList.remove('none');
+    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+  }
 };
 
-const handleNavScroll = () => {
+const handleResize = () => {
+  if (breakpointBelowXL && menuIsActive) {
+    studioCarbonNegativeButton.classList.add('none');
+  };
+  
+  if (!breakpointBelowXL && menuIsActive) {
+    studioCarbonNegativeButton.classList.remove('none');
+  };
+};
+
+const handleScroll = () => {
   const scrollTop = document.documentElement.scrollTop;
 
   if (scrollTop > 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--inactive');
     studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--active');
-  }
+  };
 
   if (scrollTop < 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--active');
     studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--inactive');
-  }
-};
+  };
+}
 
 navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
-window.addEventListener('scroll', handleNavScroll);
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('resize', handleResize);
 window.onload = addActiveClassToFooterMenuLink();
