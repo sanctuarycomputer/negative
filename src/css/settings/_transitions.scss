@@ -62,6 +62,18 @@ $transition: $transition-duration-short $transition-easing;
   }
 }
 
+@keyframes animation-fade-in-up-slow {
+  35% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes animation-appear-from-bottom {
   0% {
     transform: translate3d(0, 2rem, 0);

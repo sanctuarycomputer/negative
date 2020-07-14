@@ -107,7 +107,7 @@
 
 .menu-link {
   &--animation {
-    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up; 
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
   }
 }
 
