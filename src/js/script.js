@@ -32,7 +32,7 @@ const addActiveClassToFooterMenuLink = () => {
 
 
 //Nav
-const breakpointBelowXL = window.innerWidth < 1280;
+const breakpointXL = 1280;
 const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
@@ -56,13 +56,15 @@ const openMenu = () => {
   view.classList.add('view--menu-is-active');
   globe.classList.add('globe--menu-is-active');
 
-  if (breakpointBelowXL) {
+  if (window.innerWidth < breakpointXL && menuIsActive) {
     studioCarbonNegativeButton.classList.add('none');
     studioCarbonNegativeButtonContainer.classList.remove('z-2000');
-  } else {
+  };
+
+  if (window.innerWidth > breakpointXL && menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
-  }
+  };
 };
 
 const closeMenu = () => {
@@ -77,27 +79,27 @@ const closeMenu = () => {
   view.classList.remove('view--menu-is-active');
   globe.classList.remove('globe--menu-is-active');
 
-  if (breakpointBelowXL) {
-    studioCarbonNegativeButton.classList.add('none');
-    studioCarbonNegativeButtonContainer.classList.remove('z-2000');
-  } else {
+  if (window.innerWidth < breakpointXL && !menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
-  }
+  };
 };
 
 const handleResize = () => {
-  if (breakpointBelowXL && menuIsActive) {
+  if (window.innerWidth < breakpointXL && menuIsActive) {
     studioCarbonNegativeButton.classList.add('none');
   };
   
-  if (!breakpointBelowXL && menuIsActive) {
+  if (window.innerWidth > breakpointXL && menuIsActive) {
+    console.log('resized, should so button')
     studioCarbonNegativeButton.classList.remove('none');
+    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+
   };
 };
 
 const handleScroll = () => {
-  const scrollTop = document.documentElement.scrollTop;
+  const scrollTop = window.pageYOffset;
 
   if (scrollTop > 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--inactive');
@@ -108,6 +110,7 @@ const handleScroll = () => {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--active');
     studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--inactive');
   };
+
 }
 
 navMenuButton.addEventListener('click', openMenu);
