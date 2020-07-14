@@ -60,7 +60,6 @@ const openMenu = () => {
   };
 
   if (window.innerWidth < breakpointXL && menuIsActive) {
-    console.log('open menu clicked, hide button')
     studioCarbonNegativeButton.classList.add('none');
     studioCarbonNegativeButtonContainer.classList.remove('z-2000');
   };
@@ -99,7 +98,6 @@ const handleResize = () => {
   };
   
   if (window.innerWidth > breakpointXL && menuIsActive) {
-    console.log('resized, should so button')
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
 
