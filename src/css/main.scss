@@ -78,7 +78,7 @@
 
 .menu {
   @extend %transition-short;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   position: fixed;
   width: 100%;
   height: 55vh;
@@ -105,16 +105,9 @@
     z-index: 900;
     opacity: .95;
   }
-
-  .fade {
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 
-    95%);
-    height: 10rem;
-  }
 }
 
 .inner-menu {
-  background-color: rgba(255, 255, 255, 0.95);
   padding-top: $nav-height-desktop;
   max-width: 80rem;
 
@@ -124,7 +117,6 @@
 }
 
 .inner-menu-inner-container {
-  background-color: rgba(255, 255, 255, 0.95);
   padding-left: $nav-padding-x;
   padding-right: $nav-padding-x;
 
