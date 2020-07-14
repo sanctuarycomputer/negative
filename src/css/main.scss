@@ -295,18 +295,14 @@ footer {
 }
 
 .header-image-container {
-  top: 50vh;
+  top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
 
   @include media('md-up') {
     max-height: 13.94rem;
-    top: 55vh;
-    left: 35%;
-  }
-
-  @include media('md-up') {
     top: 40vh;
+    left: 35%;
   }
 
   @include media('xl-up') {
