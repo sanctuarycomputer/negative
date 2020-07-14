@@ -128,6 +128,21 @@ const handleScroll = () => {
 
 }
 
+
+const sections = document.querySelectorAll('section.fade-in-up');
+
+window.onscroll = function() {
+  // Don't run the rest of the code if every section is already visible
+  if (!document.querySelectorAll('section.fade-in-up:not(.visible)')) return;
+  
+  // Run this code for every section in sections
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
+      section.classList.add('visible');
+    }
+  }
+};
+
 addActiveClassToFooterMenuLink();
 navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
