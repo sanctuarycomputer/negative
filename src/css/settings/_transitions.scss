@@ -25,7 +25,7 @@ $transition: $transition-duration-short $transition-easing;
   transition: all $transition-duration-long $transition-easing;
 }
 
-@keyframes animation-fade-in-up {
+@keyframes animation-fade-in-up-slow {
   35% {
     opacity: 0;
     transform: translate3d(0, -1rem, 0);
