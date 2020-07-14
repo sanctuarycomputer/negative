@@ -47,10 +47,10 @@ const globe = document.getElementsByClassName('background-slide')[0];
 const openMenu = () => {
   menuIsActive = true;
   tableOfContentsTitle.classList.remove('opacity-0');
-  tableOfContentsTitle.classList.add('opacity-1');
+  tableOfContentsTitle.classList.add('opacity-100');
   navMenuButton.classList.add('opacity-0', 'events-none', 'none');
   navCloseButton.classList.remove('opacity-0', 'events-none', 'none');
-  navCloseButton.classList.add('opacity-1', 'events-all');
+  navCloseButton.classList.add('opacity-100', 'events-all');
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
@@ -73,16 +73,16 @@ const openMenu = () => {
 const closeMenu = () => {
   menuIsActive = false;
   tableOfContentsTitle.classList.add('opacity-0');
-  tableOfContentsTitle.classList.remove('opacity-1');
+  tableOfContentsTitle.classList.remove('opacity-100');
   navCloseButton.classList.add('opacity-0', 'events-none', 'none');
-  navMenuButton.classList.add('opacity-1', 'events-all');
+  navMenuButton.classList.add('opacity-100', 'events-all');
   navMenuButton.classList.remove('opacity-0', 'events-none', 'none');
   menu.classList.remove('menu--active');
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
-  globe.classList.remove('globe--menu-is-active');
 
   if (globe) {
+    globe.classList.remove('globe--menu-is-active');
     globe.classList.add('globe--menu-is-active');
   };
 
@@ -119,8 +119,8 @@ const handleScroll = () => {
 
 }
 
+addActiveClassToFooterMenuLink();
 navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleResize);
-window.onload = addActiveClassToFooterMenuLink();
