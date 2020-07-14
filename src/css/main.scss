@@ -105,6 +105,12 @@
   }
 }
 
+.menu-link {
+  &--animation {
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up; 
+  }
+}
+
 .inner-menu {
   padding-top: $nav-height-desktop;
   max-width: 80rem;
@@ -348,7 +354,6 @@ footer {
 
 .emissions-header-image-container {
   top: 23vh;
-  left: 6%;
   left: 1.112rem;
   max-height: 20rem;
 
@@ -363,11 +368,11 @@ footer {
 }
 
 .emissions-caption {
-  bottom: -5%;
+  top: 90vh;
   right: 1.112rem;
 
   @include media('md-up') {
-    bottom: 5%;
+    top: 75vh;
     right: 20%;
   }
 
@@ -532,11 +537,11 @@ tr:last-of-type {
 }
 
 .clients-caption {
-  bottom: -5%;
+  top: 95vh;
   right: 1.112rem;
 
   @include media('md-up') {
-    bottom: 5%;
+    top: 85vh;
     right: 20%;
   }
 
@@ -552,7 +557,6 @@ tr:last-of-type {
 }
 
 .clients-image-three-container {
-
   @include media('md-up') {
     margin-top: -2%;
   }

@@ -43,6 +43,7 @@ const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button
 const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
 const globe = document.getElementsByClassName('background-slide')[0];
+const menuLinks = document.getElementsByClassName('menu-link');
 
 const openMenu = () => {
   menuIsActive = true;
@@ -54,7 +55,11 @@ const openMenu = () => {
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
-  
+
+  Array.from(menuLinks).forEach(link => {
+    link.classList.add('menu-link--animation');
+  });
+
   if (globe) {
     globe.classList.add('globe--menu-is-active');
   };
@@ -80,6 +85,10 @@ const closeMenu = () => {
   menu.classList.remove('menu--active');
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
+
+  Array.from(menuLinks).forEach(link => {
+    link.classList.remove('menu-link--animation');
+  });
 
   if (globe) {
     globe.classList.remove('globe--menu-is-active');
