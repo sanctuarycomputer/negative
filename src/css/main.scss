@@ -7,9 +7,22 @@
 .nav-menu-button-container {
   background-color: rgba(255, 255, 255, 0.95);
   background: linear-gradient(to bottom,#fff 0,#0000 100%);
+  padding-right: $nav-padding-x;
+  padding-left: $nav-padding-x;
+
+  @include media('xl-up') {
+    padding-left: 0;
+    padding-right: $nav-padding-x;
+  }
 }
 
 .studio-carbon-negative-button-container {
+  padding-left: $nav-padding-x;
+
+  @include media('md-up') {
+    padding-left: $nav-padding-x;
+  }
+
   @include media('xl-up') {
     background: linear-gradient(to bottom,#fff 0,#0000 100%);
   }
@@ -28,24 +41,6 @@
 
   @include media('md-up') {
     height: $nav-height-desktop;
-  }
-}
-
-.nav-menu-button-container {
-  padding-right: $nav-padding-x;
-  padding-left: $nav-padding-x;
-
-  @include media('xl-up') {
-    padding-left: 0;
-    padding-right: $nav-padding-x;
-  }
-}
-
-.studio-carbon-negative-button-container {
-  padding-left: $nav-padding-x;
-
-  @include media('md-up') {
-    padding-left: $nav-padding-x;
   }
 }
 
@@ -112,7 +107,8 @@
   }
 
   .fade {
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 95%);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 
+    95%);
     height: 10rem;
   }
 }
@@ -249,7 +245,7 @@ button {
   width: 12.22rem;
   background-color: transparent;
   border-width: 1px;
-  border-color: black;
+  border-color: color('black');
   border-style: solid;
   border-radius: 999px;
   cursor: pointer;
@@ -365,17 +361,17 @@ footer {
 }
 
 .emissions-header-image-container {
-  top: 23%;
+  top: 23vh;
   left: 6%;
   left: 1.112rem;
   max-height: 20rem;
 
   @include media('sm-up') {
-    top: 22%;
+    top: 22vh;
   }
 
   @include media('md-up') {
-    top: 15%;
+    top: 15vh;
     left: 35%;
   }
 }
@@ -527,7 +523,7 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  top: 30%;
+  top: 30vh;
   left: 30%;
   max-height: 20rem;
 
@@ -537,7 +533,7 @@ tr:last-of-type {
   }
 
   @include media('xl-up') {
-    top: 35%;
+    top: 35vh;
   }
 }
 

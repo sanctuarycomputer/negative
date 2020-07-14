@@ -54,9 +54,13 @@ const openMenu = () => {
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
-  globe.classList.add('globe--menu-is-active');
+  
+  if (globe) {
+    globe.classList.add('globe--menu-is-active');
+  };
 
   if (window.innerWidth < breakpointXL && menuIsActive) {
+    console.log('open menu clicked, hide button')
     studioCarbonNegativeButton.classList.add('none');
     studioCarbonNegativeButtonContainer.classList.remove('z-2000');
   };
@@ -78,6 +82,10 @@ const closeMenu = () => {
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
   globe.classList.remove('globe--menu-is-active');
+
+  if (globe) {
+    globe.classList.add('globe--menu-is-active');
+  };
 
   if (window.innerWidth < breakpointXL && !menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
