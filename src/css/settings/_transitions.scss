@@ -25,11 +25,28 @@ $transition: $transition-duration-short $transition-easing;
   transition: all $transition-duration-long $transition-easing;
 }
 
-.fade-in-up {
-  opacity: 0;
+@keyframes animation-fade-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -5rem, 0);
+  }
 
-  &.visible {
-    animation: $transition-duration-long ease 0s 1 normal forwards animation-fade-in-up;
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+  }
+}
+
+@keyframes animation-fade-in-from-top {
+  0% {
+    opacity: 0;
+     transform: translate3d(0, 5rem, 0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -42,5 +59,23 @@ $transition: $transition-duration-short $transition-easing;
   100% {
     opacity: 1;
     transform: translate3d(0, 0rem, 0);
+  }
+}
+
+@keyframes animation-appear-from-bottom {
+  0% {
+    transform: translate3d(0, 2rem, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0rem, 0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+
+  &.visible {
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
   }
 }
