@@ -297,7 +297,7 @@ footer {
   top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-appear-from-bottom;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-appear-from-bottom;
 
   @include media('md-up') {
     max-height: 13.94rem;
@@ -359,8 +359,7 @@ footer {
 }
 
 .emissions-header-image-container {
-  opacity: 0;
-  animation: $transition-duration-longer $transition-easing 0s 1 normal forwards animation-fade-in-up-slower;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-appear-from-bottom;
   top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
@@ -378,7 +377,7 @@ footer {
 .emissions-caption {
   top: 90vh;
   right: 1.112rem;
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-appear-from-bottom;
 
   @include media('md-up') {
     top: 75vh;
@@ -470,7 +469,7 @@ tr:last-of-type {
 }
 
 .offsets-header-image-container {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-appear-from-bottom;
   top: 18vh;
 
   @include media('md-up') {
@@ -484,7 +483,7 @@ tr:last-of-type {
 }
 
 .offsets-caption {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-appear-from-bottom;
   bottom: -5%;
 
   @include media('md-up') {
@@ -526,7 +525,7 @@ tr:last-of-type {
 .clients-header-image-container {
   max-height: 20rem;
   top: 20vh;
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-appear-from-bottom;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-appear-from-bottom;
 
   @include media('sm-down') {
     left: 30%;
@@ -538,7 +537,7 @@ tr:last-of-type {
 }
 
 .clients-caption {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-appear-from-bottom;
   top: 95vh;
   right: 1.112rem;
 

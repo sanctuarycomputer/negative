@@ -18,8 +18,8 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
-        opacity: 1;
-        animation: 1.25s ease 0s 1 normal forwards animation-appear-from-bottom;
+        opacity: 0;
+        animation: 1s ease-in-out .5s 1 normal forwards animation-appear-from-bottom;
       }
       .map-container:before {
         content: "";
@@ -115,7 +115,7 @@
           Studio
         </h1>
       </div>
-      <div class="header-image-container z-4 absolute col-5 md:col-2">
+      <div class="header-image-container opacity-0 z-4 absolute col-5 md:col-2">
         <div class="color-img">
           <img 
           class="fit-contain h100 w100"
