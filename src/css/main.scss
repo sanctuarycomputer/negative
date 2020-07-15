@@ -443,7 +443,7 @@ tr:last-of-type {
   > li > a {
     color: color('black');
     text-decoration: none;
-    transition: all ease-in-out 0.18s;
+    transition: all ease-in-out $transition-duration-shorter;
 
     &:hover {
       color: color('gray')

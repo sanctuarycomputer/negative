@@ -110,6 +110,15 @@ p.sans-serif, li.sans-serif {
   line-height: 0.8rem;
   letter-spacing: .75px;
 
+  > a {
+    transition: all ease-in-out $transition-duration-shorter;
+    color: color('black');
+    
+    &:hover {
+      color: color('gray');
+    }
+  }
+
   @include media('md-up') {
     font-size: 0.77rem;
     line-height: 1.1rem;
@@ -165,10 +174,6 @@ ol {
 .list-number {
   min-width: 2.5rem;
   max-width: 2.5rem;
-}
-
-.caption-number {
-  padding-right: 2.38rem;
 }
 
 .resources-list > li > a {
