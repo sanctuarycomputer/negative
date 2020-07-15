@@ -496,7 +496,7 @@ tr:last-of-type {
 .color-img {
   font-size: 0;
   line-height: 0;
-  background-color: #0807fe;
+  background-color: color('blue');
 
   > img {
     mix-blend-mode: lighten;
