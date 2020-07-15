@@ -53,7 +53,7 @@
     <div class="background-slide">
       <div class="map-container relative overflow-hidden">
         <div class="map">
-          <img class="globe" src="img/earth.svg" alt="Earth" />
+          <img class="globe" src="img/index/earth.svg" alt="Earth" />
           <canvas id="map-canvas"></canvas>
         </div>
       </div>
@@ -76,8 +76,11 @@
           <img 
           class="fit-contain h100 w100"
           src="img/index/header-sm.png"
-          srcset="img/index/header-sm.png 240w, img/index/header-md.png 300w, img/index/header-lg.png 720w"
-          alt="Venice, Italy"/>
+          srcset="img/index/header-sm.png 240w, img/index/header-md.png 400w, img/index/header-lg.png 720w"
+          sizes="(min-width: 1200px) 720w,
+          (max-width: 768px) 400w,
+          (max-width: 380px) 240w"
+          alt="New York City"/>
         </div>
       </div>
       <div class="negative z1 col col-12 md:col-6 text-center md:text-right relative">
@@ -103,7 +106,10 @@
             <img 
               class="w100" 
               src="img/index/antarctica-md.png"
-              srcset="img/index/antarctica-sm.png 240w, img/index/antarctica-md.png 300w, img/index/antarctica-lg.png 720w"
+              srcset="img/index/antarctica-sm.png 240w, img/index/antarctica-md.png 400w, img/index/antarctica-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
               alt="Antarctica"/>
           </div>
           <p class="md:col-6 md:off-4 text-caption mt_5">
@@ -115,7 +121,10 @@
             <img 
               class="w100" 
               src="img/index/yemen-md.png"
-              srcset="img/index/yemen-sm.png 240w, img/index/yemen-md.png 300w, img/index/yemen-lg.png 720w"
+              srcset="img/index/yemen-sm.png 240w, img/index/yemen-md.png 400w, img/index/yemen-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
               alt="Yemen"/>
           </div>
           <p class="md:off-2 md:col-6 text-caption mt_5">
@@ -138,7 +147,10 @@
             <img 
             class="w100 h100"
             src="img/index/united-arab-emirates-md.png"
-            srcset="img/index/united-arab-emirates-sm.png 240w, img/index/united-arab-emirates-md.png 300w, img/index/united-arab-emirates-lg.png 720w"
+            srcset="img/index/united-arab-emirates-sm.png 240w, img/index/united-arab-emirates-md.png 400w, img/index/united-arab-emirates-lg.png 720w"
+            sizes="(min-width: 1200px) 720w,
+            (max-width: 768px) 400w,
+            (max-width: 380px) 240w"
             alt="United Arab Emirates"/>
           </div>
           <p class="text-caption mt_5">
@@ -177,7 +189,10 @@
             <img 
               class="w100" 
               src="img/index/jordan-md.png"
-              srcset="img/index/jordan-sm.png 240w, img/index/jordan-md.png 300w, img/index/jordan-lg.png 720w"
+              srcset="img/index/jordan-sm.png 240w, img/index/jordan-md.png 400w, img/index/jordan-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
               alt="Jordan"/>
           </div>
           <p class="md:off-4 md:col-6 text-caption mt_5">
@@ -189,7 +204,10 @@
             <img 
               class="w100" 
               src="img/index/barrier-reef-md.png" 
-              srcset="img/index/barrier-reef-sm.png 240w, img/index/barrier-reef-md.png 300w, img/index/barrier-reef-lg.png 720w"
+              srcset="img/index/barrier-reef-sm.png 240w, img/index/barrier-reef-md.png 400w, img/index/barrier-reef-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
               alt="Great Barrier Reef"/>
           </div>
           <p class="md:col-6 md:off-2 text-caption mt_5">
@@ -215,20 +233,29 @@
             <div class="color-img">
               <img 
               class="w100"
-              src="img/index/haiti-md.png" 
-              srcset="img/index/haiti-sm.png 240w, img/index/haiti-md.png 300w, img/index/haiti-lg.png 720w"
-              alt="Haiti"/>
+              src="img/index/united-states-md.png" 
+              srcset="img/index/united-states-sm.png 240w, img/index/united-states-md.png 400w, img/index/united-states-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
+              alt="United States"/>
             </div>
           </div>
           <p class="md:off-6 md:col-6 column-margin-padding-left text-caption mt_5">
-            <span class="caption-number">(4.)</span>Haiti – <span class="color-gray-darker">Haiti's forests covered 60% of the country as recently as 50 years ago, but today, according to more in-depth environmental analysis, the country yields approximately 30% tree cover, a stark difference from the often cited figure of 2% which has been widely circulated in discourse concerning Haiti. </span>
+            <span class="caption-number">(4.)</span>United States – <span class="color-gray-darker">Haiti's forests covered 60% of the country as recently as 50 years ago, but today, according to more in-depth environmental analysis, the country yields approximately 30% tree cover, a stark difference from the often cited figure of 2% which has been widely circulated in discourse concerning Haiti. </span>
           </p>
         </div>
         <div class="col-8 md:col-6">
-          <img
-            class="index-image-seven-container md:off-2 md:col-4 w100"
-            src="img/placeholder/haiti-b.jpg"
+          <div class="index-image-seven-container md:off-2 md:col-4 color-img">
+            <img
+            class="w100"
+            src="img/index/haiti-md.png"
+            srcset="img/index/haiti-sm.png 240w, img/index/haiti-md.png 400w, img/index/haiti-lg.png 720w"
+            sizes="(min-width: 1200px) 720w,
+            (max-width: 768px) 400w,
+            (max-width: 380px) 240w"
             alt="Haiti"/>
+          </div>
           <p class="md:col-6 md:off-2 text-caption mt_5">
             <span class="caption-number">(4.)</span>Haiti – <span class="color-gray-darker">Haiti's forests covered 60% of the country as recently as 50 years ago, but today, according to more in-depth environmental analysis, the country yields approximately 30% tree cover, a stark difference from the often cited figure of 2% which has been widely circulated in discourse concerning Haiti. </span>
           </p>
