@@ -198,17 +198,14 @@ button {
 }
 
 .button--style-nav {
+  @extend %transition-shorter;
   background-color: transparent;
   padding: 0;
+  text-decoration: none;
+  color: color('black');
 
-  > a {
-    @extend %transition-shorter;
-    text-decoration: none;
-    color: color('black');
-
-    &:hover {
-      color: color('gray')
-    }
+  &:hover {
+    color: color('gray')
   }
 }
 
