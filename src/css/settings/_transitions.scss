@@ -2,6 +2,7 @@ $transition-duration-shorter: 0.18s;
 $transition-duration-short: 0.4s;
 $transition-duration-medium: 0.5s;
 $transition-duration-long: 1.25s;
+$transition-duration-longer: 2s;
 $transition-easing: ease-in-out;
 $transition: $transition-duration-short $transition-easing;
 
@@ -23,6 +24,11 @@ $transition: $transition-duration-short $transition-easing;
 .transition-long,
 %transition-long {
   transition: all $transition-duration-long $transition-easing;
+}
+
+.transition-longer,
+%transition-longer {
+  transition: all $transition-duration-longer $transition-easing;
 }
 
 @keyframes animation-fade-in-from-bottom {
@@ -73,6 +79,19 @@ $transition: $transition-duration-short $transition-easing;
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes animation-fade-in-up-slower {
+  75% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 
 @keyframes animation-appear-from-bottom {
   0% {

@@ -359,7 +359,8 @@ footer {
 }
 
 .emissions-header-image-container {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  opacity: 0;
+  animation: $transition-duration-longer $transition-easing 0s 1 normal forwards animation-fade-in-up-slower;
   top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
