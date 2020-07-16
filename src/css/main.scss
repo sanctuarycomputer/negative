@@ -79,23 +79,27 @@
 .menu {
   @extend %transition-short;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
-  height: 55vh;
+  height: 36rem;
 
-  @include media('sm-up') {
-    height: 65vh;
+  @include media('md-sm-up') {
+    height: 40rem;
   }
 
-  @include media('xl-up') {
-    height: 60vh;
+  @include media('md-up') {
+    height: 36rem;
   }
 
   &--inactive {
-    transform: translate3d(0, -55vh, 0);
+    transform: translate3d(0, -36rem, 0);
     transform-style: preserve-3d;
     opacity: 0;
 
-    @include media('xl-up') {
-      transform: translate3d(0, -60vh, 0);
+    @include media('md-sm-up') {
+      transform: translate3d(0, -40rem, 0);
+    }
+
+    @include media('md-up') {
+      transform: translate3d(0, -36rem, 0);
     }
   }
 
