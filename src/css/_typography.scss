@@ -111,7 +111,7 @@ p.sans-serif, li.sans-serif {
   letter-spacing: .75px;
 
   > a {
-    transition: all ease-in-out $transition-duration-shorter;
+    transition: all $transition-easing $transition-duration-shorter;
     color: color('black');
     
     &:hover {
