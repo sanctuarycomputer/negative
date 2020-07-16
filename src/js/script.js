@@ -57,8 +57,8 @@ const openMenu = () => {
   view.classList.add('view--menu-is-active');
 
   Array.from(menuLinks).forEach(link => {
-    link.classList.remove('menu-link--animation-2');
-    link.classList.add('menu-link--animation');
+    link.classList.remove('menu-link--animation-fade-in-up-slow');
+    link.classList.add('menu-link--animation-fade-in-down-slow');
   });
 
   if (globe) {
@@ -88,8 +88,8 @@ const closeMenu = () => {
   view.classList.remove('view--menu-is-active');
 
   Array.from(menuLinks).forEach(link => {
-    link.classList.remove('menu-link--animation');
-    link.classList.add('menu-link--animation-2');
+    link.classList.remove('menu-link--animation-fade-in-down-slow');
+    link.classList.add('menu-link--animation-fade-in-up-slow');
   });
 
   if (globe) {

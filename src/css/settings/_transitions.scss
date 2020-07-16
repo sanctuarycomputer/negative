@@ -5,6 +5,11 @@ $transition-duration-long: 1s;
 $transition-easing: ease-in-out;
 $transition: $transition-duration-short $transition-easing;
 
+.transition-shortest,
+%transition-shortest {
+  transition: all 0.05s $transition-easing;
+}
+
 .transition-shorter,
 %transition-shorter {
   transition: all $transition-duration-shorter $transition-easing;

@@ -111,11 +111,11 @@
 }
 
 .menu-link {
-  &--animation {
+  &--animation-fade-in-down-slow {
     animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
   }
 
-  &--animation-2 {
+  &--animation-fade-in-up-slow {
     animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
   }
 }
