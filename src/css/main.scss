@@ -90,6 +90,7 @@
   }
 
   &--inactive {
+    transition: all 1s $transition-easing;
     transform: translate3d(0, -36rem, 0);
     transform-style: preserve-3d;
     opacity: 0;
@@ -112,6 +113,10 @@
 .menu-link {
   &--animation {
     animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+  }
+
+  &--animation-2 {
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow-2; 
   }
 }
 

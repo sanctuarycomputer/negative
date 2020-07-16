@@ -57,6 +57,7 @@ const openMenu = () => {
   view.classList.add('view--menu-is-active');
 
   Array.from(menuLinks).forEach(link => {
+    link.classList.remove('menu-link--animation-2');
     link.classList.add('menu-link--animation');
   });
 
@@ -88,6 +89,7 @@ const closeMenu = () => {
 
   Array.from(menuLinks).forEach(link => {
     link.classList.remove('menu-link--animation');
+    link.classList.add('menu-link--animation-2');
   });
 
   if (globe) {

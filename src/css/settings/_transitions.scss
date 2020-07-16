@@ -36,3 +36,20 @@ $transition: $transition-duration-short $transition-easing;
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes animation-fade-in-up-slow-2 {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
