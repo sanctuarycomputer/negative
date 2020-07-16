@@ -112,11 +112,11 @@
 
 .menu-link {
   &--animation {
-    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
   }
 
   &--animation-2 {
-    animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow-2; 
+    animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
   }
 }
 
