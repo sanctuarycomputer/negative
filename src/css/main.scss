@@ -78,6 +78,7 @@
 
 .menu {
   @extend %transition-short;
+  z-index: 900;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   height: 36rem;
 
@@ -90,7 +91,7 @@
   }
 
   &--inactive {
-    transition: all 1s $transition-easing;
+    transition: all 1.5s $transition-easing .25s;
     transform: translate3d(0, -36rem, 0);
     transform-style: preserve-3d;
     opacity: 0;
@@ -105,7 +106,6 @@
   }
 
   &--active {
-    z-index: 900;
     opacity: .95;
   }
 }
@@ -116,7 +116,7 @@
   }
 
   &--animation-2 {
-    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow-2; 
+    animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow-2; 
   }
 }
 
@@ -142,7 +142,7 @@
 //View
 
 .view, .globe {
-  @extend %transition-short;
+  @extend %transition;
 
   &--menu-is-active {
     transform: translate3d(0, 5rem, 0);
