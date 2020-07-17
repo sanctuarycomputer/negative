@@ -283,6 +283,7 @@ footer {
 }
 
 .studio {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
   margin-top: 12vh;
 
   @include media('md-up') {
@@ -291,12 +292,15 @@ footer {
 }
 
 .negative {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
+
   @include media('md-up') {
     margin-top: 40vh;
   }
 }
 
 .header-image-container {
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
@@ -326,6 +330,7 @@ footer {
 
 //Calculating Emissions
 .calculating {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -342,6 +347,7 @@ footer {
 }
 
 .emissions {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
   margin-top: 60vh;
 
   @include media('sm-up') {
@@ -359,6 +365,7 @@ footer {
 }
 
 .emissions-header-image-container {
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
@@ -374,6 +381,7 @@ footer {
 }
 
 .emissions-caption {
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
   top: 90vh;
   right: 1.112rem;
 
@@ -440,6 +448,7 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -448,6 +457,7 @@ tr:last-of-type {
 }
 
 .offsets {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
   margin-top: 55vh;
 
   @include media('sm-down') {
@@ -465,24 +475,21 @@ tr:last-of-type {
 }
 
 .offsets-header-image-container {
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 18vh;
 
   @include media('md-up') {
-    left: 50%;
+    left: 40%;
     top: 38%;
-    transform: translate(-50%, -50%);
   }
 
   @include media('lg-up') {
-    top: 45%;
-  }
-
-  @include media('xxl-up') {
-    top: 55%;
+    top: 35%;
   }
 }
 
 .offsets-caption {
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
   bottom: -5%;
 
   @include media('md-up') {
@@ -498,6 +505,7 @@ tr:last-of-type {
 
 //Helping Clients
 .helping {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -507,6 +515,7 @@ tr:last-of-type {
 }
 
 .clients {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
   margin-top: 80vh;
 
   @include media('sm-up') {
@@ -519,15 +528,8 @@ tr:last-of-type {
   }
 }
 
-.resources-list {
-  > li > a {
-    color: color('black');
-    text-decoration: none;
-    transition: all $transition-easing $transition-duration-shorter;
-  }
-}
-
 .clients-header-image-container {
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 30vh;
   left: 30%;
   max-height: 20rem;
@@ -543,6 +545,7 @@ tr:last-of-type {
 }
 
 .clients-caption {
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
   top: 95vh;
   right: 1.112rem;
 
@@ -569,6 +572,9 @@ tr:last-of-type {
 }
 
 //Resources
+.resources-section-container {
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+}
 
 .resources-list-container {
   @include media('md-up') {
