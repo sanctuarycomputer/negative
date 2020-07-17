@@ -1,39 +1,152 @@
 @import 'config';
 @import '~@sanctucompu/basement/src/index';
-@import 'settings', 'reset', 'typography';
+@import 'settings', 'reset', 'typography', 'sizing';
 
-.headroom {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 10px;
+//Nav
+
+.nav-menu-button-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(to bottom,#fff 0,#0000 100%);
+  padding-right: $nav-padding-x;
+  padding-left: $nav-padding-x;
+
+  @include media('xl-up') {
+    padding-left: 0;
+    padding-right: $nav-padding-x;
+  }
 }
 
-.drawer {
-  position: fixed;
-  z-index: 3;
-  width: 100%;
+.studio-carbon-negative-button-container {
+  padding-left: $nav-padding-x;
 
-  .content {
-    background-color: white;
+  @include media('md-up') {
+    padding-left: $nav-padding-x;
+  }
 
-    .inner {
-      max-width: 600px;
+  @include media('xl-up') {
+    background: linear-gradient(to bottom,#fff 0,#0000 100%);
+  }
+}
 
-      .links {
-        p {
-          font-size: 1.6rem;
-        }
-      }
+.nav-menu-button-container,
+.studio-carbon-negative-button-container {
+  height: $nav-height-mobile;
+
+  button {
+    @extend %transition-shorter;
+    &:hover {
+      color: color('gray')
     }
   }
 
-  .fade {
-    background: linear-gradient(to bottom,#fff 0,#0000 100%);
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100px;
+  @include media('md-up') {
+    height: $nav-height-desktop;
+  }
+}
+
+.studio-carbon-negative-button {
+  &--inactive {
+    transform: translate3d(0, -2rem, 0);
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.main-nav,
+.inner-nav {
+  height: $nav-height-mobile;
+  padding-left: $nav-padding-x;
+  padding-right: $nav-padding-x;
+
+  button {
+    @extend %transition-shorter;
+    &:hover {
+      color: color('gray')
+    }
+  }
+
+  @include media('md-up') {
+    height: $nav-height-desktop;
+    padding-left: $nav-padding-x;
+    padding-right: $nav-padding-x;
+  }
+}
+
+.menu {
+  @extend %transition-short;
+  z-index: 900;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
+  height: 36rem;
+
+  @include media('md-sm-up') {
+    height: 40rem;
+  }
+
+  @include media('md-up') {
+    height: 36rem;
+  }
+
+  &--inactive {
+    transition: all 1.5s $transition-easing .25s;
+    transform: translate3d(0, -36rem, 0);
+    transform-style: preserve-3d;
+    opacity: 0;
+
+    @include media('md-sm-up') {
+      transform: translate3d(0, -40rem, 0);
+    }
+
+    @include media('md-up') {
+      transform: translate3d(0, -36rem, 0);
+    }
+  }
+
+  &--active {
+    opacity: .95;
+  }
+}
+
+.menu-link {
+  &--animation-fade-in-down-slow {
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
+  }
+
+  &--animation-fade-in-up-slow {
+    animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+  }
+}
+
+.inner-menu {
+  padding-top: $nav-height-desktop;
+  max-width: 80rem;
+
+  button > a {
+    @extend %text-menu-lg;
+  }
+}
+
+.inner-menu-inner-container {
+  padding-left: $nav-padding-x;
+  padding-right: $nav-padding-x;
+
+  @include media('xl-up') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//View
+
+.view, .globe {
+  @extend %transition;
+
+  &--menu-is-active {
+    transform: translate3d(0, 5rem, 0);
+    transform-style: preserve-3d;
   }
 }
 
@@ -55,20 +168,20 @@
 
 .inner-content-padding-x {
   @include media('md-up') {
-    padding-left: 6.72rem;
-    padding-right: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 
 .inner-content-padding-x-left {
   @include media('md-up') {
-    padding-left: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
   }
 }
 
 .inner-content-padding-x-right {
   @include media('md-up') {
-    padding-right: 6.72rem;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 
@@ -87,26 +200,21 @@
   }
 }
 
+
+//Buttons
 button {
-  @extend %text-button;
-  padding: 6px 20px;
-  width: 12.22rem;
-  background-color: transparent;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  border-radius: 999px;
   cursor: pointer;
-  transition: all ease-in-out 0.18s;
+}
+
+.button--style-nav {
+  @extend %transition-shorter;
+  background-color: transparent;
+  padding: 0;
+  text-decoration: none;
+  color: color('black');
 
   &:hover {
-    width: 16rem;
-    background-color: color('black');
-    color: color('white');
-  }
-
-  @include media('md-up') {
-    width: 16rem;
+    color: color('gray')
   }
 }
 
@@ -132,6 +240,28 @@ button {
   }
 }
 
+.button--style-primary {
+  @extend %text-button;
+  @extend %transition-shorter;
+  padding: 6px 20px;
+  width: 12.22rem;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: color('black');
+  border-style: solid;
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color('black');
+    color: color('white');
+  }
+
+  @include media('md-up') {
+    width: 16rem;
+  }
+}
+
 footer {
   img {
     max-width: 80px;
@@ -141,7 +271,6 @@ footer {
 //Index
 
 .map-container {
-  z-index: 2;
   width: 90vw;
   top: 58%;
   left: 50%;
@@ -168,20 +297,14 @@ footer {
 }
 
 .header-image-container {
-  z-index: 3;
-  top: 60%;
-  left: 38%;
+  top: 55vh;
+  left: 18vw;
   max-height: 8.61rem;
-  transform: translate(-50%, -50%);
 
   @include media('md-up') {
     max-height: 13.94rem;
-    top: 55vh;
-    left: 35%;
-  }
-
-  @include media('md-up') {
     top: 40vh;
+    left: 35%;
   }
 
   @include media('xl-up') {
@@ -236,27 +359,26 @@ footer {
 }
 
 .emissions-header-image-container {
-  top: 23%;
-  left: 6%;
+  top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
 
   @include media('sm-up') {
-    top: 22%;
+    top: 22vh;
   }
 
   @include media('md-up') {
-    top: 15%;
+    top: 15vh;
     left: 35%;
   }
 }
 
 .emissions-caption {
-  bottom: -5%;
+  top: 90vh;
   right: 1.112rem;
 
   @include media('md-up') {
-    bottom: 5%;
+    top: 75vh;
     right: 20%;
   }
 
@@ -318,11 +440,15 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
-  margin-top: 20vh;
+  margin-top: 10vh;
+
+  @include media('md-up') {
+    margin-top: 15vh;
+  }
 }
 
 .offsets {
-  margin-top: 50vh;
+  margin-top: 55vh;
 
   @include media('sm-down') {
     display: flex;
@@ -334,7 +460,7 @@ tr:last-of-type {
   }
 
   @include media('md-up') {
-    margin-top: 30vh;
+    margin-top: 50vh;
   }
 }
 
@@ -347,8 +473,12 @@ tr:last-of-type {
     transform: translate(-50%, -50%);
   }
 
-  @include media('xl-up') {
+  @include media('lg-up') {
     top: 45%;
+  }
+
+  @include media('xxl-up') {
+    top: 55%;
   }
 }
 
@@ -372,7 +502,7 @@ tr:last-of-type {
 
   @include media('md-up') {
     margin-top: 25vh;
-    padding-left: 6.72rem;
+    padding-left: $inner-content-padding-x-desktop;
   }
 }
 
@@ -385,12 +515,20 @@ tr:last-of-type {
 
   @include media('md-up') {
     margin-top: 25vh;
-    padding-right: 6.72rem;
+    padding-right: $inner-content-padding-x-desktop;
+  }
+}
+
+.resources-list {
+  > li > a {
+    color: color('black');
+    text-decoration: none;
+    transition: all $transition-easing $transition-duration-shorter;
   }
 }
 
 .clients-header-image-container {
-  top: 30%;
+  top: 30vh;
   left: 30%;
   max-height: 20rem;
 
@@ -400,16 +538,16 @@ tr:last-of-type {
   }
 
   @include media('xl-up') {
-    top: 35%;
+    top: 35vh;
   }
 }
 
 .clients-caption {
-  bottom: -5%;
+  top: 95vh;
   right: 1.112rem;
 
   @include media('md-up') {
-    bottom: 5%;
+    top: 85vh;
     right: 20%;
   }
 
@@ -425,7 +563,6 @@ tr:last-of-type {
 }
 
 .clients-image-three-container {
-
   @include media('md-up') {
     margin-top: -2%;
   }
@@ -441,9 +578,9 @@ tr:last-of-type {
 
 .resources-list {
   > li > a {
+    @extend %transition-shorter;
     color: color('black');
     text-decoration: none;
-    transition: all $transition-easing $transition-duration-shorter;
 
     &:hover {
       color: color('gray')
@@ -481,7 +618,7 @@ tr:last-of-type {
   > div > a {
     color: color('black');
     text-decoration: none;
-    transition: all ease-in-out 0.18s;
+    @extend %transition-shorter;
 
     &:hover {
       color: color('gray')

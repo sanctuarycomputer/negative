@@ -34,10 +34,6 @@
         color: white;
         text-align: center;
       }
-      .map canvas {
-        border-radius: 9999px;
-        image-rendering: pixelated;
-      }
       .map img {
         z-index: 2;
         width: 100%;
@@ -50,8 +46,8 @@
       @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
       @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
-    <div class="background-slide">
-      <div class="map-container relative overflow-hidden">
+    <div class="background-slide globe">
+      <div class="map-container z-2 relative overflow-hidden">
         <div class="map">
           <img class="globe" src="img/index/earth.svg" alt="Earth" />
           <canvas id="map-canvas"></canvas>
@@ -60,18 +56,68 @@
     </div>
     <!-- End Weathermap -->
 
-    <!-- TO-DO: add menu. Start Menu -->
-      <div class="fade"></div>
-    <!-- End Menu -->
+    <!-- Start Menu -->
+    <nav>
+      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
+        <div>
+          <button aria-label="Visit Studio Carbon Negative" href="index.html" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
+            <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-menu-button-container fixed z-overlay flex items-center col-12 xl:col-6 xl:off-6 justify-between">
+        <div class="table-of-contents transition-shortest opacity-0 col-6 text-menu-md serif">
+          Table of Contents
+        </div>
+        <div class="col-3 flex justify-end">
+          <button aria-label="Open menu" id="nav-menu-button" class="button--style-nav text-left italic text-menu-md serif transition-shorter">
+            Menu
+          </button>
+          <button aria-label="Close menu" id="nav-close-button" class="button--style-nav text-left italic text-menu-md serif none opacity-0 events-none transition-shorter">
+            Close
+          </button>
+        </div>
+      </div>
 
-    <!-- Start Page Content -->
+      <div id="menu" class="fixed w100 menu menu--inactive">
+        <div class="inner-menu mxauto w100 h100">
+          <div class="inner-menu-inner-container menu-link opacity-0">
+            <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
+              <div>
+                <a aria-label="Visit Studio Carbon Negative" class="button--style-nav text-left" href="index.html">Studio Carbon Negative</a>
+              </div>
+              <div>
+                <a aria-label="Visit Calculating Emissions" class="button--style-nav text-left" href="emissions.html">Calculating Emissions</a>
+              </div>
+              <div>
+                <a aria-label="Visit Buying Offsets" class="button--style-nav text-left" href="offsetting.html">Buying Offsets</a>
+              </div>
+              <div>
+                <a aria-label="Visit Helping Clients" class="button--style-nav text-left" href="clients.html">Helping Clients</a>
+              </div>
+              <div>
+                <a aria-label="Visit Resources" class="button--style-nav text-left" href="resources.html">Resources</a>
+              </div>
+            </div>
+            <div class="xl:col-6 xl:off-6">
+              <a aria-label="View our 2019 Report" class=" button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5">&rarr; See Our 2019 Report</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  <!-- End Menu -->
+
+  <!-- Start Page Content -->
+  <div class="view">
     <header class="header vh100 md:mb6">
       <div class="studio z1 col col-12 text-center md:text-left md:col-6 relative">
         <h1 class="text-title serif italic">
           Studio
         </h1>
       </div>
-      <div class="header-image-container absolute col-5 md:col-2">
+      <div class="header-image-container z-4 absolute col-5 md:col-2">
         <div class="color-img">
           <img 
           class="fit-contain h100 w100"
@@ -195,7 +241,7 @@
           <div class="flex flex-row space-between pb2 md:pb3">
             <span class="list-number">(3.)</span>
             <li>
-              Provide lightweight consulting to help our client’s build sustainability into their brand from day one.
+              Provide lightweight consulting to help our clients build sustainability into their brand from day one.
             </li>
           </div>
           </ol>
@@ -254,7 +300,7 @@
         <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
           It also becomes our responsibility to challenge our clients to do the best that we collectively can when it comes to reducing their footprint on the planet. Additionally, we wanted to collect data on the amount of carbon emissions that the hardware products we work on release. Our first case study is the Light Phone.
         </p>
-        <a class="button--style-primary flex items-center justify-center color-black off-1 md:off-2 mt1 md:mt2" href="clients.html">View Helping Clients</a>
+        <a class="button--style-primary flex items-center justify-center color-black off-1 md:off-2 mt1 md:mt2" href="clients.html">&rarr; View Helping Clients</a>
       </section>
 
       <section class="full-width-content-container flex-col md:flex-row">
@@ -342,17 +388,17 @@
         <div class="footer-logo-container pb2 md:pb0">
           <img src="img/sanctu.svg" alt="Sanctuary Computer logo" />
         </div>
-
         <div class="text-footer-xs flex flex-col justify-end md:col-6 pr4">
           <h6 class="color-black">Research and documentation done by Sanctuary Computer.</h6>
-          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits 26g of Carbon per Page Load. View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative" target="_blank">Github</a>.</h6>
+          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits roughly 26g of carbon per page load (from a cold cache).) View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative" target="_blank">Github</a>.</h6>
         </div>
-
       </div>
       
     </footer>
     <!-- End Footer -->
+  </div>
+    
+  <script src="js/script.js"></script>
 
-    <script src="js/script.js"></script>
   </body>
 </html>

@@ -5,6 +5,11 @@ $transition-duration-long: 1s;
 $transition-easing: ease-in-out;
 $transition: $transition-duration-short $transition-easing;
 
+.transition-shortest,
+%transition-shortest {
+  transition: all 0.05s $transition-easing;
+}
+
 .transition-shorter,
 %transition-shorter {
   transition: all $transition-duration-shorter $transition-easing;
@@ -23,4 +28,28 @@ $transition: $transition-duration-short $transition-easing;
 .transition-long,
 %transition-long {
   transition: all $transition-duration-long $transition-easing;
+}
+
+@keyframes animation-fade-in-down-slow {
+  35% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animation-fade-in-up-slow {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
 }
