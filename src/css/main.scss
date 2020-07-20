@@ -418,6 +418,18 @@ footer {
   }
 }
 
+.emissions-diagram-caption {
+  @include media('xl-up') {
+    padding-top: 35%;
+  }
+}
+
+.emissions-diagram-container, .emissions-diagram-table-container {
+  @include media('xl-up') {
+    padding-right: 10%;
+  }
+}
+
 .emissions-diagram-table > :last-child {
   border-bottom: 1px solid color('black');
 }
