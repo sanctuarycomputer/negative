@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,15 +100,15 @@
     </header>
 
     <div class="wrapper">
-      <section class="content-container inner-content-padding-x mxauto flex-col fade-in-up">
-        <h3 class="text-subtitle serif mb3 lg:col-5">How we measured our carbon footprint and emissions.</h3>
-        <div class="flex flex-col-reverse off-1 lg:off-0 lg:flex-row">
-          <div class="measuring-emissions-caption flex flex-col off-1 lg:off-0 lg:col-4">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+        <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">How we measured our carbon footprint and emissions.</h3>
+        <div class="flex flex-col-reverse off-1 md:off-0 xl:flex-row">
+          <div class="measuring-emissions-caption flex flex-col off-1 md:col-8 md:off-4 xl:off-0 xl:col-4">
             <p class="text-caption">
-              <span class="caption-number">(A.)</span>The Greenhouse Gas Protocol – <span class="color-gray-darker">The most widely used international accounting tool for government and business leaders to understand, quantify, and manage greenhouse gas emissions. A decade-long partnership between the World Resources Institute (WRI) and the World Business Council for Sustainable Development (WBCSD), the GHG Protocol is working with businesses, governments, and environmental groups around the world to build a new generation of credible and effective programs for tackling climate change. It serves as the foundation for nearly every GHG standard and program in the world - from the International Standards Organization to The Climate Registry - as well as hundreds of GHG inventories prepared by individual companies.</span>
+              <span class="caption-letter pr2">(A.)</span>The Greenhouse Gas Protocol – <span class="color-gray-darker">The most widely used international accounting tool for government and business leaders to understand, quantify, and manage greenhouse gas emissions. A decade-long partnership between the World Resources Institute (WRI) and the World Business Council for Sustainable Development (WBCSD), the GHG Protocol is working with businesses, governments, and environmental groups around the world to build a new generation of credible and effective programs for tackling climate change. It serves as the foundation for nearly every GHG standard and program in the world - from the International Standards Organization to The Climate Registry - as well as hundreds of GHG inventories prepared by individual companies.</span>
             </p>
           </div>
-          <div class="flex flex-col lg:col-5 lg:off-2">
+          <div class="flex flex-col md:col-8 md:off-4 xl:col-5 xl:off-2">
             <p class="text-paragraph atlas mb2_5">
               First, we needed to understand the industry standard approach to carbon footprinting. We discussed the process with several third party consultancies, certification companies, and did a bunch of our own research, we decided to base our math on the GHG Protocol.
             </p>
@@ -116,7 +116,14 @@
               The GHG Protocol consists of "Scopes", each of which has multiple sub categories. In order to calculate our current carbon footprint, we looked into the emission categories within Scope 1, Scope 2, and Scope 3.
             </p>
             <div class="emissions-diagram-container my2 md:mt5">
-              <img class="h100 w100" src="img/emissions/ghg-protocol-diagram.svg" alt="Diagram of GHG Protocol"/>
+              <img
+                class="none md:block h100 w100"
+                src="img/emissions/ghg-protocol-diagram-lg.svg"
+                alt="Diagram of GHG Protocol"/>
+              <img
+              class="md:none h100 w100"
+              src="img/emissions/ghg-protocol-diagram-sm.svg"
+              alt="Diagram of GHG Protocol"/>
             </div>
             <div class="emissions-diagram-table mb3 flex flex-col">
               <div class="flex flex-col lg:flex-row emissions-diagram-table-item">
@@ -151,9 +158,9 @@
         </div>
       </section>
 
-      <section class="full-width-content-container flex flex-col md:flex-row fade-in-up">
-        <div class="emissions-image-one-container md:col-6 mb5 md:mb0">
-          <div class="color-img col-8 md:col-8 md:off-4 ">
+      <section class="full-width-content-container flex flex-col lg:flex-row fade-in-up">
+        <div class="emissions-image-one-container lg:col-6 mb5 md:mb0">
+          <div class="color-img col-8 md:col-6 md:off-1 lg:col-8 lg:off-4">
             <img 
               class="w100"
               src="img/emissions/united-states-md.png"
@@ -163,8 +170,8 @@
               (max-width: 380px) 240w"
               alt="United States"/>
           </div>
-          <div class="col-8 md:col-6 md:off-4 pt_5">
-            <p class="text-caption color-gray-darker">
+          <div class="col-8 md:col-12 lg:col-6 lg:off-4 pt_5">
+            <p class="md:col-4 md:off-1 lg:off-0 lg:col-12 text-caption color-gray-darker">
               <a href="https://g.co/ev/13472" target="_blank">
                 <span class="pr_25">&rarr;</span><span class="underline">United States</span>
               </a>
@@ -172,8 +179,8 @@
             </p>
           </div>
         </div>
-        <div class="emissions-image-two-container col-8 md:col-6 off-4 md:off-0">
-          <div class="flex col-12 md:col-4 md:off-4 color-img">
+        <div class="emissions-image-two-container col-8 md:col-12 lg:col-6 off-4 md:off-0">
+          <div class="flex col-12 md:col-3 md:off-8 lg:col-4 lg:off-4 color-img">
             <img 
               class="w100"
               src="img/emissions/united-states-2-md.png"
@@ -183,7 +190,7 @@
               (max-width: 380px) 240w"
               alt="United States"/>
           </div>
-          <div class="col-12 md:off-4 md:col-6 pt_5">
+          <div class="col-12 md:col-4 md:off-8 lg:off-4 lg:col-6 pt_5">
             <p class="text-caption color-gray-darker">
               <a href="https://g.co/ev/1287" target="_blank">
                 <span class="pr_25">&rarr;</span><span class="underline">United States</span>
@@ -194,16 +201,16 @@
         </div>
       </section>
 
-      <section class="content-container inner-content-padding-x mxauto flex-col fade-in-up">
-        <h3 class="text-subtitle serif mb3 lg:col-6">Using third parties to source our emissions and understand our impact.</h3>
-        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+        <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Using third parties to source our emissions and understand our impact.</h3>
+        <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph atlas">
           We had calls with several third party consultancies, certification companies, and companies selling software tools that could help us collect our carbon emission data, provide analysis, recommend offsets to purchase, and become carbon neutral certified. The services were either incredibly expensive for a studio of our size or not quite what we were looking for, and most of the software tools were in their beta testing phase. Additionally, a lot of the data we would have to provide anyway, so we figure we might as well give it a shot first!
         </p>
       </section>
       
       <section class="full-width-content-container flex flex-col-reverse md:flex-row fade-in-up">
         <div class="emissions-image-three-container md:col-6">
-          <div class="col-8 md:col-6 md:off-6 color-img">
+          <div class="col-8 md:off-2 xl:col-6 xl:off-6 color-img">
             <img 
             class="w100"
             src="img/emissions/alps-md.png"
@@ -213,7 +220,7 @@
             (max-width: 380px) 240w"
             alt="The Alps"/>
           </div>
-          <div class="col-8 md:col-6 md:off-6 pt_5">
+          <div class="col-8 md:off-2 xl:col-6 xl:off-6 pt_5">
             <p class="text-caption color-gray-darker">
               <a href="https://g.co/ev/1039" target="_blank">
                 <span class="pr_25">&rarr;</span><span class="underline">The Alps</span>
@@ -223,8 +230,8 @@
           </div>
         </div>
         <div class="emissions-image-four-container md:col-6 mb5 md:mb0">
-          <div class="md:col-4 md:off-4">
-            <div class="color-img col-8 off-4 md:off-0 md:col-12">
+          <div class="xl:col-4 xl:off-4">
+            <div class="color-img col-8 off-4 md:off-2 md:col-6 xl:off-0 xl:col-12">
               <img
               class="w100"
               src="img/emissions/maldives-md.png"
@@ -235,8 +242,8 @@
               alt="The Maldives"/>
             </div>
           </div>
-          <div class="md:col-6 md:off-4">
-            <div class="col-8 md:col-12 off-4 md:off-0 pt_5">
+          <div class="xl:col-6 xl:off-4">
+            <div class="col-8 off-4 md:off-2 md:col-6 xl:col-12 xl:off-0 pt_5">
               <p class="text-caption color-gray-darker">
                 <a href="https://g.co/ev/1915" target="_blank">
                   <span class="pr_25">&rarr;</span><span class="underline">The Maldives</span>
@@ -248,32 +255,135 @@
         </div>
       </section>
 
-      <section class="content-container mxauto flex-col fade-in-up">
+      <section class="smaller-content-container mxauto flex-col fade-in-upp">
         <div class="inner-content-padding-x">
-          <h3 class="text-subtitle serif mb3 lg:col-6">Calculating our carbon footprint.</h3>
-          <p class="off-1 md:off-6 text-paragraph mb2_5 atlas md:col-6">
-            Fortunately, a business like our is relatively straight forward to calculate: at the end of the day, Sanctuary Computer is a room of desks and monitors. We don't have any complex products that need LCA studies done, and our supply chain is relatively straight forward.
-          </p>
-          <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
-            That's not to say it's easy. In order to get accurate numbers for each of our categories, we had to piece together a variety of calculators, datasets and spreadsheets from trusted sourced all over the internet. To make it easy for our peers to do the same, we've put together this spreadsheet. Please reach out to us if you have suggestions, or would like a hand doing this for your studio!
-          </p>
-        </div>
-        <div class="flex flex-col-reverse lg:flex-row">
-          <div class="flex flex-col lg:col-6">
-            <p class="text-caption py4 col-8 lg:col-6 off-4 lg:off-2 lg:pt10 lg:pb10">
-              <span class="caption-number">(B.)</span>Sanctuary Computers 2019 Emissions – <span class="color-gray-darker">Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.</span>
+          <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Calculating our carbon footprint.</h3>
+            <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph mb2_5 atlas">
+              Fortunately, a business like our is relatively straight forward to calculate: at the end of the day, Sanctuary Computer is a room of desks and monitors. We don't have any complex products that need LCA studies done, and our supply chain is relatively straight forward.
             </p>
-            <div class="col-8 lg:col-7 color-img">
-              <img 
-                class="w100"
-                src="img/emissions/haiti-md.png"
-                srcset="img/emissions/haiti-sm.png 240w, img/emissions/haiti-md.png 400w, img/emissions/haiti-lg.png 720w"
-                sizes="(min-width: 1200px) 720w,
-                (max-width: 768px) 400w,
-                (max-width: 380px) 240w"
-                alt="Haiti"/>
+            <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph atlas">
+              That's not to say it's easy. In order to get accurate numbers for each of our categories, we had to piece together a variety of calculators, datasets and spreadsheets from trusted sourced all over the internet. To make it easy for our peers to do the same, we've put together this spreadsheet. Please reach out to us if you have suggestions, or would like a hand doing this for your studio!
+            </p>
+        </div>
+          <div class="flex flex-col">
+            <div class="flex flex-row">
+              <div class="none xl:col-6 xl:flex">
+                <p class="emissions-diagram-caption text-caption py4 col-8 xl:col-6 off-4 xl:off-2">
+                  <span class="caption-letter pr2">(B.)</span>Sanctuary Computers 2019 Emissions – <span class="color-gray-darker">Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.</span>
+              </div>
+              <div class="emissions-diagram-container off-1 md:col-8 md:off-4 xl:off-0 xl:col-6 my2 md:mt5">
+                <img
+                  class="none md:block h100 w100"
+                  src="img/emissions/scopes-diagram-lg.svg"
+                  alt="Diagram of our carbon footprint"/>
+                <img
+                class="md:none h100 w100"
+                src="img/emissions/scopes-diagram-sm.svg"
+                alt="Diagram of our carbon footprint"/>
+              </div>
             </div>
-            <div class="col-8 lg:col-6">
+            <div class="flex flex-row">
+              <div class="xl:col-6 flex flex-col">
+                <div class="color-img none xl:flex xl:col-8">
+                  <img 
+                  class="w100 h100"
+                  src="img/emissions/haiti-md.png"
+                  srcset="img/emissions/haiti-sm.png 240w, img/emissions/haiti-md.png 400w, img/emissions/haiti-lg.png 720w"
+                  sizes="(min-width: 1200px) 720w,
+                  (max-width: 768px) 400w,
+                  (max-width: 380px) 240w"
+                  alt="Haiti"/>
+                </div>
+                <p class="none xl:block text-caption xl:col-6 mt_5 xl:pb10">
+                  <span class="caption-letter pr2">(B.)</span>Sanctuary Computers 2019 Emissions – <span class="color-gray-darker">Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.</span>
+                </p>
+              </div>
+              <div class="off-1 md:col-8 md:off-4 xl:off-0 xl:col-6">
+                <div class="emissions-diagram-table-container">
+                  <table class="mb2 w100">
+                    <tr class="text-menu-md serif table-header">
+                      <th class="text-left">Scope 1</th>
+                      <th class="text-right">0%</th>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td>None*</td>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <table class="mb2 w100">
+                    <tr class="text-menu-md serif table-header">
+                      <th class="text-left">Scope 2</th>
+                      <th class="text-right">39.98%</th>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Studio Electricity</td>
+                      <td class="text-right">2,502.16 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Cloud Computing & Web Hosting</td>
+                      <td class="text-right">11,263.29 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Data Transfer at the Edge</td>
+                      <td class="text-right">36,707.9812 kg CO2e</td>
+                    </tr>
+                  </table>
+                  <table class="w100">
+                    <tr class="text-menu-md serif table-header">
+                      <th class="text-left">Scope 3</th>
+                      <th class="text-right">61.02%</th>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Laptops</td>
+                      <td class="text-right">839.19 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Privately Owned Vehicles</td>
+                      <td class="text-right">252.10 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Employee Commuting</td>
+                      <td class="text-right">12.8 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Electricity for Commuting</td>
+                      <td class="text-right">12.8 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Business Travel Vehicles</td>
+                      <td class="text-right">902 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Business Travel Flights</td>
+                      <td class="text-right">60,667 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Miscellaneous</td>
+                      <td class="text-right">15,140.00 kg CO2e</td>
+                    </tr>
+                    <tr class="table-items sans-serif text-details">
+                      <td class="text-left">Total Scope 3 Emissions</td>
+                      <td class="text-right">79,007.48 kg CO2e</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="xl:none text-caption py4 col-8 xl:col-6 off-4 xl:off-2 xl:pt10 xl:pb10">
+            <span class="caption-letter pr2">(B.)</span>Sanctuary Computers 2019 Emissions – <span class="color-gray-darker">Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.</span>
+          </p>
+          <div class="xl:none col-8 md:col-4 lg:off-1 xl:col-7 color-img">
+            <img 
+              class="w100"
+              src="img/emissions/haiti-md.png"
+              srcset="img/emissions/haiti-sm.png 240w, img/emissions/haiti-md.png 400w, img/emissions/haiti-lg.png 720w"
+              sizes="(min-width: 1200px) 720w,
+              (max-width: 768px) 400w,
+              (max-width: 380px) 240w"
+              alt="Haiti"/>
+          </div>
+            <div class="xl:none col-8 md:col-4 lg:off-1 xl:off-0 xl:col-6">
               <div class="pt_5">
                 <p class="text-caption color-gray-darker">
                   <a href="https://g.co/ev/1364" target="_blank">
@@ -283,106 +393,34 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col off-1 lg:off-0 lg:col-6 inner-content-padding-x-right">
-            <div class="carbon-footprint-diagram-container my2 md:mt5">
-              <img class="h100 w100" src="img/emissions/carbon-footprint-diagram.svg" alt="Diagram of our carbon footprint"/>
-            </div>
-            <table class="mb2">
-              <tr class="text-menu-md serif table-header">
-                <th class="text-left">Scope 1</th>
-                <th class="text-right">0%</th>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td>None*</td>
-                <td></td>
-              </tr>
-            </table>
-            <table class="mb2 w100">
-              <tr class="text-menu-md serif table-header">
-                <th class="text-left">Scope 2</th>
-                <th class="text-right">39.98%</th>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Studio Electricity</td>
-                <td class="text-right">2,502.16 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Cloud Computing & Web Hosting</td>
-                <td class="text-right">11,263.29 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Data Transfer at the Edge</td>
-                <td class="text-right">36,707.9812 kg CO2e</td>
-              </tr>
-            </table>
-            <table class="w100">
-              <tr class="text-menu-md serif table-header">
-                <th class="text-left">Scope 3</th>
-                <th class="text-right">61.02%</th>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Laptops</td>
-                <td class="text-right">839.19 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Privately Owned Vehicles</td>
-                <td class="text-right">252.10 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Employee Commuting</td>
-                <td class="text-right">12.8 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Electricity for Commuting</td>
-                <td class="text-right">12.8 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Business Travel Vehicles</td>
-                <td class="text-right">902 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Business Travel Flights</td>
-                <td class="text-right">60,667 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Miscellaneous</td>
-                <td class="text-right">15,140.00 kg CO2e</td>
-              </tr>
-              <tr class="table-items sans-serif text-details">
-                <td class="text-left">Total Scope 3 Emissions</td>
-                <td class="text-right">79,007.48 kg CO2e</td>
-              </tr>
-            </table>
-          </div>
-        </div>
       </section>
 
-      <section class="content-container inner-content-padding-x mxauto flex-col fade-in-up">
-        <h3 class="text-subtitle serif mb3 lg:col-6">Setting new goals.</h3>
-        <p class="off-1 md:off-6 text-paragraph mb2_5 atlas md:col-6">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+        <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Setting new goals.</h3>
+        <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph mb2_5 atlas md:col-6">
           Going to all of this effort without preparing a clear plan to reduce emissions overall is a pointless endeavor. The long term health of our planet requires a reduction in emissions, which can't be achieved if we just meet the status quo each year.
         </p>
-        <p class="off-1 md:off-6 text-paragraph atlas md:col-6">
+        <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph atlas md:col-6">
           When performing these studies, we assessed each category, tried to see if we could do better. We were surprised! We found a bunch of places we could lower our emissions simply by choosing a different provider, or doing a little leg work to set up better systems. 
         </p>
       </section>
-     
-      <section class="content-container inner-content-padding-x mxauto flex-col fade-in-up">
-        <p class="text-subtitle serif lg:col-8">
+
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+        <p class="text-subtitle serif md:col-9 lg:col-7">
           Studio Carbon Negative was initiated by Sanctuary Computer. Get in touch if you would like to know more information about Studio Carbon Negative.
         </p>
         <a class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://www.sanctuary.computer/">&rarr; Visit Sanctuary Computer</a>
       </section>
+      
     </div>
     <!-- End Page Content -->
 
     <!-- Start Footer -->
-    <section class="md:off-6">
-      <p class="footer-header color-black text-footer-sm pb2">Continue Reading</p>
+    <section class="lg:off-4 xl:off-6">
+      <p class="footer-header color-black text-footer-sm pb2">Table of Contents</p>
     </section>
     <footer class="footer-padding-x flex flex-col pb2">
-      <div class="footer-menu links text-menu-lg md:off-6">
+      <div class="footer-menu links text-menu-lg lg:off-4 xl:off-6">
         <div>
           <a class="nav-studio-carbon-negative" href="index.html">Studio Carbon Negative</a>
         </div>
@@ -400,16 +438,14 @@
         </div>
       </div>
 
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div class="footer-logo-container pb2 md:pb0">
+      <div class="flex flex-col lg:flex-row xl:justify-between">
+        <div class="footer-logo-container pb2 lg:col-4 lg:pb0">
           <img src="img/sanctu.svg" alt="Sanctuary Computer logo" />
         </div>
-
-        <div class="text-footer-xs flex flex-col justify-end md:col-6 pr4">
+        <div class="text-footer-xs flex flex-col justify-end lg:col-8 xl:col-6 pr4">
           <h6 class="color-black">Research and documentation done by Sanctuary Computer.</h6>
-          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits roughly 26g of carbon per page load (from a cold cache).) View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative">Github</a>.</h6>
+          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits roughly 26g of carbon per page load (from a cold cache).) View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative" target="_blank">Github</a>.</h6>
         </div>
-
       </div>
       
     </footer>
