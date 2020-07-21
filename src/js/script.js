@@ -42,7 +42,6 @@ const studioCarbonNegativeButtonContainer = document.getElementsByClassName('stu
 const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button-container')[0];
 const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
-const globe = document.getElementsByClassName('background-slide')[0];
 const menuLinks = document.getElementsByClassName('menu-link');
 
 const openMenu = () => {
@@ -60,10 +59,6 @@ const openMenu = () => {
     link.classList.remove('menu-link--animation-fade-in-up-slow');
     link.classList.add('menu-link--animation-fade-in-down-slow');
   });
-
-  if (globe) {
-    globe.classList.add('globe--menu-is-active');
-  };
 
   if (window.innerWidth < breakpointXL && menuIsActive) {
     studioCarbonNegativeButton.classList.add('none');
@@ -92,11 +87,6 @@ const closeMenu = () => {
     link.classList.add('menu-link--animation-fade-in-up-slow');
   });
 
-  if (globe) {
-    globe.classList.remove('globe--menu-is-active');
-    globe.classList.add('globe--menu-is-active');
-  };
-
   if (window.innerWidth < breakpointXL && !menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
@@ -117,6 +107,8 @@ const handleResize = () => {
 
 const handleScroll = () => {
   const scrollTop = window.pageYOffset;
+  const hideNavMenuButton = window.innerHeight + scrollTop > document.body.offsetHeight - 200;
+  const showNavMenuButton = window.innerHeight + scrollTop < document.body.offsetHeight - 200;
 
   if (scrollTop > 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--inactive');
@@ -126,6 +118,16 @@ const handleScroll = () => {
   if (scrollTop < 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--active');
     studioCarbonNegativeButton.classList.add('studio-carbon-negative-button--inactive');
+  };
+
+  if (hideNavMenuButton) {
+    navMenuButton.classList.remove('opacity-1', 'events-all');
+    navMenuButton.classList.add('opacity-0', 'events-none');
+  };
+
+  if (showNavMenuButton) {
+    navMenuButton.classList.remove('opacity-0', 'events-none');
+    navMenuButton.classList.add('opacity-1', 'events-all');
   };
 
 }

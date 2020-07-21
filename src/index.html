@@ -11,52 +11,6 @@
   </head>
   <body>
 
-    <!-- Start Weathermap -->
-    <style>
-      .background-slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        opacity: 0;
-        animation: 1s ease-in-out .25s 1 normal forwards animation-fade-in-up;
-      }
-      .map-container:before {
-        content: "";
-        display: block;
-        padding-top: 100%;
-      }
-      .map-container .map {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        color: white;
-        text-align: center;
-      }
-      .map img {
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        -webkit-animation:spin 100s linear infinite;
-        -moz-animation:spin 100s linear infinite;
-        animation:spin 100s linear infinite;
-      }
-      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-    </style>
-    <div class="background-slide globe">
-      <div class="map-container z-2 relative overflow-hidden">
-        <div class="map">
-          <img class="globe" src="img/index/earth.svg" alt="Earth" />
-          <canvas id="map-canvas"></canvas>
-        </div>
-      </div>
-    </div>
-    <!-- End Weathermap -->
-
     <!-- Start Menu -->
     <nav>
       <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
@@ -112,13 +66,23 @@
 
   <!-- Start Page Content -->
   <div class="view">
+    <div class="background-slide globe z-1 w100 h100 absolute opacity-0 events-none">
+      <div class="vh100 vw100 flex flex-col items-center justify-center">
+        <div class="map-container mxauto relative overflow-hidden">
+          <div class="map absolute text-center color-white t0 r0 b0 l0">
+            <img class="globe z-2 w100 h100" src="img/index/earth.svg" alt="Earth" />
+            <canvas id="map-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="header vh100 md:mb6">
-      <div class="studio z1 col col-12 text-center md:text-left md:col-6 relative">
+      <div class="studio z-below col col-12 text-center md:text-left md:col-6 relative">
         <h1 class="text-title serif italic">
           Studio
         </h1>
       </div>
-      <div class="header-image-container opacity-0 z-4 absolute col-5 md:col-2">
+      <div class="header-image-container z-3 opacity-0 col-5 absolute md:col-2">
         <div class="color-img">
           <img 
           class="fit-contain h100 w100"
@@ -130,7 +94,7 @@
           alt="New York City"/>
         </div>
       </div>
-      <div class="negative z1 col col-12 md:col-6 text-center md:text-right relative">
+      <div class="negative z-below col col-12 md:col-6 text-center md:text-right relative">
         <h1 class="text-title serif">
           Carbon Negative
         </h1>
@@ -149,7 +113,7 @@
 
       <section class="full-width-content-container col-12 flex flex-col md:flex-row fade-in-up">
         <div class="mb5 md:mb0 md:col-6">
-          <div class="col-8 md:col-10 xl:col-6 xl:off-3 color-img ">
+          <div class="col-8 md:col-10 xl:col-6 xl:off-4 color-img ">
             <img 
               class="w100" 
               src="img/index/antarctica-md.png"
@@ -159,7 +123,7 @@
               (max-width: 380px) 240w"
               alt="Antarctica"/>
           </div>
-            <div class="col-8 md:col-8 xl:col-6 xl:off-3 pt_5">
+            <div class="col-8 md:col-8 xl:col-6 xl:off-4 pt_5">
               <p class="text-caption block color-gray-darker">                    
                 <a href="https://g.co/ev/6488" target="_blank">
                 <span class="pr_25">&rarr;</span>
@@ -305,7 +269,7 @@
 
       <section class="full-width-content-container flex-col md:flex-row fade-in-up">
         <div class="col-8 off-4 md:off-0 md:col-6 mb5 md:mb0">
-          <div class="column-margin-padding-left md:col-12 xl:off-6 xl:col-6">
+          <div class="md:col-12 xl:off-6 xl:col-6">
             <div class="color-img">
               <img 
               class="w100"
@@ -317,7 +281,7 @@
               alt="United States"/>
             </div>
           </div>
-          <div class="md:col-8 xl:off-6 xl:col-6 column-margin-padding-left pt_5">
+          <div class="md:col-8 xl:off-6 xl:col-6 pt_5">
             <p class="text-caption color-gray-darker">
               <a href="https://g.co/ev/1968" target="_blank">
                 <span class="pr_25">&rarr;</span><span class="underline">United States</span>
@@ -360,7 +324,7 @@
 
     <!-- Start Footer -->
     <section class="lg:off-4 xl:off-6">
-      <p class="footer-header color-black text-footer-sm pb2">Table of Contents</p>
+      <p class="footer-header color-black text-footer-md serif pb2">Table of Contents</p>
     </section>
     <footer class="footer-padding-x flex flex-col pb2">
       <div class="footer-menu links text-menu-lg lg:off-4 xl:off-6">

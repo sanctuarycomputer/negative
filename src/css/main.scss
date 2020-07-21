@@ -4,7 +4,7 @@
 
 //View
 
-.view, .globe {
+.view {
   @extend %transition;
 
   &--menu-is-active {
@@ -91,7 +91,7 @@ button {
   width: 12.22rem;
   background-color: transparent;
   border-width: 1px;
-  border-color: black;
+  border-color: color('black');
   border-style: solid;
   border-radius: 999px;
   cursor: pointer;
@@ -138,7 +138,7 @@ footer {
 
 .nav-menu-button-container {
   background-color: rgba(255, 255, 255, 0.95);
-  background: linear-gradient(to bottom,#fff 0,#0000 100%);
+  background: linear-gradient(to bottom,#fff 0,rgba(255, 255, 255, 0));
   padding-right: $nav-padding-x;
   padding-left: $nav-padding-x;
 
@@ -156,7 +156,7 @@ footer {
   }
 
   @include media('xl-up') {
-    background: linear-gradient(to bottom,#fff 0,#0000 100%);
+    background: linear-gradient(to bottom,#fff 0,rgba(255, 255, 255, 0));
   }
 }
 
@@ -248,7 +248,7 @@ footer {
   }
 
   &--animation-fade-in-up-slow {
-    animation: 1s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
   }
 }
 
@@ -273,15 +273,41 @@ footer {
 
 //Index
 
+.background-slide {
+  animation: $transition-duration-long $transition-easing .25s 1 normal forwards animation-fade-in-up;
+}
+
+.map-container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.map img {
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 .map-container {
+  transform-style: preserve-3d;
   width: 90vw;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  @include media('sm-up') {
+    top: 10vh;
+  }
 
   @include media('md-up') {
-    top: 50%;
+    top: 0%;
     width: 40vw;
+  }
+
+  @include media('xl-up') {
+    width: 50vw;
   }
 }
 
@@ -303,6 +329,7 @@ footer {
 }
 
 .header-image-container {
+  transform-style: preserve-3d;
   animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 55vh;
   left: 18vw;
@@ -311,20 +338,16 @@ footer {
   @include media('md-up') {
     max-height: 13.94rem;
     top: 35vh;
-    left: 30%;
+    left: 28%;
   }
 
   @include media('lg-up') {
-    left: 30%;
+    left: 32%;
   }
 
   @include media('xl-up') {
-    top: 33vh;
-    left: 33%;
-  }
-
-  @include media('xxl-up') {
-    left: 35%;
+    top: 30vh;
+    left: 28%;
   }
 }
 
