@@ -459,7 +459,7 @@ footer {
 
 .emissions-diagram-container, .emissions-diagram-table-container {
   @include media('xl-up') {
-    padding-right: 10%;
+    padding-right: $inner-content-padding-x-desktop;
   }
 }
 
