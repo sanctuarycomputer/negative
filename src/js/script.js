@@ -6,7 +6,7 @@ const emissionsPathname = "emissions";
 const offsetsPathname = "offsetting";
 const clientsPathname = "clients";
 const resourcesPathname = "resources";
-const currentPathname = window.location.pathname.slice(1).split('/')[0].split('.')[0];
+const currentPathname = process.env.NODE_ENV === 'production' ? window.location.pathname.slice(1) : window.location.pathname.slice(1).split('/')[0].split('.')[0];
 
 const addActiveClassToFooterMenuLink = () => {
   if (currentPathname === indexPathname) {
