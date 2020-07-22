@@ -50,7 +50,7 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-title, .text-menu-lg, .text-subtitle, .text-menu, .text-caption {
+.text-title, .text-menu-lg, .text-subtitle, .text-caption {
   font-family: $austin;
 }
 
@@ -107,12 +107,7 @@ p.sans-serif, li.sans-serif {
   }
 }
 
-.text-caption {
-  font-weight: 100;
-  font-size: 0.6rem;
-  line-height: 0.8rem;
-  letter-spacing: .75px;
-
+.text-caption, .text-paragraph {
   > a {
     transition: all $transition-easing $transition-duration-shorter;
     color: color('black');
@@ -121,6 +116,13 @@ p.sans-serif, li.sans-serif {
       color: color('gray');
     }
   }
+}
+
+.text-caption {
+  font-weight: 100;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  letter-spacing: .75px;
 
   @include media('lg-up') {
     font-size: 0.77rem;
@@ -157,7 +159,6 @@ p.sans-serif, li.sans-serif {
   @include media('md-up') {
     font-size: 1rem;
     line-height: 1.7rem;
-
   }
 }
 
