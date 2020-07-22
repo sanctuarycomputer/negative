@@ -1,6 +1,5 @@
 "use strict";
 
-//TO-DO: update pathnames
 const indexPathname = "index";
 const emissionsPathname = "emissions";
 const offsetsPathname = "offsetting";
