@@ -33,6 +33,13 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5, h6, p, div, span, a, img, th, td {
+  &::selection {
+    color: color('white');
+    background-color: color('blue');
+  }
+}
+
 .text-title, .text-menu-lg, h1, h2, h3, h4, h5, p.serif {
   font-weight: 100;
 }
