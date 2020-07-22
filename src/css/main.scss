@@ -242,6 +242,11 @@ footer {
   }
 }
 
+.menu-active-link {
+  color: color('gray')!important;
+  pointer-events: none;
+}
+
 .menu-link {
   &--animation-fade-in-down-slow {
     animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
@@ -692,10 +697,6 @@ tr:last-of-type {
       color: color('gray')
     }
   }
-}
-
-.footer-menu-active-link {
-  color: color('gray')!important;
 }
 
 .color-img {
