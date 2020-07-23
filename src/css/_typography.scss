@@ -27,6 +27,17 @@ $austin:  'Austin News Deck Web', serif;
 
 a {
   text-decoration: none;
+
+  &:visited {
+    color: color('black');
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span, a, img, th, td {
+  &::selection {
+    color: color('white');
+    background-color: color('blue');
+  }
 }
 
 .text-title, .text-menu-lg, h1, h2, h3, h4, h5, p.serif {

@@ -7,26 +7,46 @@ const clientsPathname = "clients";
 const resourcesPathname = "resources";
 const currentPathname = process.env.NODE_ENV === 'production' ? window.location.pathname.slice(1) : window.location.pathname.slice(1).split('/')[0].split('.')[0];
 
-const addActiveClassToFooterMenuLink = () => {
+const addActiveClassToMenuLink = () => {
   if (currentPathname === indexPathname) {
-    document.getElementsByClassName('nav-studio-carbon-negative')[0].classList.add('italic', 'footer-menu-active-link');
+    const links = document.getElementsByClassName('menu-studio-carbon-negative');
+
+    Array.from(links).forEach(link => {
+      link.classList.add('italic', 'menu-active-link');
+    });
   };
 
   if (currentPathname === emissionsPathname) {
-    document.getElementsByClassName('nav-emissions')[0].classList.add('italic', 'footer-menu-active-link');
+    const links = document.getElementsByClassName('menu-emissions');
+
+    Array.from(links).forEach(link => {
+      link.classList.add('italic', 'menu-active-link');
+    });
   };
   
   if (currentPathname === offsetsPathname) {
-    document.getElementsByClassName('nav-offsetting')[0].classList.add('italic', 'footer-menu-active-link');
+    const links = document.getElementsByClassName('menu-offsetting');
+
+    Array.from(links).forEach(link => {
+      link.classList.add('italic', 'menu-active-link');
+    });
   };
   
   if (currentPathname === clientsPathname) {
-    document.getElementsByClassName('nav-clients')[0].classList.add('italic', 'footer-menu-active-link');
+    const links = document.getElementsByClassName('menu-clients');
+
+    Array.from(links).forEach(link => {
+      link.classList.add('italic', 'menu-active-link');
+    });
   };
   
   if (currentPathname === resourcesPathname) {
-    document.getElementsByClassName('nav-resources')[0].classList.add('italic', 'footer-menu-active-link');
-  };  
+    const links = document.getElementsByClassName('menu-resources');
+
+    Array.from(links).forEach(link => {
+      link.classList.add('italic', 'menu-active-link');
+    });
+  };
 };
 
 
@@ -144,7 +164,7 @@ window.onscroll = function() {
   }
 };
 
-addActiveClassToFooterMenuLink();
+addActiveClassToMenuLink();
 navMenuButton.addEventListener('click', openMenu);
 navCloseButton.addEventListener('click', closeMenu);
 window.addEventListener('scroll', handleScroll);
