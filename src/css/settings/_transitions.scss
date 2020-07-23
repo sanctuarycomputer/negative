@@ -89,6 +89,18 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
   }
 }
 
+@keyframes animation-fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0rem, 0);
+  }
+}
+
 @keyframes animation-fade-in {
   0% {
     opacity: 0;

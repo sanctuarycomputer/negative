@@ -401,7 +401,7 @@ footer {
 
 .header-image-container {
   transform-style: preserve-3d;
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
@@ -471,7 +471,7 @@ footer {
 }
 
 .emissions-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
@@ -602,7 +602,7 @@ tr:last-of-type {
 }
 
 .offsets-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 18vh;
 
   @include media('md-up') {
@@ -662,7 +662,7 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
   top: 20vh;
   max-height: 20rem;
 
