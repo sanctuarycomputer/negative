@@ -9,12 +9,12 @@
     <title>Studio Carbon Negative</title>
   </head>
   <body>
-    
+
     <!-- Start Menu -->
     <nav>
       <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
         <div>
-          <button aria-label="Visit Studio Carbon Negative" href="index.html" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
+          <button aria-label="Visit Studio Carbon Negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
             <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
           </button>
         </div>
@@ -38,26 +38,25 @@
           <div class="inner-menu-inner-container menu-link opacity-0">
             <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
               <div>
-                <a aria-label="Visit Studio Carbon Negative" class="button--style-nav text-left" href="index.html">Studio Carbon Negative</a>
+                <a aria-label="Visit Studio Carbon Negative" class="button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
               </div>
               <div>
-                <a aria-label="Visit Calculating Emissions" class="button--style-nav text-left" href="emissions.html">Calculating Emissions</a>
+                <a aria-label="Visit Calculating Emissions" class="button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
               </div>
               <div>
-                <a aria-label="Visit Buying Offsets" class="button--style-nav text-left" href="offsetting.html">Buying Offsets</a>
+                <a aria-label="Visit Buying Offsets" class="button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
               </div>
               <div>
-                <a aria-label="Visit Helping Clients" class="button--style-nav text-left" href="clients.html">Helping Clients</a>
+                <a aria-label="Visit Helping Clients" class="button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
               </div>
               <div>
-                <a aria-label="Visit Resources" class="button--style-nav text-left" href="resources.html">Resources</a>
+                <a aria-label="Visit Resources" class="button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
             </div>
             <div class="xl:col-6 xl:off-6">
               <a aria-label="View our 2019 Report" class=" button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank">&rarr; See Our 2019 Report</a>
             </div>
           </div>
-
         </div>
       </div>
     </nav>
@@ -421,19 +420,19 @@
     <footer class="footer-padding-x flex flex-col pb2">
       <div class="footer-menu links text-menu-lg lg:off-4 xl:off-6">
         <div>
-          <a class="nav-studio-carbon-negative" href="index.html">Studio Carbon Negative</a>
+          <a class="nav-studio-carbon-negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
         </div>
         <div>
-          <a class="nav-emissions" href="emissions.html">Calculating Emissions</a>
+          <a class="nav-emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
         </div>
         <div>
-          <a class="nav-offsetting" href="offsetting.html">Buying Offsets</a>
+          <a class="nav-offsetting" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
         </div>
         <div>
-          <a class="nav-clients" href="clients.html">Helping Clients</a>
+          <a class="nav-clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
         </div>
         <div>
-          <a class="nav-resources" href="resources.html">Resources</a>
+          <a class="nav-resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row xl:justify-between">
