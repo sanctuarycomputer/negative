@@ -4,7 +4,7 @@ $transition-duration-medium: 0.5s;
 $transition-duration-long: 1s;
 $transition-duration-longer: 1.25s;
 $transition-easing: ease-in-out;
-$transition-cubic-bezier: cubic-bezier(0.45, 0, 0.55, 1); 
+$transition-cubic-bezier: cubic-bezier(.455,.03,.515,.955); 
 $transition: $transition-duration-short $transition-easing;
 $transition-left-title: $transition-duration-long $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-up-long; 
 $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-down;
@@ -67,7 +67,7 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
 @keyframes animation-fade-in-down {
   0% {
     opacity: 0;
-    transform: translate3d(0, -5rem, 0);
+    transform: translate3d(0, -10rem, 0);
   }
 
   100% {
