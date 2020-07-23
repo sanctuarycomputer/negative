@@ -159,11 +159,6 @@ const handleScroll = () => {
     navMenuButton.classList.remove('opacity-0', 'events-none');
     navMenuButton.classList.add('opacity-1', 'events-all');
   };
-
-  // Hide menu if open when footer is in viewport
-  if (footer.getBoundingClientRect().top <= window.innerHeight * .85 && footer.getBoundingClientRect().top > 0 && menuIsActive) {
-    closeMenu();
-  };
 }
 
 // Add transition when section enters viewport
