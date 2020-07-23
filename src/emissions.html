@@ -51,19 +51,19 @@
           <div class="inner-menu-inner-container menu-link opacity-0">
             <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
               <div>
-                <a class="menu-studio-carbon-negative" aria-label="Visit Studio Carbon Negative button--style-nav text-left" href="index.html">Studio Carbon Negative</a>
+                <a class="menu-studio-carbon-negative" aria-label="Visit Studio Carbon Negative button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
               </div>
               <div>
-                <a class="menu-emissions button--style-nav text-left" aria-label="Visit Calculating Emissions" href="emissions.html">Calculating Emissions</a>
+                <a class="menu-emissions button--style-nav text-left" aria-label="Visit Calculating Emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
               </div>
               <div>
-                <a class="menu-offsetting button--style-nav text-left" aria-label="Visit Buying Offsets" href="offsetting.html">Buying Offsets</a>
+                <a class="menu-offsetting button--style-nav text-left" aria-label="Visit Buying Offsets" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
               </div>
               <div>
-                <a class="menu-clients button--style-nav text-left" aria-label="Visit Helping Clients" href="clients.html">Helping Clients</a>
+                <a class="menu-clients button--style-nav text-left" aria-label="Visit Helping Clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
               </div>
               <div>
-                <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="resources.html">Resources</a>
+                <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
             </div>
             <div class="xl:col-6 xl:off-6">
@@ -433,35 +433,19 @@
     <footer class="footer-padding-x flex flex-col pb2">
       <div class="footer-menu links text-menu-lg lg:off-4 xl:off-6">
         <div>
-<<<<<<< HEAD
-          <a class="nav-studio-carbon-negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
+          <a class="menu-studio-carbon-negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
         </div>
         <div>
-          <a class="nav-emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
+          <a class="menu-emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
         </div>
         <div>
-          <a class="nav-offsetting" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
+          <a class="menu-offsetting" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
         </div>
         <div>
-          <a class="nav-clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
+          <a class="menu-clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
         </div>
         <div>
-          <a class="nav-resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
-=======
-          <a class="menu-studio-carbon-negative" href="index.html">Studio Carbon Negative</a>
-        </div>
-        <div>
-          <a class="menu-emissions" href="emissions.html">Calculating Emissions</a>
-        </div>
-        <div>
-          <a class="menu-offsetting" href="offsetting.html">Buying Offsets</a>
-        </div>
-        <div>
-          <a class="menu-clients" href="clients.html">Helping Clients</a>
-        </div>
-        <div>
-          <a class="menu-resources" href="resources.html">Resources</a>
->>>>>>> update menu active link
+          <a class="menu-resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row xl:justify-between">
