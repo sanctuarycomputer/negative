@@ -209,7 +209,7 @@ footer {
 }
 
 .menu {
-  @extend %transition-short;
+  transition: all .5s $transition-cubic-bezier;
   z-index: 900;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   height: 36rem;
@@ -223,7 +223,7 @@ footer {
   }
 
   &--inactive {
-    transition: all 1.5s $transition-easing .25s;
+    transition: all .5s $transition-cubic-bezier;
     transform: translate3d(0, -36rem, 0);
     transform-style: preserve-3d;
     opacity: 0;
@@ -247,13 +247,77 @@ footer {
   pointer-events: none;
 }
 
-.menu-link {
+
+.menu-links {
+  &--fade-in {
+    div:nth-child(1) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.15s 1 normal forwards animation-fade-in-down-short; 
+    }
+    
+    div:nth-child(2) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.3s 1 normal forwards animation-fade-in-down-short; 
+    }
+    
+    div:nth-child(3) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.45s 1 normal forwards animation-fade-in-down-short; 
+    }
+    
+    div:nth-child(4) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.60s 1 normal forwards animation-fade-in-down-short; 
+    }
+    
+    div:nth-child(5) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.75s 1 normal forwards animation-fade-in-down-short; 
+    }
+
+    div:nth-child(6) {
+      animation: 0.75s cubic-bezier(0.280, 0.840, 0.420, 1) 0.90s 1 normal forwards animation-fade-in-down-short; 
+    }
+  }
+
+  &--fade-out {
+    div:nth-child(1) {
+      animation: 3s $transition-easing 0s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+    
+    div:nth-child(2) {
+      animation: 3s $transition-easing .25s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+    
+    div:nth-child(3) {
+      animation: 3s $transition-easing .5s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+    
+    div:nth-child(4) {
+      animation: 3s $transition-easing .75s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+    
+    div:nth-child(5) {
+      animation: 3s $transition-easing 1s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+
+    div:nth-child(6) {
+      animation: 3s $transition-easing 1.25s 1 normal forwards animation-fade-in-down-short-2; 
+    }
+  }
+}
+
+
+.inner-menu-container {
+  padding-left: $nav-padding-x;
+  padding-right: $nav-padding-x;
+
+  @include media('xl-up') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &--animation-fade-in-down-slow {
-    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
+    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
   }
 
   &--animation-fade-in-up-slow {
-    animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
   }
 }
 
@@ -266,20 +330,18 @@ footer {
   }
 }
 
-.inner-menu-inner-container {
-  padding-left: $nav-padding-x;
-  padding-right: $nav-padding-x;
+.table-of-contents {
+  transition: all 1s $transition-easing;
 
   @include media('xl-up') {
-    padding-left: 0;
-    padding-right: 0;
+    transition: all $transition-duration-medium $transition-easing;
   }
 }
 
 //Index
 
 .background-slide {
-  animation: $transition-duration-long $transition-easing .25s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .25s 1 normal forwards animation-fade-in;
 }
 
 .map-container:before {
@@ -322,7 +384,7 @@ footer {
 }
 
 .studio {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
+  animation: $transition-left-title;  
   margin-top: 12vh;
 
   @include media('md-up') {
@@ -331,8 +393,7 @@ footer {
 }
 
 .negative {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
-
+  animation: $transition-right-title;;
   @include media('md-up') {
     margin-top: 40vh;
   }
@@ -340,7 +401,7 @@ footer {
 
 .header-image-container {
   transform-style: preserve-3d;
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
   top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
@@ -375,7 +436,7 @@ footer {
 
 //Calculating Emissions
 .calculating {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
+  animation: $transition-left-title;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -392,7 +453,7 @@ footer {
 }
 
 .emissions {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
+  animation: $transition-right-title;
   margin-top: 57vh;
 
   @include media('sm-up') {
@@ -410,7 +471,7 @@ footer {
 }
 
 .emissions-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
   top: 23vh;
   left: 1.112rem;
   max-height: 20rem;
@@ -431,7 +492,7 @@ footer {
 }
 
 .emissions-caption {
-  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in;
   top: 90vh;
   right: 1.112rem;
 
@@ -514,7 +575,7 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
+  animation: $transition-left-title;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -523,7 +584,7 @@ tr:last-of-type {
 }
 
 .offsets {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
+  animation: $transition-right-title;
   margin-top: 55vh;
 
   @include media('sm-down') {
@@ -541,7 +602,7 @@ tr:last-of-type {
 }
 
 .offsets-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
   top: 18vh;
 
   @include media('md-up') {
@@ -550,7 +611,7 @@ tr:last-of-type {
 }
 
 .offsets-caption {
-  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in;
   bottom: -5%;
 
   @include media('md-up') {
@@ -566,7 +627,7 @@ tr:last-of-type {
 
 //Helping Clients
 .helping {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up-long;  
+  animation: $transition-left-title;  
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -583,7 +644,7 @@ tr:last-of-type {
 }
 
 .clients {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-down;
+  animation: $transition-right-title;
   margin-top: 65vh;
 
   @include media('md-up') {
@@ -601,7 +662,7 @@ tr:last-of-type {
 }
 
 .clients-header-image-container {
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in;
   top: 20vh;
   max-height: 20rem;
 
@@ -612,7 +673,7 @@ tr:last-of-type {
 }
 
 .clients-caption {
-  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing .75s 1 normal forwards animation-fade-in;
   top: 95vh;
   right: 1.112rem;
 
@@ -640,7 +701,7 @@ tr:last-of-type {
 
 //Resources
 .resources-section-container {
-  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-easing 0s 1 normal forwards animation-fade-in;
 }
 
 .resources-list-container {

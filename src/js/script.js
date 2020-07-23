@@ -51,7 +51,7 @@ const addActiveClassToMenuLink = () => {
 
 
 //Nav
-const breakpointXL = 1280;
+const breakpointLg = 1080;
 const navMenuButton = document.getElementById('nav-menu-button');
 const navCloseButton = document.getElementById('nav-close-button');
 const menu = document.getElementById('menu');
@@ -61,7 +61,7 @@ const studioCarbonNegativeButtonContainer = document.getElementsByClassName('stu
 const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button-container')[0];
 const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
-const menuLinks = document.getElementsByClassName('menu-link');
+const menuLinksContainer = document.getElementsByClassName('inner-menu-container');
 
 const openMenu = () => {
   menuIsActive = true;
@@ -74,17 +74,20 @@ const openMenu = () => {
   menu.classList.add('menu--active');
   view.classList.add('view--menu-is-active');
 
-  Array.from(menuLinks).forEach(link => {
-    link.classList.remove('menu-link--animation-fade-in-up-slow');
-    link.classList.add('menu-link--animation-fade-in-down-slow');
+
+  document.getElementsByClassName('menu-links')[0].classList.add('menu-links--fade-in');
+
+  Array.from(menuLinksContainer).forEach(link => {
+    link.classList.remove('inner-menu-container--animation-fade-in-up-slow');
+    link.classList.add('inner-menu-container--animation-fade-in-down-slow');
   });
 
-  if (window.innerWidth < breakpointXL && menuIsActive) {
+  if (window.innerWidth < breakpointLg && menuIsActive) {
     studioCarbonNegativeButton.classList.add('none');
     studioCarbonNegativeButtonContainer.classList.remove('z-2000');
   };
 
-  if (window.innerWidth > breakpointXL && menuIsActive) {
+  if (window.innerWidth > breakpointLg && menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
   };
@@ -101,23 +104,25 @@ const closeMenu = () => {
   menu.classList.add('menu--inactive');
   view.classList.remove('view--menu-is-active');
 
-  Array.from(menuLinks).forEach(link => {
-    link.classList.remove('menu-link--animation-fade-in-down-slow');
-    link.classList.add('menu-link--animation-fade-in-up-slow');
+  document.getElementsByClassName('menu-links')[0].classList.remove('menu-links--fade-in');
+
+  Array.from(menuLinksContainer).forEach(link => {
+    link.classList.remove('inner-menu-container--animation-fade-in-down-slow');
+    link.classList.add('inner-menu-container--animation-fade-in-up-slow');
   });
 
-  if (window.innerWidth < breakpointXL && !menuIsActive) {
+  if (window.innerWidth < breakpointLg && !menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
   };
 };
 
 const handleResize = () => {
-  if (window.innerWidth < breakpointXL && menuIsActive) {
+  if (window.innerWidth < breakpointLg && menuIsActive) {
     studioCarbonNegativeButton.classList.add('none');
   };
   
-  if (window.innerWidth > breakpointXL && menuIsActive) {
+  if (window.innerWidth > breakpointLg && menuIsActive) {
     studioCarbonNegativeButton.classList.remove('none');
     studioCarbonNegativeButtonContainer.classList.add('z-2000');
 
@@ -152,10 +157,10 @@ const handleScroll = () => {
 }
 
 // Add transition when section enters viewport
-const sections = document.querySelectorAll('section.fade-in-up');
+const sections = document.querySelectorAll('section.fade-in');
 
 window.onscroll = function() {
-  if (!document.querySelectorAll('section.fade-in-up:not(.visible)')) return;
+  if (!document.querySelectorAll('section.fade-in:not(.visible)')) return;
 
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
