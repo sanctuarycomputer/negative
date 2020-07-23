@@ -209,7 +209,7 @@ footer {
 }
 
 .menu {
-  transition: all $transition-duration-short $transition-cubic-bezier;
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   z-index: 900;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   height: 36rem;
@@ -223,17 +223,17 @@ footer {
   }
 
   &--inactive {
-    transition: all $transition-duration-short $transition-cubic-bezier;
-    transform: translate3d(0, -36rem, 0);
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transform: translate3d(0, -40rem, 0);
     transform-style: preserve-3d;
     opacity: 0;
 
     @include media('md-sm-up') {
-      transform: translate3d(0, -40rem, 0);
+      transform: translate3d(0, -44rem, 0);
     }
 
     @include media('md-up') {
-      transform: translate3d(0, -36rem, 0);
+      transform: translate3d(0, -40rem, 0);
     }
   }
 
@@ -251,56 +251,57 @@ footer {
 .menu-links {
   &--fade-in {
     div:nth-child(1) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.15s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.15s 1 normal forwards animation-fade-in-down-short; 
     }
     
     div:nth-child(2) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.3s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.3s 1 normal forwards animation-fade-in-down-short; 
     }
     
     div:nth-child(3) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.45s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.45s 1 normal forwards animation-fade-in-down-short; 
     }
     
     div:nth-child(4) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.60s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.60s 1 normal forwards animation-fade-in-down-short; 
     }
     
     div:nth-child(5) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.75s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.75s 1 normal forwards animation-fade-in-down-short; 
     }
 
     div:nth-child(6) {
-      animation: 0.9s cubic-bezier(.455,.03,.515,.955) 0.90s 1 normal forwards animation-fade-in-down-short; 
-    }
-  }
-
-  &--fade-out {
-    div:nth-child(1) {
-      animation: 3s $transition-easing 0s 1 normal forwards animation-fade-in-down-short-2; 
-    }
-    
-    div:nth-child(2) {
-      animation: 3s $transition-easing .25s 1 normal forwards animation-fade-in-down-short-2; 
-    }
-    
-    div:nth-child(3) {
-      animation: 3s $transition-easing .5s 1 normal forwards animation-fade-in-down-short-2; 
-    }
-    
-    div:nth-child(4) {
-      animation: 3s $transition-easing .75s 1 normal forwards animation-fade-in-down-short-2; 
-    }
-    
-    div:nth-child(5) {
-      animation: 3s $transition-easing 1s 1 normal forwards animation-fade-in-down-short-2; 
-    }
-
-    div:nth-child(6) {
-      animation: 3s $transition-easing 1.25s 1 normal forwards animation-fade-in-down-short-2; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.90s 1 normal forwards animation-fade-in-down-short; 
     }
   }
 }
+
+//   &--fade-out {
+//     div:nth-child(1) {
+//       animation: 3s $transition-easing 0s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+    
+//     div:nth-child(2) {
+//       animation: 3s $transition-easing .25s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+    
+//     div:nth-child(3) {
+//       animation: 3s $transition-easing .5s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+    
+//     div:nth-child(4) {
+//       animation: 3s $transition-easing .75s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+    
+//     div:nth-child(5) {
+//       animation: 3s $transition-easing 1s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+
+//     div:nth-child(6) {
+//       animation: 3s $transition-easing 1.25s 1 normal forwards animation-fade-in-down-short-2; 
+//     }
+//   }
+// }
 
 
 .inner-menu-container {

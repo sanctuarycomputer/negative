@@ -62,6 +62,7 @@ const navMenuButtonContainer = document.getElementsByClassName('nav-menu--button
 const tableOfContentsTitle = document.getElementsByClassName('table-of-contents')[0];
 const view = document.getElementsByClassName('view')[0];
 const menuLinksContainer = document.getElementsByClassName('inner-menu-container');
+const menuLinks = document.getElementsByClassName('menu-links')[0];
 
 const openMenu = () => {
   menuIsActive = true;
@@ -72,10 +73,8 @@ const openMenu = () => {
   navCloseButton.classList.add('opacity-1', 'events-all');
   menu.classList.remove('menu--inactive');
   menu.classList.add('menu--active');
+  menuLinks.classList.add('menu-links--fade-in');
   view.classList.add('view--menu-is-active');
-
-
-  document.getElementsByClassName('menu-links')[0].classList.add('menu-links--fade-in');
 
   Array.from(menuLinksContainer).forEach(link => {
     link.classList.remove('inner-menu-container--animation-fade-in-up-slow');
@@ -83,13 +82,15 @@ const openMenu = () => {
   });
 
   if (window.innerWidth < breakpointLg && menuIsActive) {
-    studioCarbonNegativeButton.classList.add('none');
-    studioCarbonNegativeButtonContainer.classList.remove('z-2000');
+    studioCarbonNegativeButton.classList.add('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.add('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.remove('z-2000', 'opacity-1');
   };
 
   if (window.innerWidth > breakpointLg && menuIsActive) {
-    studioCarbonNegativeButton.classList.remove('none');
-    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+    studioCarbonNegativeButton.classList.remove('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.remove('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.add('z-2000', 'opacity-1');
   };
 };
 
@@ -102,9 +103,8 @@ const closeMenu = () => {
   navMenuButton.classList.remove('opacity-0', 'events-none', 'none');
   menu.classList.remove('menu--active');
   menu.classList.add('menu--inactive');
+  menuLinks.classList.remove('menu-links--fade-in');
   view.classList.remove('view--menu-is-active');
-
-  document.getElementsByClassName('menu-links')[0].classList.remove('menu-links--fade-in');
 
   Array.from(menuLinksContainer).forEach(link => {
     link.classList.remove('inner-menu-container--animation-fade-in-down-slow');
@@ -112,27 +112,33 @@ const closeMenu = () => {
   });
 
   if (window.innerWidth < breakpointLg && !menuIsActive) {
-    studioCarbonNegativeButton.classList.remove('none');
-    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+    studioCarbonNegativeButton.classList.remove('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.remove('opacity-0');
+    studioCarbonNegativeButtonContainer.classList.add('z-2000', 'opacity-1');
   };
 };
 
 const handleResize = () => {
-  if (window.innerWidth < breakpointLg && menuIsActive) {
-    studioCarbonNegativeButton.classList.add('none');
-  };
-  
-  if (window.innerWidth > breakpointLg && menuIsActive) {
-    studioCarbonNegativeButton.classList.remove('none');
-    studioCarbonNegativeButtonContainer.classList.add('z-2000');
+    if ((window.innerWidth < breakpointLg) && menuIsActive) {
+      studioCarbonNegativeButton.classList.remove('opacity-1');
+      studioCarbonNegativeButtonContainer.classList.remove('opacity-1');
+      studioCarbonNegativeButton.classList.add('opacity-0');
+      studioCarbonNegativeButtonContainer.classList.add('opacity-0');
+    };
 
-  };
+    if ((window.innerWidth > breakpointLg) && menuIsActive) {
+      studioCarbonNegativeButton.classList.remove('opacity-0');
+      studioCarbonNegativeButtonContainer.classList.remove('opacity-0');
+      studioCarbonNegativeButtonContainer.classList.add('z-2000', 'opacity-1');
+      studioCarbonNegativeButton.classList.add('opacity-1');
+    };
 };
 
 const handleScroll = () => {
   const scrollTop = window.pageYOffset;
   const hideNavMenuButton = window.innerHeight + scrollTop > document.body.offsetHeight - 200;
   const showNavMenuButton = window.innerHeight + scrollTop < document.body.offsetHeight - 200;
+  const footer = document.getElementsByClassName('footer-section')[0];
 
   if (scrollTop > 400) {
     studioCarbonNegativeButton.classList.remove('studio-carbon-negative-button--inactive');
@@ -154,6 +160,10 @@ const handleScroll = () => {
     navMenuButton.classList.add('opacity-1', 'events-all');
   };
 
+  // Hide menu if open when footer is in viewport
+  if (footer.getBoundingClientRect().top <= window.innerHeight * .85 && footer.getBoundingClientRect().top > 0 && menuIsActive) {
+    closeMenu();
+  };
 }
 
 // Add transition when section enters viewport
