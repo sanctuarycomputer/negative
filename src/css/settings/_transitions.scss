@@ -1,13 +1,14 @@
 $transition-duration-shorter: 0.18s;
 $transition-duration-short: 0.4s;
 $transition-duration-medium: 0.5s;
-$transition-duration-long: 1s;
-$transition-duration-longer: 1.25s;
+$transition-duration-medium-long: 850ms;
+$transition-duration-long: 950ms;
+$transition-duration-longer: 3.2s;
 $transition-easing: ease-in-out;
-$transition-cubic-bezier: cubic-bezier(.455,.03,.515,.955); 
+$transition-cubic-bezier: cubic-bezier(0, 0.12, 0.11, 0.71);
 $transition: $transition-duration-short $transition-easing;
-$transition-left-title: $transition-duration-long $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-up-long; 
-$transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-down;
+$transition-left-title: $transition-duration-longer $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-up-long;
+$transition-right-title: $transition-duration-longer $transition-cubic-bezier .2s 1 normal forwards animation-fade-in-down;
 
 .transition-shortest,
 %transition-shortest {
@@ -26,17 +27,17 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
 
 .transition,
 %transition {
-  transition: all $transition-duration-medium $transition-easing;
+  transition: all $transition-duration-medium $transition-cubic-bezier;
 }
 
 .transition-long,
 %transition-long {
-  transition: all $transition-duration-long $transition-easing;
+  transition: all $transition-duration-long $transition-cubic-bezier;
 }
 
 .transition-longer,
 %transition-longer {
-  transition: all $transition-duration-longer $transition-easing;
+  transition: all $transition-duration-medium-long $transition-cubic-bezier;
 }
 
 @keyframes animation-fade-in-down-slow {
@@ -67,7 +68,7 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
 @keyframes animation-fade-in-down {
   0% {
     opacity: 0;
-    transform: translate3d(0, -10rem, 0);
+    transform: translate3d(0, -2.5rem, 0);
   }
 
   100% {
@@ -116,7 +117,7 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
 @keyframes animation-fade-in-up-long {
   0% {
     opacity: 0;
-     transform: translate3d(0, 10rem, 0)
+     transform: translate3d(0, 3.5rem, 0)
   }
 
   100% {
@@ -129,6 +130,6 @@ $transition-right-title: $transition-duration-long $transition-cubic-bezier 0s 1
   opacity: 0;
 
   &.visible {
-    animation: $transition-duration-longer $transition-easing 0s 1 normal forwards animation-fade-in;
+    animation: $transition-duration-medium-long $transition-easing 0s 1 normal forwards animation-fade-in;
   }
 }

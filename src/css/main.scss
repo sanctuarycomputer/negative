@@ -8,7 +8,7 @@
   @extend %transition;
 
   &--menu-is-active {
-    transform: translate3d(0, 5rem, 0);
+    transform: translate3d(0, 2rem, 0);
     transform-style: preserve-3d;
   }
 }
@@ -209,10 +209,12 @@ footer {
 }
 
 .menu {
-  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  @extend %transition;
+  transform-style: preserve-3d;
   z-index: 900;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   height: 36rem;
+  opacity: 0;
 
   @include media('md-sm-up') {
     height: 40rem;
@@ -220,21 +222,6 @@ footer {
 
   @include media('md-up') {
     height: 36rem;
-  }
-
-  &--inactive {
-    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-    transform: translate3d(0, -40rem, 0);
-    transform-style: preserve-3d;
-    opacity: 0;
-
-    @include media('md-sm-up') {
-      transform: translate3d(0, -44rem, 0);
-    }
-
-    @include media('md-up') {
-      transform: translate3d(0, -40rem, 0);
-    }
   }
 
   &--active {
@@ -251,54 +238,54 @@ footer {
 .menu-links {
   &--fade-in {
     div:nth-child(1) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.15s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.15s 1 normal forwards animation-fade-in-down-short;
     }
-    
+
     div:nth-child(2) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.3s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.3s 1 normal forwards animation-fade-in-down-short;
     }
-    
+
     div:nth-child(3) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.45s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.45s 1 normal forwards animation-fade-in-down-short;
     }
-    
+
     div:nth-child(4) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.60s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.60s 1 normal forwards animation-fade-in-down-short;
     }
-    
+
     div:nth-child(5) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.75s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.75s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(6) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.90s 1 normal forwards animation-fade-in-down-short; 
+      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.90s 1 normal forwards animation-fade-in-down-short;
     }
   }
 }
 
 //   &--fade-out {
 //     div:nth-child(1) {
-//       animation: 3s $transition-easing 0s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing 0s 1 normal forwards animation-fade-in-down-short-2;
 //     }
-    
+
 //     div:nth-child(2) {
-//       animation: 3s $transition-easing .25s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing .25s 1 normal forwards animation-fade-in-down-short-2;
 //     }
-    
+
 //     div:nth-child(3) {
-//       animation: 3s $transition-easing .5s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing .5s 1 normal forwards animation-fade-in-down-short-2;
 //     }
-    
+
 //     div:nth-child(4) {
-//       animation: 3s $transition-easing .75s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing .75s 1 normal forwards animation-fade-in-down-short-2;
 //     }
-    
+
 //     div:nth-child(5) {
-//       animation: 3s $transition-easing 1s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing 1s 1 normal forwards animation-fade-in-down-short-2;
 //     }
 
 //     div:nth-child(6) {
-//       animation: 3s $transition-easing 1.25s 1 normal forwards animation-fade-in-down-short-2; 
+//       animation: 3s $transition-easing 1.25s 1 normal forwards animation-fade-in-down-short-2;
 //     }
 //   }
 // }
@@ -314,11 +301,11 @@ footer {
   }
 
   &--animation-fade-in-down-slow {
-    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-down-slow; 
+    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-down-slow;
   }
 
   &--animation-fade-in-up-slow {
-    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow; 
+    animation: 0.5s $transition-easing 0s 1 normal forwards animation-fade-in-up-slow;
   }
 }
 
@@ -385,7 +372,7 @@ footer {
 }
 
 .studio {
-  animation: $transition-left-title;  
+  animation: $transition-left-title;
   margin-top: 12vh;
 
   @include media('md-up') {
@@ -394,7 +381,8 @@ footer {
 }
 
 .negative {
-  animation: $transition-right-title;;
+  animation: $transition-right-title;
+  opacity: 0;
   @include media('md-up') {
     margin-top: 40vh;
   }
@@ -402,7 +390,7 @@ footer {
 
 .header-image-container {
   transform-style: preserve-3d;
-  animation: $transition-duration-long $transition-easing .5s 1 normal forwards animation-fade-in-up;
+  animation: $transition-duration-long $transition-cubic-bezier .5s 1 normal forwards animation-fade-in-up;
   top: 55vh;
   left: 18vw;
   max-height: 8.61rem;
@@ -437,7 +425,7 @@ footer {
 
 //Calculating Emissions
 .calculating {
-  animation: $transition-left-title;  
+  animation: $transition-left-title;
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -460,7 +448,7 @@ footer {
   @include media('sm-up') {
     margin-top: 70vh;
   }
-  
+
   @include media('md-up') {
     margin-top: 25vh;
     padding-right: 8%;
@@ -576,7 +564,7 @@ tr:last-of-type {
 
 //Buying Offsets
 .buying {
-  animation: $transition-left-title;  
+  animation: $transition-left-title;
   margin-top: 10vh;
 
   @include media('md-up') {
@@ -628,7 +616,7 @@ tr:last-of-type {
 
 //Helping Clients
 .helping {
-  animation: $transition-left-title;  
+  animation: $transition-left-title;
   margin-top: 10vh;
 
   @include media('md-up') {
