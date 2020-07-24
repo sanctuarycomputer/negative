@@ -238,27 +238,27 @@ footer {
 .menu-links {
   &--fade-in {
     div:nth-child(1) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.1s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(2) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.15s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(3) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.2s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(4) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.25s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(5) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.3s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s 1 normal forwards animation-fade-in-down-short;
     }
 
     div:nth-child(6) {
-      animation: $transition-duration-long cubic-bezier(.455,.03,.515,.955) 0.35s 1 normal forwards animation-fade-in-down-short;
+      animation: $transition-duration-short cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s 1 normal forwards animation-fade-in-down-short;
     }
   }
 }
