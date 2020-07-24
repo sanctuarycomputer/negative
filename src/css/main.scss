@@ -457,7 +457,7 @@ footer {
   }
 }
 
-.emissions-diagram-container, .emissions-diagram-table-container {
+.emissions-diagram-table-container {
   @include media('xl-up') {
     padding-right: $inner-content-padding-x-desktop;
   }
