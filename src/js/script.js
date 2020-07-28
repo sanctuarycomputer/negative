@@ -1,6 +1,6 @@
 "use strict";
 
-const indexPathname = "index";
+const indexPathname = process.env.NODE_ENV === 'production' ? '' : 'index';
 const emissionsPathname = "emissions";
 const offsetsPathname = "offsetting";
 const clientsPathname = "clients";

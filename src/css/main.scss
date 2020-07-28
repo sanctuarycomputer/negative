@@ -704,7 +704,7 @@ tr:last-of-type {
   padding-left: 1.11rem;
   padding-right: 1.11rem;
 
-  @include media('xl-up') {
+  @include media('lg-up') {
     padding-left: 0;
     padding-right: 0;
   }
