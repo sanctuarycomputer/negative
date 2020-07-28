@@ -19,5 +19,5 @@ module.exports = {
     "studio-carbon-negative-button--active",
     "visible",
   ],
-  defaultExtractor: (content) => content.match(/[A-Za-z0-9_-]+/g) || [],
+  defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:]+/g) || [],
 }
