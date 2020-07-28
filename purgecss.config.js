@@ -1,0 +1,23 @@
+module.exports = {
+  content: ["src/**/*.html"],
+  whitelist: [
+    "menu-active-link",
+    "opacity-1",
+    "opacity-0",
+    "events-none",
+    "none",
+    "events-all",
+    "menu--active",
+    "menu--inactive",
+    "menu-links--fade-in",
+    "view--menu-is-active",
+    "inner-menu-container--animation-fade-in-up-slow",
+    "inner-menu-container--animation-fade-in-down-slow",
+    "z-2000",
+    "footer-section",
+    "studio-carbon-negative-button--inactive",
+    "studio-carbon-negative-button--active",
+    "visible",
+  ],
+  defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:]+/g) || [],
+}
