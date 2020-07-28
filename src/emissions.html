@@ -11,21 +11,22 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Calculating Emissions • Studio Carbon Negative" />
     <meta property="og:description" content="You can't mitigate what you can't measure. Here's how we go about getting hard numbers for our emissions." />
-    <meta property="og:image" content="img/emissions/emissions-share-card.jpg" />
+    <meta property="og:image" content="https://negative.sanctuary.computer/src/img/emissions/emissions-share-card.jpg" />
     <meta property="og:site_name" content="Sanctuary Computer" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:title" content="Calculating Emissions • Studio Carbon Negative" />
     <meta name="twitter:description" content="You can't mitigate what you can't measure. Here's how we go about getting hard numbers for our emissions." />
-    <meta name="twitter:image" content="img/emissions/emissions-share-card.jpg" />
+    <meta name="twitter:image" content="https://negative.sanctuary.computer/src/img/emissions/emissions-share-card.jpg" />
     <meta name="twitter:site" content="@sanctucompu" />
     <meta name="twitter:creator" content="@sanctucompu" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="https://negative.sanctuary.computer/src/img/favicon-32x32.png" />
   </head>
   <body>
 
     <!-- Start Menu -->
     <nav>
-      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-long z-2000 opacity-0">
+      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-long z-2000 opacity-1">
         <div>
           <a aria-label="Visit Studio Carbon Negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
             <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
@@ -46,7 +47,7 @@
         </div>
       </div>
 
-      <div id="menu" class="fixed w100 menu menu--inactive">
+      <div id="menu" class="fixed w100 opacity-0 z-below menu menu--inactive">
         <div class="inner-menu mxauto w100 h100">
           <div class="inner-menu-container opacity-0">
             <div class="menu-links serif lg:col-8 lg:off-4 xl:col-6 xl:off-6 mb2_5 xl:mb2">
@@ -66,7 +67,7 @@
                 <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
               <div class="opacity-0">
-                <a aria-label="View our 2019 Report" class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+                <a aria-label="View our 2019 Report" class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-2019-sustainability-report-36428441f73c" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
               </div>
             </div>
           </div>
@@ -305,7 +306,10 @@
                   alt="Haiti"/>
                 </div>
                 <p class="none xl:block text-caption xl:col-6 mt_5 xl:pb10">
-                  <span class="caption-letter pr2">(B.)</span>Sanctuary Computer's 2019 Emissions – <span class="color-gray-darker">Though we didn’t have any scope 1 direct emissions some examples include anything you own that creates direct emissions like burning gas in vehicles, furnaces, or boilers.</span>
+                  <a href="https://g.co/ev/1364" target="_blank" rel="noopener">
+                    <span class="pr_25">&rarr;</span><span class="underline">Haiti</span>
+                  </a>
+                  &mdash; Haiti's position as a Southern island nation makes it particularly susceptible to the effects of climate change. Factors that make Haiti more vulnerable than other Caribbean nations, such as the Dominican Republic, are its higher population density, extensive deforestation, extreme soil erosion, and high income-inequality.
                 </p>
               </div>
               <div class="off-1 col-12 md:col-8 md:off-4 xl:off-0 xl:col-6">
@@ -455,7 +459,7 @@
         </div>
         <div class="text-footer-xs flex flex-col justify-end lg:col-8 xl:col-6 md:pr4">
           <h6 class="color-black">Research and documentation done by <a class="color-gray text-decoration-none" href="https://sanctuary.computer" target="_blank" rel="noopener">Sanctuary Computer</a>.</h6>
-          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits roughly 26g of carbon per page load (from a cold cache).) View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative" target="_blank" rel="noopener">Github</a>.</h6>
+          <h6 class="color-gray">Climate change citations from Wikipedia Commons. All images are from Google Earth. This website emits roughly 0.62g of carbon per page load (from a cold cache). View this project on <a class="color-gray text-decoration-none" href="https://github.com/sanctuarycomputer/negative" target="_blank" rel="noopener">Github</a>.</h6>
         </div>
       </div>
     </footer>
