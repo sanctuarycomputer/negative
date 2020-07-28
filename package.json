@@ -4,6 +4,7 @@
   "devDependencies": {
     "@sanctucompu/basement": "^1.1.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-purgecss": "^3.0.0",
     "posthtml-expressions": "^1.4.5",
     "sass": "^1.26.9"
   },
