@@ -10,6 +10,6 @@
   },
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "NODE_ENV=production parcel build src/*.html"
+    "build": "NODE_ENV=production parcel build src/*.html --public-url https://negative.sanctuary.computer"
   }
 }
