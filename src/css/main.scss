@@ -211,10 +211,8 @@ footer {
 .menu {
   @extend %transition;
   transform-style: preserve-3d;
-  z-index: 900;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 18%);
   height: 36rem;
-  opacity: 0;
 
   @include media('md-sm-up') {
     height: 40rem;
@@ -226,6 +224,7 @@ footer {
 
   &--active {
     opacity: .95;
+    z-index: 900;
   }
 }
 
@@ -344,18 +343,20 @@ footer {
 }
 
 .studio {
-  animation: $transition-left-title;
+  animation: $transition-duration-longer $transition-cubic-bezier 0s 1 normal forwards animation-fade-in-up-shortest;
   margin-top: 12vh;
 
   @include media('md-up') {
+    animation: $transition-left-title;
     margin-top: 40vh;
   }
 }
 
 .negative {
-  animation: $transition-right-title;
+  animation: $transition-duration-longer $transition-cubic-bezier .2s 1 normal forwards animation-fade-in-down-shortest;
   
   @include media('md-up') {
+    animation: $transition-right-title;
     margin-top: 40vh;
   }
 }
