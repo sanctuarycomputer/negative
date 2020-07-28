@@ -25,7 +25,7 @@
     
     <!-- Start Menu -->
     <nav>
-      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
+      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-long z-2000 opacity-0">
         <div>
           <a aria-label="Visit Studio Carbon Negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
             <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="nav-menu-button-container fixed z-overlay flex items-center col-12 xl:col-6 xl:off-6 justify-between">
-        <div class="table-of-contents transition-shortest opacity-0 col-6 text-menu-md serif">
+        <div class="table-of-contents opacity-0 col-6 lg:off-4 xl:off-0 text-menu-md serif">
           Table of Contents
         </div>
         <div class="col-3 flex justify-end">
@@ -48,29 +48,28 @@
 
       <div id="menu" class="fixed w100 menu menu--inactive">
         <div class="inner-menu mxauto w100 h100">
-          <div class="inner-menu-inner-container menu-link opacity-0">
-            <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
-              <div>
+          <div class="inner-menu-container opacity-0">
+            <div class="menu-links serif lg:col-8 lg:off-4 xl:col-6 xl:off-6 mb2_5 xl:mb2">
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-studio-carbon-negative" aria-label="Visit Studio Carbon Negative button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-emissions button--style-nav text-left" aria-label="Visit Calculating Emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-offsetting button--style-nav text-left" aria-label="Visit Buying Offsets" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-clients button--style-nav text-left" aria-label="Visit Helping Clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
-            </div>
-            <div class="xl:col-6 xl:off-6">
-              <a aria-label="View our 2019 Report" class=" button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              <div class="opacity-0">
+                <a aria-label="View our 2019 Report" class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </nav>
   <!-- End Menu -->
@@ -103,7 +102,7 @@
           &mdash; In February 2020, the region recorded the highest temperature of 18.3 degree Celsius which was a degree higher than the previous record of 17.5 degrees in March 2015..
         </p>
       </div>
-      <div class="clients z1 col col-6 text-right relative">
+      <div class="clients opacity-0 z1 col col-6 text-right relative">
         <h1 class="text-title serif">
           Clients
         </h1>
@@ -112,7 +111,7 @@
 
     <div class="wrapper">
 
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Sustainability done right can breed brand loyalists and super fans.</h3>
         <div class="flex flex-col-reverse off-1 lg:off-0 xl:flex-row">
           <div class="clients-diagram-caption flex flex-col md:off-4 xl:off-0 md:col-8 xl:col-4">
@@ -142,7 +141,7 @@
         </div>
       </section>
 
-      <section class="full-width-content-container clients-section-one-container flex flex-col fade-in-up">
+      <section class="full-width-content-container clients-section-one-container flex flex-col fade-in">
         <div class="flex flex-col md:flex-row col-12">
           <div class="col-8 md:col-6 mb5 md:mb0">
             <div class="color-img md:off-2 md:col-8 xl:off-4 xl:col-6">
@@ -187,7 +186,7 @@
         </div>
       </section>
 
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Making an impact is not nearly as hard as it may sound.</h3>
         <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph mb2_5 atlas md:col-6">
           We're here to help. Over the past year, we've done significant leg work researching and understanding how we can help our clients be more responsible from both a supply chain and technology front. We're incredibly proactive in this regard! We've come to see helping our clients do better by mother nature as one of our core responsibilities.
@@ -197,7 +196,7 @@
         </p>
       </section>
 
-      <section class="full-width-content-container clients-section-one-container flex flex-col mb5 md:mb0 fade-in-up">
+      <section class="full-width-content-container clients-section-one-container flex flex-col mb5 md:mb0 fade-in">
         <div class="flex flex-col">
           <div class="mb5">
             <div class="color-img col-8 md:col-4 md:off-2 xl:col-2 xl:off-2">
@@ -242,7 +241,7 @@
         </div>
       </section>
 
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <h3 class="text-subtitle serif mb3 md:col-9 xl:col-6">Taking a hard stance, and expecting more from our partners.</h3>
         <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 mb2_5 text-paragraph atlas md:col-6">
           We're blessed to have become a sought after collaborator in the product space, and it's our intention to use that influence to inspire and change the culture around sustainability with our partners and peers.
@@ -251,8 +250,8 @@
           We feel strongly that businesses that ignore the responsibility to our planet will become irrelevant to their community on a longer timeline; and for that reason, we have no interest in working with them. From here on out, we'll be turning down work that is a clear net negative to the world at large, and we'll be encouraging our peers to do the same.
         </p>
       </section>
-
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+     
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <p class="text-subtitle serif md:col-9 lg:col-7">
           Studio Carbon Negative was initiated by Sanctuary Computer. Get in touch if you would like to know more information about Studio Carbon Negative.
         </p>

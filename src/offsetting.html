@@ -25,7 +25,7 @@
 
     <!-- Start Menu -->
     <nav>
-      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
+      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-long z-2000 opacity-0">
         <div>
           <a aria-label="Visit Studio Carbon Negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
             <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="nav-menu-button-container fixed z-overlay flex items-center col-12 xl:col-6 xl:off-6 justify-between">
-        <div class="table-of-contents transition-shortest opacity-0 col-6 text-menu-md serif">
+        <div class="table-of-contents opacity-0 col-6 lg:off-4 xl:off-0 text-menu-md serif">
           Table of Contents
         </div>
         <div class="col-3 flex justify-end">
@@ -48,29 +48,28 @@
 
       <div id="menu" class="fixed w100 menu menu--inactive">
         <div class="inner-menu mxauto w100 h100">
-          <div class="inner-menu-inner-container menu-link opacity-0">
-            <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
-              <div>
+          <div class="inner-menu-container opacity-0">
+            <div class="menu-links serif lg:col-8 lg:off-4 xl:col-6 xl:off-6 mb2_5 xl:mb2">
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-studio-carbon-negative" aria-label="Visit Studio Carbon Negative button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-emissions button--style-nav text-left" aria-label="Visit Calculating Emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-offsetting button--style-nav text-left" aria-label="Visit Buying Offsets" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-clients button--style-nav text-left" aria-label="Visit Helping Clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
-            </div>
-            <div class="xl:col-6 xl:off-6">
-              <a aria-label="View our 2019 Report" class=" button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              <div class="opacity-0">
+                <a aria-label="View our 2019 Report" class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </nav>
   <!-- End Menu -->
@@ -103,7 +102,7 @@
           </p>
         </div>
       </div>
-      <div class="absolute z1 offsets col-6 off-6">
+      <div class="offsets opacity-0 absolute z1 col-6 off-6">
         <h1 class="md:off-6 xl:off-4 md:justify-end lg:justify-start flex text-title serif">
           Offsets
         </h1>
@@ -142,7 +141,7 @@
         </div>
       </section>
 
-      <section class="full-width-content-container fade-in-up">
+      <section class="full-width-content-container fade-in">
         <div class="flex flex-col">
           <div class="col-8 md:col-3 md:off-4 xl:off-5 xl:col-2 color-img">
             <img
@@ -165,7 +164,7 @@
         </div>
       </section>
 
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <h3 class="text-subtitle serif mb3 lg:col-6">Buying local, and paying ethical prices for renwable energy credits.</h3>
         <p class="off-1 md:off-4 md:col-8 xl:off-6 xl:col-6 text-paragraph atlas md:col-6 mb2_5">
           We're careful to buy Renewable Energy Credits (RECs) and offsets that are in near proximity to us. Unfortunately, a lot of wind power RECs that are bought to offset electricity usage are from Texas, where wind energy is really cheap due to a deregulated market, and wide open land to build such farms.
@@ -175,7 +174,7 @@
         </p>
       </section>
 
-      <section class="full-width-content-container flex flex-col fade-in-up">
+      <section class="full-width-content-container flex flex-col fade-in">
         <div class="mb5 md:mb0">
           <div class="col-8 md:col-5 xl:col-3 xl:off-3 color-img">
             <img
@@ -222,7 +221,7 @@
         </div>
       </section>
 
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <h3 class="text-subtitle serif mb3 lg:col-5">Early stage technologies may not by a best use of our resources (yet).</h3>
         <div class="flex flex-col-reverse off-1 md:off-0 lg:flex-row">
           <div class="offsetting-technologies-caption flex flex-col md:off-4 md:col-8 lg:off-0 lg:col-4">
@@ -253,8 +252,8 @@
           </div>
         </div>
       </section>
-
-      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in-up">
+     
+      <section class="smaller-content-container inner-content-padding-x mxauto flex-col fade-in">
         <p class="text-subtitle serif lg:col-8">
           Studio Carbon Negative was initiated by Sanctuary Computer. Get in touch if you would like to know more information about Studio Carbon Negative.
         </p>

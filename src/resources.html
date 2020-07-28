@@ -25,7 +25,7 @@
     
     <!-- Start Menu -->
     <nav>
-      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-shorter z-2000">
+      <div class="studio-carbon-negative-button-container fixed flex col-6 items-center transition-long z-2000 opacity-0">
         <div>
           <a aria-label="Visit Studio Carbon Negative" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}" id="studio-carbon-negative-button" class="button--style-nav text-menu-md serif studio-carbon-negative-button studio-carbon-negative-button--inactive transition-shorter">
             <span class="italic mr_25">Studio</span><span>Carbon Negative</span>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="nav-menu-button-container fixed z-overlay flex items-center col-12 xl:col-6 xl:off-6 justify-between">
-        <div class="table-of-contents transition-shortest opacity-0 col-6 text-menu-md serif">
+        <div class="table-of-contents opacity-0 col-6 lg:off-4 xl:off-0 text-menu-md serif">
           Table of Contents
         </div>
         <div class="col-3 flex justify-end">
@@ -48,29 +48,28 @@
 
       <div id="menu" class="fixed w100 menu menu--inactive">
         <div class="inner-menu mxauto w100 h100">
-          <div class="inner-menu-inner-container menu-link opacity-0">
-            <div class="text-menu-lg serif xl:col-6 xl:off-6 links mb2_5 xl:mb2">
-              <div>
+          <div class="inner-menu-container opacity-0">
+            <div class="menu-links serif lg:col-8 lg:off-4 xl:col-6 xl:off-6 mb2_5 xl:mb2">
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-studio-carbon-negative" aria-label="Visit Studio Carbon Negative button--style-nav text-left" href="{{ NODE_ENV === 'production' ? '/' : 'index.html' }}">Studio Carbon Negative</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-emissions button--style-nav text-left" aria-label="Visit Calculating Emissions" href="{{ NODE_ENV === 'production' ? '/emissions' : 'emissions.html' }}">Calculating Emissions</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-offsetting button--style-nav text-left" aria-label="Visit Buying Offsets" href="{{ NODE_ENV === 'production' ? '/offsetting' : 'offsetting.html' }}">Buying Offsets</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-clients button--style-nav text-left" aria-label="Visit Helping Clients" href="{{ NODE_ENV === 'production' ? '/clients' : 'clients.html' }}">Helping Clients</a>
               </div>
-              <div>
+              <div class="opacity-0 text-menu-lg">
                 <a class="menu-resources button--style-nav text-left" aria-label="Visit Resources" href="{{ NODE_ENV === 'production' ? '/resources' : 'resources.html' }}">Resources</a>
               </div>
-            </div>
-            <div class="xl:col-6 xl:off-6">
-              <a aria-label="View our 2019 Report" class=" button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              <div class="opacity-0">
+                <a aria-label="View our 2019 Report" class="button--style-primary flex items-center justify-center color-black mt1 md:mt2" href="https://medium.com/sanctuary-computer-inc/our-open-source-2019-profit-loss-12af726471a5" target="_blank" rel="noopener">&rarr; See Our 2019 Report</a>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </nav>
   <!-- End Menu -->
@@ -78,7 +77,7 @@
   <!-- Start Page Content -->
   <div class="view">
     <div class="wrapper">
-    <section class="resources-section-container md:mb6 smaller-content-container inner-content-padding-x mxauto fade-in-up">
+    <section class="resources-section-container md:mb6 smaller-content-container inner-content-padding-x mxauto fade-in">
       <div class="col-12 flex flex-col pt10">
         <div class="pb3 md:pb0 md:col-6 flex flex-col">
           <h1 class="text-title">Resources</h1>
