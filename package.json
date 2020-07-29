@@ -11,5 +11,9 @@
   "scripts": {
     "start": "parcel src/*.html",
     "build": "NODE_ENV=production parcel build src/*.html --public-url https://negative.sanctuary.computer"
+  },
+  "dependencies": {
+    "firebase-tools": "^8.6.0",
+    "global": "^4.4.0"
   }
 }

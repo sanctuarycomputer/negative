@@ -42,15 +42,7 @@ jobs:
       - attach_workspace:
           at: ~/negative
       - checkout
-      - run: sudo apt-get install python-dev python-pip
-      - run: sudo pip install awscli
-      - run: aws s3 sync dist s3://computer-sanctuary-negative/ --delete
-      - run: aws s3 cp dist/index.html s3://computer-sanctuary-negative/index.html --cache-control max-age=0 --content-type "text/html"
-      - run: aws s3 cp dist/emissions.html s3://computer-sanctuary-negative/emissions --cache-control max-age=0 --content-type "text/html"
-      - run: aws s3 cp dist/offsetting.html s3://computer-sanctuary-negative/offsetting --cache-control max-age=0 --content-type "text/html"
-      - run: aws s3 cp dist/clients.html s3://computer-sanctuary-negative/clients --cache-control max-age=0 --content-type "text/html"
-      - run: aws s3 cp dist/resources.html s3://computer-sanctuary-negative/resources --cache-control max-age=0 --content-type "text/html"
-      - run: curl --location --request POST "https://www.spirit.fish/api/v1/renderers/b9285e1a-014f-4af3-90e2-f8f5ea2f46a8/api_invalidations" -H "Content-Type:application/json" -H "X-Hatchery-Renderer-Api-Key:$PRODUCTION_SPIRIT_FISH_API_KEY" --data-raw '{"invalidation":{"pages":["*"]}}'
+      - run: npx firebase deploy -m "Deploy from CI" --non-interactive --token $FIREBASE_TOKEN
 
 workflows:
   build:
